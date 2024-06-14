@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, BehaviorSubject, forkJoin, of } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { Observable, BehaviorSubject, forkJoin } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { User } from '../interfaces/user';
 import { Role } from '../interfaces/role';
 import { environment } from '../../environments/environment';
@@ -27,7 +27,8 @@ export class UserService {
 
   login(email: string, password: string): Observable<User> {
     return this.checkUserByEmail(email).pipe(
-      map(user => {
+      map(users => {
+        const user = users[0];
         if (user && this.validatePassword(user, password)) {
           localStorage.setItem('loggedUser', JSON.stringify(user));
           this.userSubject.next(user);
@@ -58,13 +59,15 @@ export class UserService {
     );
   }
 
-  checkUserByEmail(email: string): Observable<User | null> {
-    return this.http.get<User[]>(`${this.usersUrl}?email=${email}`).pipe(
-      map(users => users.length > 0 ? users[0] : null)
-    );
+  checkUserByEmail(email: string): Observable<User[]> {
+    return this.http.get<User[]>(`${this.usersUrl}?email=${email}`);
   }
 
   validatePassword(user: User, password: string): boolean {
     return user.password === password;
+  }
+
+  register(user: Partial<User>): Observable<User> {
+    return this.http.post<User>(this.usersUrl, user);
   }
 }

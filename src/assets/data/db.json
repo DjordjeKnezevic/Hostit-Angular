@@ -23,45 +23,63 @@
       "role_id": "1",
       "name": "Admin User",
       "email": "admin@example.com",
-      "email_verified_at": "2024-01-01T00:00:00Z",
-      "password": "admin123",
-      "remember_token": null
+      "password": "admin123"
     },
     {
       "id": "2",
       "role_id": "2",
       "name": "Moderator User",
       "email": "moderator@example.com",
-      "email_verified_at": "2024-01-01T00:00:00Z",
-      "password": "moderator123",
-      "remember_token": null
+      "password": "moderator123"
     },
     {
       "id": "3",
       "role_id": "3",
       "name": "Premium User 1",
       "email": "premiumuser@example.com",
-      "email_verified_at": "2024-01-01T00:00:00Z",
-      "password": "premium123",
-      "remember_token": null
+      "password": "premium123"
     },
     {
       "id": "4",
       "role_id": "4",
       "name": "Regular User 1",
       "email": "user1@example.com",
-      "email_verified_at": "2024-01-01T00:00:00Z",
-      "password": "user123",
-      "remember_token": null
+      "password": "user123"
     },
     {
       "id": "5",
       "role_id": "4",
       "name": "Regular User 2",
       "email": "user2@example.com",
-      "email_verified_at": "2024-01-01T00:00:00Z",
-      "password": "user123",
-      "remember_token": null
+      "password": "user123"
+    },
+    {
+      "id": "dd26",
+      "name": "data",
+      "email": "admin2@example.com",
+      "password": "admin123A#",
+      "role_id": "1"
+    },
+    {
+      "id": "409e",
+      "name": "Test",
+      "email": "admin3@example.com",
+      "password": "admin1231A#",
+      "role_id": "1"
+    },
+    {
+      "id": "262e",
+      "name": "Test2",
+      "email": "admin4@example.com",
+      "password": "A1@adsfds",
+      "role_id": "1"
+    },
+    {
+      "id": "8eb2",
+      "name": "sdfsd",
+      "email": "admin5@example.com",
+      "password": "adsgfdgfd%345@fGDf",
+      "role_id": "1"
     }
   ],
   "server_types": [
@@ -1138,7 +1156,7 @@
       "service_id": "20",
       "service_type": "App\\Models\\Server",
       "name": "Tera - monthly - San Francisco",
-      "price": 588.10,
+      "price": 588.1,
       "period": "monthly",
       "valid_from": "2024-01-01T00:00:00Z",
       "valid_until": null
@@ -1738,7 +1756,7 @@
       "service_id": "40",
       "service_type": "App\\Models\\Server",
       "name": "Tera - monthly - Frankfurt",
-      "price": 588.10,
+      "price": 588.1,
       "period": "monthly",
       "valid_from": "2024-01-01T00:00:00Z",
       "valid_until": null
@@ -1978,7 +1996,7 @@
       "service_id": "48",
       "service_type": "App\\Models\\Server",
       "name": "Mega - monthly - Tokyo",
-      "price": 266.20,
+      "price": 266.2,
       "period": "monthly",
       "valid_from": "2024-01-01T00:00:00Z",
       "valid_until": null
@@ -2038,7 +2056,7 @@
       "service_id": "50",
       "service_type": "App\\Models\\Server",
       "name": "Tera - monthly - Tokyo",
-      "price": 532.40,
+      "price": 532.4,
       "period": "monthly",
       "valid_from": "2024-01-01T00:00:00Z",
       "valid_until": null
@@ -2168,7 +2186,7 @@
       "service_id": "54",
       "service_type": "App\\Models\\Server",
       "name": "Advanced - yearly - Mumbai",
-      "price": 196.90,
+      "price": 196.9,
       "period": "yearly",
       "valid_from": "2024-01-01T00:00:00Z",
       "valid_until": null
@@ -2369,8 +2387,8 @@
     {
       "id": "1",
       "subscription_id": "1",
-      "amount_due": 100.00,
-      "amount_paid": 0.00,
+      "amount_due": 100,
+      "amount_paid": 0,
       "due_date": "2024-06-15",
       "status": "pending"
     }
@@ -2511,7 +2529,8 @@
       "storage": 5120,
       "network_speed": 10,
       "link": "/server",
-      "linkText": "See Details"
+      "linkText": "See Details",
+      "id": "1c0d"
     },
     {
       "period": "monthly",
@@ -2521,17 +2540,19 @@
       "storage": 5120,
       "network_speed": 10,
       "link": "/server",
-      "linkText": "See Details"
+      "linkText": "See Details",
+      "id": "e72c"
     },
     {
       "period": "yearly",
-      "price": 50.50,
+      "price": 50.5,
       "cpu": 128,
       "ram": 512,
       "storage": 5120,
       "network_speed": 10,
       "link": "/server",
-      "linkText": "See Details"
+      "linkText": "See Details",
+      "id": "b4a5"
     }
   ]
 }

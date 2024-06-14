@@ -19,11 +19,15 @@ export class LoginComponent {
   onSubmit() {
     this.errorMessage = '';
 
-    this.userService.checkUserByEmail(this.email).subscribe(user => {
+    this.userService.checkUserByEmail(this.email).subscribe(users => {
+      const user = users[0];
+
       if (!user) {
         this.errorMessage = 'User does not exist';
+        this.toastr.error(this.errorMessage, 'Error');
       } else if (!this.userService.validatePassword(user, this.password)) {
         this.errorMessage = 'Incorrect password';
+        this.toastr.error(this.errorMessage, 'Error');
       } else {
         this.userService.login(user.email, this.password).subscribe(
           () => {
@@ -32,6 +36,7 @@ export class LoginComponent {
           },
           (error) => {
             this.errorMessage = error.message;
+            this.toastr.error(this.errorMessage, 'Error');
           }
         );
       }

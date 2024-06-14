@@ -9,6 +9,7 @@ import { ServiceComponentComponent } from './service-component/service-component
 import { AboutComponentComponent } from './about-component/about-component.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { ContactComponent } from './contact/contact.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,13 +19,14 @@ import { ContactComponent } from './contact/contact.component';
     ServiceComponentComponent,
     AboutComponentComponent,
     TestimonialComponent,
-    ContactComponent
+    ContactComponent,
   ],
   imports: [
     CommonModule,
     RouterModule,
     NgbModule,
-    NgbCarouselModule
+    NgbCarouselModule,
+    ReactiveFormsModule
   ],
   exports: [
     LocationDetailsComponent,
@@ -33,7 +35,8 @@ import { ContactComponent } from './contact/contact.component';
     ServiceComponentComponent,
     AboutComponentComponent,
     TestimonialComponent,
-    ContactComponent
+    ContactComponent,
+    ReactiveFormsModule
   ]
 })
 export class SharedModule { }

@@ -26,10 +26,8 @@ export class AppComponent implements OnInit {
     ).subscribe((event: NavigationEnd) => {
       this.shouldShowSlider = event.url === '/' || event.url === '/price';
       if (event.url !== '/') {
-        console.log(event.url)
         this.renderer.addClass(document.body, 'sub_page');
       } else {
-        console.log("here")
         this.renderer.removeClass(document.body, 'sub_page');
       }
     });

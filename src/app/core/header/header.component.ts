@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
 import { NavigationLink } from '../../interfaces/navigation-link';
 import { User } from '../../interfaces/user';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-header',
@@ -16,7 +17,7 @@ export class HeaderComponent implements OnInit {
   public isAuthenticated: boolean = false;
   public userName: string = 'User';
 
-  constructor(private userService: UserService, private router: Router) {}
+  constructor(private userService: UserService, private router: Router, private toastr: ToastrService) {}
 
   ngOnInit() {
     this.userService.user.subscribe(user => {
@@ -30,6 +31,7 @@ export class HeaderComponent implements OnInit {
 
   public logout() {
     this.userService.logout();
+    this.toastr.success('Logout successful', 'Success');
     this.router.navigate(['/login']);
   }
 }

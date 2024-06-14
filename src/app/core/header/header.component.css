@@ -2,3 +2,15 @@
   display: flex;
   justify-content: flex-end;
 }
+
+#user-dropdown{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1em;
+}
+
+button.dropdown-toggle {
+  color: #fff !important;
+  margin-left: 1em;
+}

@@ -8,6 +8,8 @@ import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,21 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     SharedModule,
     HttpClientModule,
     FontAwesomeModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      positionClass: 'toast-top-left',
+      preventDuplicates: true,
+      progressBar: true,
+      easeTime: 300,
+      easing: 'ease-in',
+      closeButton: true,
+      tapToDismiss: true,
+      extendedTimeOut: 1000,
+      enableHtml: true,
+      progressAnimation: 'increasing',
+      onActivateTick: true
+    })
   ],
   providers: [
     provideAnimationsAsync()

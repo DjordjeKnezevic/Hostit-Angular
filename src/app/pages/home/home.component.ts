@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../services/auth.service'
 
 @Component({
   selector: 'app-home',
@@ -9,9 +8,8 @@ import { AuthService } from '../../services/auth.service'
 export class HomeComponent implements OnInit {
   isAuthenticated = false;
 
-  constructor(private authService: AuthService) {}
+  constructor() {}
 
   ngOnInit(): void {
-    this.isAuthenticated = this.authService.isAuthenticated();
   }
 }

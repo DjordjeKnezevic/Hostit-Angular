@@ -8,8 +8,9 @@ import { ServiceComponent } from './service/service.component';
 import { RouterModule } from '@angular/router';
 import { AuthModule } from './auth/auth.module';
 import { RentServerComponent } from './rent-server/rent-server.component';
-import { NgbModule, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule, NgbCarouselModule, NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from '../shared/shared.module';
+import { ServersComponent } from './servers/servers.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SharedModule } from '../shared/shared.module';
     ContactComponent,
     PriceComponent,
     ServiceComponent,
-    RentServerComponent
+    RentServerComponent,
+    ServersComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +28,8 @@ import { SharedModule } from '../shared/shared.module';
     AuthModule,
     NgbModule,
     NgbCarouselModule,
-    SharedModule
+    SharedModule,
+    NgbDropdownModule
   ]
 })
 export class PagesModule { }

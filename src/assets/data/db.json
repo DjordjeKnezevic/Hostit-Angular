@@ -170,42 +170,42 @@
       "name": "US East",
       "network_zone": "Zone A",
       "city": "New York",
-      "image": "img/countries/us.jpg"
+      "image": "assets/img/countries/us.jpg"
     },
     {
       "id": "2",
       "name": "US West",
       "network_zone": "Zone B",
       "city": "San Francisco",
-      "image": "img/countries/us.jpg"
+      "image": "assets/img/countries/us.jpg"
     },
     {
       "id": "3",
       "name": "EU West",
       "network_zone": "Zone C",
       "city": "London",
-      "image": "img/countries/uk.jpg"
+      "image": "assets/img/countries/uk.jpg"
     },
     {
       "id": "4",
       "name": "EU Central",
       "network_zone": "Zone D",
       "city": "Frankfurt",
-      "image": "img/countries/germany.jpg"
+      "image": "assets/img/countries/germany.jpg"
     },
     {
       "id": "5",
       "name": "Asia East",
       "network_zone": "Zone E",
       "city": "Tokyo",
-      "image": "img/countries/japan.jpg"
+      "image": "assets/img/countries/japan.jpg"
     },
     {
       "id": "6",
       "name": "Asia South",
       "network_zone": "Zone F",
       "city": "Mumbai",
-      "image": "img/countries/india.jpg"
+      "image": "assets/img/countries/india.jpg"
     }
   ],
   "servers": [
@@ -570,1808 +570,368 @@
       "location_id": "6"
     }
   ],
-  "pricing": [
-    {
-      "id": "1",
-      "service_id": "1",
-      "service_type": "App\\Models\\Server",
-      "name": "Basic - hourly - New York",
-      "price": 0.01,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "2",
-      "service_id": "1",
-      "service_type": "App\\Models\\Server",
-      "name": "Basic - monthly - New York",
-      "price": 5.84,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "3",
-      "service_id": "1",
-      "service_type": "App\\Models\\Server",
-      "name": "Basic - yearly - New York",
-      "price": 56.16,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "4",
-      "service_id": "2",
-      "service_type": "App\\Models\\Server",
-      "name": "Starter - hourly - New York",
-      "price": 0.01,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "5",
-      "service_id": "2",
-      "service_type": "App\\Models\\Server",
-      "name": "Starter - monthly - New York",
-      "price": 5.84,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "6",
-      "service_id": "2",
-      "service_type": "App\\Models\\Server",
-      "name": "Starter - yearly - New York",
-      "price": 56.16,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "7",
-      "service_id": "3",
-      "service_type": "App\\Models\\Server",
-      "name": "Intermediate - hourly - New York",
-      "price": 0.02,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "8",
-      "service_id": "3",
-      "service_type": "App\\Models\\Server",
-      "name": "Intermediate - monthly - New York",
-      "price": 11.68,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "9",
-      "service_id": "3",
-      "service_type": "App\\Models\\Server",
-      "name": "Intermediate - yearly - New York",
-      "price": 112.32,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "10",
-      "service_id": "4",
-      "service_type": "App\\Models\\Server",
-      "name": "Advanced - hourly - New York",
-      "price": 0.04,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "11",
-      "service_id": "4",
-      "service_type": "App\\Models\\Server",
-      "name": "Advanced - monthly - New York",
-      "price": 23.36,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "12",
-      "service_id": "4",
-      "service_type": "App\\Models\\Server",
-      "name": "Advanced - yearly - New York",
-      "price": 224.64,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "13",
-      "service_id": "5",
-      "service_type": "App\\Models\\Server",
-      "name": "Pro - hourly - New York",
-      "price": 0.08,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "14",
-      "service_id": "5",
-      "service_type": "App\\Models\\Server",
-      "name": "Pro - monthly - New York",
-      "price": 46.72,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "15",
-      "service_id": "5",
-      "service_type": "App\\Models\\Server",
-      "name": "Pro - yearly - New York",
-      "price": 449.28,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "16",
-      "service_id": "6",
-      "service_type": "App\\Models\\Server",
-      "name": "Ultra - hourly - New York",
-      "price": 0.16,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "17",
-      "service_id": "6",
-      "service_type": "App\\Models\\Server",
-      "name": "Ultra - monthly - New York",
-      "price": 93.44,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "18",
-      "service_id": "6",
-      "service_type": "App\\Models\\Server",
-      "name": "Ultra - yearly - New York",
-      "price": 898.56,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "19",
-      "service_id": "7",
-      "service_type": "App\\Models\\Server",
-      "name": "Max - hourly - New York",
-      "price": 0.32,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "20",
-      "service_id": "7",
-      "service_type": "App\\Models\\Server",
-      "name": "Max - monthly - New York",
-      "price": 186.88,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "21",
-      "service_id": "7",
-      "service_type": "App\\Models\\Server",
-      "name": "Max - yearly - New York",
-      "price": 1797.12,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "22",
-      "service_id": "8",
-      "service_type": "App\\Models\\Server",
-      "name": "Mega - hourly - New York",
-      "price": 0.48,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "23",
-      "service_id": "8",
-      "service_type": "App\\Models\\Server",
-      "name": "Mega - monthly - New York",
-      "price": 280.32,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "24",
-      "service_id": "8",
-      "service_type": "App\\Models\\Server",
-      "name": "Mega - yearly - New York",
-      "price": 2695.68,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "25",
-      "service_id": "9",
-      "service_type": "App\\Models\\Server",
-      "name": "Giga - hourly - New York",
-      "price": 0.64,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "26",
-      "service_id": "9",
-      "service_type": "App\\Models\\Server",
-      "name": "Giga - monthly - New York",
-      "price": 373.76,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "27",
-      "service_id": "9",
-      "service_type": "App\\Models\\Server",
-      "name": "Giga - yearly - New York",
-      "price": 3594.24,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "28",
-      "service_id": "10",
-      "service_type": "App\\Models\\Server",
-      "name": "Tera - hourly - New York",
-      "price": 0.96,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "29",
-      "service_id": "10",
-      "service_type": "App\\Models\\Server",
-      "name": "Tera - monthly - New York",
-      "price": 560.64,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "30",
-      "service_id": "10",
-      "service_type": "App\\Models\\Server",
-      "name": "Tera - yearly - New York",
-      "price": 5391.36,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "31",
-      "service_id": "11",
-      "service_type": "App\\Models\\Server",
-      "name": "Basic - hourly - San Francisco",
-      "price": 0.01,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "32",
-      "service_id": "11",
-      "service_type": "App\\Models\\Server",
-      "name": "Basic - monthly - San Francisco",
-      "price": 6.13,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "33",
-      "service_id": "11",
-      "service_type": "App\\Models\\Server",
-      "name": "Basic - yearly - San Francisco",
-      "price": 58.82,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "34",
-      "service_id": "12",
-      "service_type": "App\\Models\\Server",
-      "name": "Starter - hourly - San Francisco",
-      "price": 0.01,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "35",
-      "service_id": "12",
-      "service_type": "App\\Models\\Server",
-      "name": "Starter - monthly - San Francisco",
-      "price": 6.13,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "36",
-      "service_id": "12",
-      "service_type": "App\\Models\\Server",
-      "name": "Starter - yearly - San Francisco",
-      "price": 58.82,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "37",
-      "service_id": "13",
-      "service_type": "App\\Models\\Server",
-      "name": "Intermediate - hourly - San Francisco",
-      "price": 0.02,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "38",
-      "service_id": "13",
-      "service_type": "App\\Models\\Server",
-      "name": "Intermediate - monthly - San Francisco",
-      "price": 12.26,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "39",
-      "service_id": "13",
-      "service_type": "App\\Models\\Server",
-      "name": "Intermediate - yearly - San Francisco",
-      "price": 117.63,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "40",
-      "service_id": "14",
-      "service_type": "App\\Models\\Server",
-      "name": "Advanced - hourly - San Francisco",
-      "price": 0.04,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "41",
-      "service_id": "14",
-      "service_type": "App\\Models\\Server",
-      "name": "Advanced - monthly - San Francisco",
-      "price": 24.51,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "42",
-      "service_id": "14",
-      "service_type": "App\\Models\\Server",
-      "name": "Advanced - yearly - San Francisco",
-      "price": 235.26,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "43",
-      "service_id": "15",
-      "service_type": "App\\Models\\Server",
-      "name": "Pro - hourly - San Francisco",
-      "price": 0.08,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "44",
-      "service_id": "15",
-      "service_type": "App\\Models\\Server",
-      "name": "Pro - monthly - San Francisco",
-      "price": 49.01,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "45",
-      "service_id": "15",
-      "service_type": "App\\Models\\Server",
-      "name": "Pro - yearly - San Francisco",
-      "price": 470.52,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "46",
-      "service_id": "16",
-      "service_type": "App\\Models\\Server",
-      "name": "Ultra - hourly - San Francisco",
-      "price": 0.16,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "47",
-      "service_id": "16",
-      "service_type": "App\\Models\\Server",
-      "name": "Ultra - monthly - San Francisco",
-      "price": 98.02,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "48",
-      "service_id": "16",
-      "service_type": "App\\Models\\Server",
-      "name": "Ultra - yearly - San Francisco",
-      "price": 941.04,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "49",
-      "service_id": "17",
-      "service_type": "App\\Models\\Server",
-      "name": "Max - hourly - San Francisco",
-      "price": 0.32,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "50",
-      "service_id": "17",
-      "service_type": "App\\Models\\Server",
-      "name": "Max - monthly - San Francisco",
-      "price": 196.03,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "51",
-      "service_id": "17",
-      "service_type": "App\\Models\\Server",
-      "name": "Max - yearly - San Francisco",
-      "price": 1882.07,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "52",
-      "service_id": "18",
-      "service_type": "App\\Models\\Server",
-      "name": "Mega - hourly - San Francisco",
-      "price": 0.48,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "53",
-      "service_id": "18",
-      "service_type": "App\\Models\\Server",
-      "name": "Mega - monthly - San Francisco",
-      "price": 294.05,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "54",
-      "service_id": "18",
-      "service_type": "App\\Models\\Server",
-      "name": "Mega - yearly - San Francisco",
-      "price": 2823.11,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "55",
-      "service_id": "19",
-      "service_type": "App\\Models\\Server",
-      "name": "Giga - hourly - San Francisco",
-      "price": 0.64,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "56",
-      "service_id": "19",
-      "service_type": "App\\Models\\Server",
-      "name": "Giga - monthly - San Francisco",
-      "price": 392.07,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "57",
-      "service_id": "19",
-      "service_type": "App\\Models\\Server",
-      "name": "Giga - yearly - San Francisco",
-      "price": 3764.14,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "58",
-      "service_id": "20",
-      "service_type": "App\\Models\\Server",
-      "name": "Tera - hourly - San Francisco",
-      "price": 0.96,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "59",
-      "service_id": "20",
-      "service_type": "App\\Models\\Server",
-      "name": "Tera - monthly - San Francisco",
-      "price": 588.1,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "60",
-      "service_id": "20",
-      "service_type": "App\\Models\\Server",
-      "name": "Tera - yearly - San Francisco",
-      "price": 5646.21,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "61",
-      "service_id": "21",
-      "service_type": "App\\Models\\Server",
-      "name": "Basic - hourly - London",
-      "price": 0.01,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "62",
-      "service_id": "21",
-      "service_type": "App\\Models\\Server",
-      "name": "Basic - monthly - London",
-      "price": 6.42,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "63",
-      "service_id": "21",
-      "service_type": "App\\Models\\Server",
-      "name": "Basic - yearly - London",
-      "price": 61.49,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "64",
-      "service_id": "22",
-      "service_type": "App\\Models\\Server",
-      "name": "Starter - hourly - London",
-      "price": 0.01,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "65",
-      "service_id": "22",
-      "service_type": "App\\Models\\Server",
-      "name": "Starter - monthly - London",
-      "price": 6.42,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "66",
-      "service_id": "22",
-      "service_type": "App\\Models\\Server",
-      "name": "Starter - yearly - London",
-      "price": 61.49,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "67",
-      "service_id": "23",
-      "service_type": "App\\Models\\Server",
-      "name": "Intermediate - hourly - London",
-      "price": 0.02,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "68",
-      "service_id": "23",
-      "service_type": "App\\Models\\Server",
-      "name": "Intermediate - monthly - London",
-      "price": 12.84,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "69",
-      "service_id": "23",
-      "service_type": "App\\Models\\Server",
-      "name": "Intermediate - yearly - London",
-      "price": 122.98,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "70",
-      "service_id": "24",
-      "service_type": "App\\Models\\Server",
-      "name": "Advanced - hourly - London",
-      "price": 0.04,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "71",
-      "service_id": "24",
-      "service_type": "App\\Models\\Server",
-      "name": "Advanced - monthly - London",
-      "price": 25.68,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "72",
-      "service_id": "24",
-      "service_type": "App\\Models\\Server",
-      "name": "Advanced - yearly - London",
-      "price": 245.96,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "73",
-      "service_id": "25",
-      "service_type": "App\\Models\\Server",
-      "name": "Pro - hourly - London",
-      "price": 0.08,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "74",
-      "service_id": "25",
-      "service_type": "App\\Models\\Server",
-      "name": "Pro - monthly - London",
-      "price": 51.36,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "75",
-      "service_id": "25",
-      "service_type": "App\\Models\\Server",
-      "name": "Pro - yearly - London",
-      "price": 491.92,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "76",
-      "service_id": "26",
-      "service_type": "App\\Models\\Server",
-      "name": "Ultra - hourly - London",
-      "price": 0.16,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "77",
-      "service_id": "26",
-      "service_type": "App\\Models\\Server",
-      "name": "Ultra - monthly - London",
-      "price": 102.72,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "78",
-      "service_id": "26",
-      "service_type": "App\\Models\\Server",
-      "name": "Ultra - yearly - London",
-      "price": 983.84,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "79",
-      "service_id": "27",
-      "service_type": "App\\Models\\Server",
-      "name": "Max - hourly - London",
-      "price": 0.32,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "80",
-      "service_id": "27",
-      "service_type": "App\\Models\\Server",
-      "name": "Max - monthly - London",
-      "price": 205.44,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "81",
-      "service_id": "27",
-      "service_type": "App\\Models\\Server",
-      "name": "Max - yearly - London",
-      "price": 1967.68,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "82",
-      "service_id": "28",
-      "service_type": "App\\Models\\Server",
-      "name": "Mega - hourly - London",
-      "price": 0.48,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "83",
-      "service_id": "28",
-      "service_type": "App\\Models\\Server",
-      "name": "Mega - monthly - London",
-      "price": 308.16,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "84",
-      "service_id": "28",
-      "service_type": "App\\Models\\Server",
-      "name": "Mega - yearly - London",
-      "price": 2951.52,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "85",
-      "service_id": "29",
-      "service_type": "App\\Models\\Server",
-      "name": "Giga - hourly - London",
-      "price": 0.64,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "86",
-      "service_id": "29",
-      "service_type": "App\\Models\\Server",
-      "name": "Giga - monthly - London",
-      "price": 410.88,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "87",
-      "service_id": "29",
-      "service_type": "App\\Models\\Server",
-      "name": "Giga - yearly - London",
-      "price": 3935.36,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "88",
-      "service_id": "30",
-      "service_type": "App\\Models\\Server",
-      "name": "Tera - hourly - London",
-      "price": 0.96,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "89",
-      "service_id": "30",
-      "service_type": "App\\Models\\Server",
-      "name": "Tera - monthly - London",
-      "price": 615.84,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "90",
-      "service_id": "30",
-      "service_type": "App\\Models\\Server",
-      "name": "Tera - yearly - London",
-      "price": 5902.96,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "91",
-      "service_id": "31",
-      "service_type": "App\\Models\\Server",
-      "name": "Basic - hourly - Frankfurt",
-      "price": 0.01,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "92",
-      "service_id": "31",
-      "service_type": "App\\Models\\Server",
-      "name": "Basic - monthly - Frankfurt",
-      "price": 6.13,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "93",
-      "service_id": "31",
-      "service_type": "App\\Models\\Server",
-      "name": "Basic - yearly - Frankfurt",
-      "price": 58.82,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "94",
-      "service_id": "32",
-      "service_type": "App\\Models\\Server",
-      "name": "Starter - hourly - Frankfurt",
-      "price": 0.01,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "95",
-      "service_id": "32",
-      "service_type": "App\\Models\\Server",
-      "name": "Starter - monthly - Frankfurt",
-      "price": 6.13,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "96",
-      "service_id": "32",
-      "service_type": "App\\Models\\Server",
-      "name": "Starter - yearly - Frankfurt",
-      "price": 58.82,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "97",
-      "service_id": "33",
-      "service_type": "App\\Models\\Server",
-      "name": "Intermediate - hourly - Frankfurt",
-      "price": 0.02,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "98",
-      "service_id": "33",
-      "service_type": "App\\Models\\Server",
-      "name": "Intermediate - monthly - Frankfurt",
-      "price": 12.26,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "99",
-      "service_id": "33",
-      "service_type": "App\\Models\\Server",
-      "name": "Intermediate - yearly - Frankfurt",
-      "price": 117.63,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "100",
-      "service_id": "34",
-      "service_type": "App\\Models\\Server",
-      "name": "Advanced - hourly - Frankfurt",
-      "price": 0.04,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "101",
-      "service_id": "34",
-      "service_type": "App\\Models\\Server",
-      "name": "Advanced - monthly - Frankfurt",
-      "price": 24.51,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "102",
-      "service_id": "34",
-      "service_type": "App\\Models\\Server",
-      "name": "Advanced - yearly - Frankfurt",
-      "price": 235.26,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "103",
-      "service_id": "35",
-      "service_type": "App\\Models\\Server",
-      "name": "Pro - hourly - Frankfurt",
-      "price": 0.08,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "104",
-      "service_id": "35",
-      "service_type": "App\\Models\\Server",
-      "name": "Pro - monthly - Frankfurt",
-      "price": 49.01,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "105",
-      "service_id": "35",
-      "service_type": "App\\Models\\Server",
-      "name": "Pro - yearly - Frankfurt",
-      "price": 470.52,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "106",
-      "service_id": "36",
-      "service_type": "App\\Models\\Server",
-      "name": "Ultra - hourly - Frankfurt",
-      "price": 0.16,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "107",
-      "service_id": "36",
-      "service_type": "App\\Models\\Server",
-      "name": "Ultra - monthly - Frankfurt",
-      "price": 98.02,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "108",
-      "service_id": "36",
-      "service_type": "App\\Models\\Server",
-      "name": "Ultra - yearly - Frankfurt",
-      "price": 941.04,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "109",
-      "service_id": "37",
-      "service_type": "App\\Models\\Server",
-      "name": "Max - hourly - Frankfurt",
-      "price": 0.32,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "110",
-      "service_id": "37",
-      "service_type": "App\\Models\\Server",
-      "name": "Max - monthly - Frankfurt",
-      "price": 196.03,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "111",
-      "service_id": "37",
-      "service_type": "App\\Models\\Server",
-      "name": "Max - yearly - Frankfurt",
-      "price": 1882.07,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "112",
-      "service_id": "38",
-      "service_type": "App\\Models\\Server",
-      "name": "Mega - hourly - Frankfurt",
-      "price": 0.48,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "113",
-      "service_id": "38",
-      "service_type": "App\\Models\\Server",
-      "name": "Mega - monthly - Frankfurt",
-      "price": 294.05,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "114",
-      "service_id": "38",
-      "service_type": "App\\Models\\Server",
-      "name": "Mega - yearly - Frankfurt",
-      "price": 2823.11,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "115",
-      "service_id": "39",
-      "service_type": "App\\Models\\Server",
-      "name": "Giga - hourly - Frankfurt",
-      "price": 0.64,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "116",
-      "service_id": "39",
-      "service_type": "App\\Models\\Server",
-      "name": "Giga - monthly - Frankfurt",
-      "price": 392.07,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "117",
-      "service_id": "39",
-      "service_type": "App\\Models\\Server",
-      "name": "Giga - yearly - Frankfurt",
-      "price": 3764.14,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "118",
-      "service_id": "40",
-      "service_type": "App\\Models\\Server",
-      "name": "Tera - hourly - Frankfurt",
-      "price": 0.96,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "119",
-      "service_id": "40",
-      "service_type": "App\\Models\\Server",
-      "name": "Tera - monthly - Frankfurt",
-      "price": 588.1,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "120",
-      "service_id": "40",
-      "service_type": "App\\Models\\Server",
-      "name": "Tera - yearly - Frankfurt",
-      "price": 5646.21,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "121",
-      "service_id": "41",
-      "service_type": "App\\Models\\Server",
-      "name": "Basic - hourly - Tokyo",
-      "price": 0.01,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "122",
-      "service_id": "41",
-      "service_type": "App\\Models\\Server",
-      "name": "Basic - monthly - Tokyo",
-      "price": 5.55,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "123",
-      "service_id": "41",
-      "service_type": "App\\Models\\Server",
-      "name": "Basic - yearly - Tokyo",
-      "price": 53.28,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "124",
-      "service_id": "42",
-      "service_type": "App\\Models\\Server",
-      "name": "Starter - hourly - Tokyo",
-      "price": 0.01,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "125",
-      "service_id": "42",
-      "service_type": "App\\Models\\Server",
-      "name": "Starter - monthly - Tokyo",
-      "price": 5.55,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "126",
-      "service_id": "42",
-      "service_type": "App\\Models\\Server",
-      "name": "Starter - yearly - Tokyo",
-      "price": 53.28,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "127",
-      "service_id": "43",
-      "service_type": "App\\Models\\Server",
-      "name": "Intermediate - hourly - Tokyo",
-      "price": 0.02,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "128",
-      "service_id": "43",
-      "service_type": "App\\Models\\Server",
-      "name": "Intermediate - monthly - Tokyo",
-      "price": 11.09,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "129",
-      "service_id": "43",
-      "service_type": "App\\Models\\Server",
-      "name": "Intermediate - yearly - Tokyo",
-      "price": 106.56,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "130",
-      "service_id": "44",
-      "service_type": "App\\Models\\Server",
-      "name": "Advanced - hourly - Tokyo",
-      "price": 0.04,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "131",
-      "service_id": "44",
-      "service_type": "App\\Models\\Server",
-      "name": "Advanced - monthly - Tokyo",
-      "price": 22.18,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "132",
-      "service_id": "44",
-      "service_type": "App\\Models\\Server",
-      "name": "Advanced - yearly - Tokyo",
-      "price": 213.12,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "133",
-      "service_id": "45",
-      "service_type": "App\\Models\\Server",
-      "name": "Pro - hourly - Tokyo",
-      "price": 0.08,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "134",
-      "service_id": "45",
-      "service_type": "App\\Models\\Server",
-      "name": "Pro - monthly - Tokyo",
-      "price": 44.37,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "135",
-      "service_id": "45",
-      "service_type": "App\\Models\\Server",
-      "name": "Pro - yearly - Tokyo",
-      "price": 426.24,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "136",
-      "service_id": "46",
-      "service_type": "App\\Models\\Server",
-      "name": "Ultra - hourly - Tokyo",
-      "price": 0.16,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "137",
-      "service_id": "46",
-      "service_type": "App\\Models\\Server",
-      "name": "Ultra - monthly - Tokyo",
-      "price": 88.73,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "138",
-      "service_id": "46",
-      "service_type": "App\\Models\\Server",
-      "name": "Ultra - yearly - Tokyo",
-      "price": 852.48,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "139",
-      "service_id": "47",
-      "service_type": "App\\Models\\Server",
-      "name": "Max - hourly - Tokyo",
-      "price": 0.32,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "140",
-      "service_id": "47",
-      "service_type": "App\\Models\\Server",
-      "name": "Max - monthly - Tokyo",
-      "price": 177.47,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "141",
-      "service_id": "47",
-      "service_type": "App\\Models\\Server",
-      "name": "Max - yearly - Tokyo",
-      "price": 1704.96,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "142",
-      "service_id": "48",
-      "service_type": "App\\Models\\Server",
-      "name": "Mega - hourly - Tokyo",
-      "price": 0.48,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "143",
-      "service_id": "48",
-      "service_type": "App\\Models\\Server",
-      "name": "Mega - monthly - Tokyo",
-      "price": 266.2,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "144",
-      "service_id": "48",
-      "service_type": "App\\Models\\Server",
-      "name": "Mega - yearly - Tokyo",
-      "price": 2557.44,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "145",
-      "service_id": "49",
-      "service_type": "App\\Models\\Server",
-      "name": "Giga - hourly - Tokyo",
-      "price": 0.64,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "146",
-      "service_id": "49",
-      "service_type": "App\\Models\\Server",
-      "name": "Giga - monthly - Tokyo",
-      "price": 354.94,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "147",
-      "service_id": "49",
-      "service_type": "App\\Models\\Server",
-      "name": "Giga - yearly - Tokyo",
-      "price": 3411.36,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "148",
-      "service_id": "50",
-      "service_type": "App\\Models\\Server",
-      "name": "Tera - hourly - Tokyo",
-      "price": 0.96,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "149",
-      "service_id": "50",
-      "service_type": "App\\Models\\Server",
-      "name": "Tera - monthly - Tokyo",
-      "price": 532.4,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "150",
-      "service_id": "50",
-      "service_type": "App\\Models\\Server",
-      "name": "Tera - yearly - Tokyo",
-      "price": 5117.04,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "151",
-      "service_id": "51",
-      "service_type": "App\\Models\\Server",
-      "name": "Basic - hourly - Mumbai",
-      "price": 0.01,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "152",
-      "service_id": "51",
-      "service_type": "App\\Models\\Server",
-      "name": "Basic - monthly - Mumbai",
-      "price": 5.13,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "153",
-      "service_id": "51",
-      "service_type": "App\\Models\\Server",
-      "name": "Basic - yearly - Mumbai",
-      "price": 49.22,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "154",
-      "service_id": "52",
-      "service_type": "App\\Models\\Server",
-      "name": "Starter - hourly - Mumbai",
-      "price": 0.01,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "155",
-      "service_id": "52",
-      "service_type": "App\\Models\\Server",
-      "name": "Starter - monthly - Mumbai",
-      "price": 5.13,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "156",
-      "service_id": "52",
-      "service_type": "App\\Models\\Server",
-      "name": "Starter - yearly - Mumbai",
-      "price": 49.22,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "157",
-      "service_id": "53",
-      "service_type": "App\\Models\\Server",
-      "name": "Intermediate - hourly - Mumbai",
-      "price": 0.02,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "158",
-      "service_id": "53",
-      "service_type": "App\\Models\\Server",
-      "name": "Intermediate - monthly - Mumbai",
-      "price": 10.26,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "159",
-      "service_id": "53",
-      "service_type": "App\\Models\\Server",
-      "name": "Intermediate - yearly - Mumbai",
-      "price": 98.45,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "160",
-      "service_id": "54",
-      "service_type": "App\\Models\\Server",
-      "name": "Advanced - hourly - Mumbai",
-      "price": 0.04,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "161",
-      "service_id": "54",
-      "service_type": "App\\Models\\Server",
-      "name": "Advanced - monthly - Mumbai",
-      "price": 20.51,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "162",
-      "service_id": "54",
-      "service_type": "App\\Models\\Server",
-      "name": "Advanced - yearly - Mumbai",
-      "price": 196.9,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "163",
-      "service_id": "55",
-      "service_type": "App\\Models\\Server",
-      "name": "Pro - hourly - Mumbai",
-      "price": 0.08,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "164",
-      "service_id": "55",
-      "service_type": "App\\Models\\Server",
-      "name": "Pro - monthly - Mumbai",
-      "price": 41.01,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "165",
-      "service_id": "55",
-      "service_type": "App\\Models\\Server",
-      "name": "Pro - yearly - Mumbai",
-      "price": 393.79,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "166",
-      "service_id": "56",
-      "service_type": "App\\Models\\Server",
-      "name": "Ultra - hourly - Mumbai",
-      "price": 0.16,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "167",
-      "service_id": "56",
-      "service_type": "App\\Models\\Server",
-      "name": "Ultra - monthly - Mumbai",
-      "price": 82.03,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "168",
-      "service_id": "56",
-      "service_type": "App\\Models\\Server",
-      "name": "Ultra - yearly - Mumbai",
-      "price": 787.58,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "169",
-      "service_id": "57",
-      "service_type": "App\\Models\\Server",
-      "name": "Max - hourly - Mumbai",
-      "price": 0.32,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "170",
-      "service_id": "57",
-      "service_type": "App\\Models\\Server",
-      "name": "Max - monthly - Mumbai",
-      "price": 164.06,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "171",
-      "service_id": "57",
-      "service_type": "App\\Models\\Server",
-      "name": "Max - yearly - Mumbai",
-      "price": 1575.15,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "172",
-      "service_id": "58",
-      "service_type": "App\\Models\\Server",
-      "name": "Mega - hourly - Mumbai",
-      "price": 0.48,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "173",
-      "service_id": "58",
-      "service_type": "App\\Models\\Server",
-      "name": "Mega - monthly - Mumbai",
-      "price": 246.09,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "174",
-      "service_id": "58",
-      "service_type": "App\\Models\\Server",
-      "name": "Mega - yearly - Mumbai",
-      "price": 2362.73,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "175",
-      "service_id": "59",
-      "service_type": "App\\Models\\Server",
-      "name": "Giga - hourly - Mumbai",
-      "price": 0.64,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "176",
-      "service_id": "59",
-      "service_type": "App\\Models\\Server",
-      "name": "Giga - monthly - Mumbai",
-      "price": 328.12,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "177",
-      "service_id": "59",
-      "service_type": "App\\Models\\Server",
-      "name": "Giga - yearly - Mumbai",
-      "price": 3150.31,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "178",
-      "service_id": "60",
-      "service_type": "App\\Models\\Server",
-      "name": "Tera - hourly - Mumbai",
-      "price": 0.96,
-      "period": "hourly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "179",
-      "service_id": "60",
-      "service_type": "App\\Models\\Server",
-      "name": "Tera - monthly - Mumbai",
-      "price": 492.18,
-      "period": "monthly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    },
-    {
-      "id": "180",
-      "service_id": "60",
-      "service_type": "App\\Models\\Server",
-      "name": "Tera - yearly - Mumbai",
-      "price": 4725.46,
-      "period": "yearly",
-      "valid_from": "2024-01-01T00:00:00Z",
-      "valid_until": null
-    }
-  ],
+    "server_options": [
+      {
+        "id": "1",
+        "name": "US East",
+        "network_zone": "Zone A",
+        "city": "New York",
+        "image": "assets/img/countries/us.jpg",
+        "servers": [
+          {
+            "id": "1",
+            "name": "New York - Basic",
+            "serverType": {
+              "id": "2",
+              "name": "Basic",
+              "cpu_cores": 2,
+              "ram": 4,
+              "storage": 40,
+              "network_speed": 1
+            },
+            "pricing": [
+              { "id": "1", "period": "hourly", "price": 0.01 },
+              { "id": "2", "period": "monthly", "price": 5.84 },
+              { "id": "3", "period": "yearly", "price": 56.16 }
+            ]
+          },
+          {
+            "id": "2",
+            "name": "New York - Starter",
+            "serverType": {
+              "id": "1",
+              "name": "Starter",
+              "cpu_cores": 1,
+              "ram": 2,
+              "storage": 20,
+              "network_speed": 1
+            },
+            "pricing": [
+              { "id": "4", "period": "hourly", "price": 0.01 },
+              { "id": "5", "period": "monthly", "price": 5.84 },
+              { "id": "6", "period": "yearly", "price": 56.16 }
+            ]
+          },
+          {
+            "id": "3",
+            "name": "New York - Intermediate",
+            "serverType": {
+              "id": "3",
+              "name": "Intermediate",
+              "cpu_cores": 4,
+              "ram": 8,
+              "storage": 80,
+              "network_speed": 2
+            },
+            "pricing": [
+              { "id": "7", "period": "hourly", "price": 0.02 },
+              { "id": "8", "period": "monthly", "price": 11.68 },
+              { "id": "9", "period": "yearly", "price": 112.32 }
+            ]
+          },
+          {
+            "id": "4",
+            "name": "New York - Advanced",
+            "serverType": {
+              "id": "4",
+              "name": "Advanced",
+              "cpu_cores": 8,
+              "ram": 16,
+              "storage": 160,
+              "network_speed": 2
+            },
+            "pricing": [
+              { "id": "10", "period": "hourly", "price": 0.04 },
+              { "id": "11", "period": "monthly", "price": 23.36 },
+              { "id": "12", "period": "yearly", "price": 224.64 }
+            ]
+          },
+          {
+            "id": "5",
+            "name": "New York - Pro",
+            "serverType": {
+              "id": "5",
+              "name": "Pro",
+              "cpu_cores": 16,
+              "ram": 32,
+              "storage": 320,
+              "network_speed": 5
+            },
+            "pricing": [
+              { "id": "13", "period": "hourly", "price": 0.08 },
+              { "id": "14", "period": "monthly", "price": 46.72 },
+              { "id": "15", "period": "yearly", "price": 448.64 }
+            ]
+          },
+          {
+            "id": "6",
+            "name": "New York - Ultra",
+            "serverType": {
+              "id": "6",
+              "name": "Ultra",
+              "cpu_cores": 32,
+              "ram": 64,
+              "storage": 640,
+              "network_speed": 5
+            },
+            "pricing": [
+              { "id": "16", "period": "hourly", "price": 0.16 },
+              { "id": "17", "period": "monthly", "price": 93.44 },
+              { "id": "18", "period": "yearly", "price": 897.28 }
+            ]
+          },
+          {
+            "id": "7",
+            "name": "New York - Mega",
+            "serverType": {
+              "id": "7",
+              "name": "Mega",
+              "cpu_cores": 48,
+              "ram": 128,
+              "storage": 1280,
+              "network_speed": 10
+            },
+            "pricing": [
+              { "id": "19", "period": "hourly", "price": 0.24 },
+              { "id": "20", "period": "monthly", "price": 140.16 },
+              { "id": "21", "period": "yearly", "price": 1345.92 }
+            ]
+          },
+          {
+            "id": "8",
+            "name": "New York - Giga",
+            "serverType": {
+              "id": "8",
+              "name": "Giga",
+              "cpu_cores": 64,
+              "ram": 256,
+              "storage": 2560,
+              "network_speed": 10
+            },
+            "pricing": [
+              { "id": "22", "period": "hourly", "price": 0.32 },
+              { "id": "23", "period": "monthly", "price": 186.88 },
+              { "id": "24", "period": "yearly", "price": 1794.56 }
+            ]
+          },
+          {
+            "id": "9",
+            "name": "New York - Tera",
+            "serverType": {
+              "id": "9",
+              "name": "Tera",
+              "cpu_cores": 96,
+              "ram": 384,
+              "storage": 3840,
+              "network_speed": 10
+            },
+            "pricing": [
+              { "id": "25", "period": "hourly", "price": 0.48 },
+              { "id": "26", "period": "monthly", "price": 280.32 },
+              { "id": "27", "period": "yearly", "price": 2691.84 }
+            ]
+          },
+          {
+            "id": "10",
+            "name": "New York - Max",
+            "serverType": {
+              "id": "10",
+              "name": "Max",
+              "cpu_cores": 128,
+              "ram": 512,
+              "storage": 5120,
+              "network_speed": 10
+            },
+            "pricing": [
+              { "id": "28", "period": "hourly", "price": 0.64 },
+              { "id": "29", "period": "monthly", "price": 373.76 },
+              { "id": "30", "period": "yearly", "price": 3588.48 }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "name": "US West",
+        "network_zone": "Zone B",
+        "city": "San Francisco",
+        "image": "assets/img/countries/us.jpg",
+        "servers": [
+          {
+            "id": "11",
+            "name": "San Francisco - Basic",
+            "serverType": {
+              "id": "2",
+              "name": "Basic",
+              "cpu_cores": 2,
+              "ram": 4,
+              "storage": 40,
+              "network_speed": 1
+            },
+            "pricing": [
+              { "id": "31", "period": "hourly", "price": 0.01 },
+              { "id": "32", "period": "monthly", "price": 5.84 },
+              { "id": "33", "period": "yearly", "price": 56.16 }
+            ]
+          },
+          {
+            "id": "12",
+            "name": "San Francisco - Starter",
+            "serverType": {
+              "id": "1",
+              "name": "Starter",
+              "cpu_cores": 1,
+              "ram": 2,
+              "storage": 20,
+              "network_speed": 1
+            },
+            "pricing": [
+              { "id": "34", "period": "hourly", "price": 0.01 },
+              { "id": "35", "period": "monthly", "price": 5.84 },
+              { "id": "36", "period": "yearly", "price": 56.16 }
+            ]
+          },
+          {
+            "id": "13",
+            "name": "San Francisco - Intermediate",
+            "serverType": {
+              "id": "3",
+              "name": "Intermediate",
+              "cpu_cores": 4,
+              "ram": 8,
+              "storage": 80,
+              "network_speed": 2
+            },
+            "pricing": [
+              { "id": "37", "period": "hourly", "price": 0.02 },
+              { "id": "38", "period": "monthly", "price": 11.68 },
+              { "id": "39", "period": "yearly", "price": 112.32 }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "name": "EU West",
+        "network_zone": "Zone C",
+        "city": "London",
+        "image": "assets/img/countries/uk.jpg",
+        "servers": [
+          {
+            "id": "14",
+            "name": "London - Basic",
+            "serverType": {
+              "id": "2",
+              "name": "Basic",
+              "cpu_cores": 2,
+              "ram": 4,
+              "storage": 40,
+              "network_speed": 1
+            },
+            "pricing": [
+              { "id": "40", "period": "hourly", "price": 0.011 },
+              { "id": "41", "period": "monthly", "price": 6.16 },
+              { "id": "42", "period": "yearly", "price": 59.12 }
+            ]
+          },
+          {
+            "id": "15",
+            "name": "London - Starter",
+            "serverType": {
+              "id": "1",
+              "name": "Starter",
+              "cpu_cores": 1,
+              "ram": 2,
+              "storage": 20,
+              "network_speed": 1
+            },
+            "pricing": [
+              { "id": "43", "period": "hourly", "price": 0.011 },
+              { "id": "44", "period": "monthly", "price": 6.16 },
+              { "id": "45", "period": "yearly", "price": 59.12 }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "name": "EU Central",
+        "network_zone": "Zone D",
+        "city": "Frankfurt",
+        "image": "assets/img/countries/germany.jpg",
+        "servers": [
+          {
+            "id": "16",
+            "name": "Frankfurt - Basic",
+            "serverType": {
+              "id": "2",
+              "name": "Basic",
+              "cpu_cores": 2,
+              "ram": 4,
+              "storage": 40,
+              "network_speed": 1
+            },
+            "pricing": [
+              { "id": "46", "period": "hourly", "price": 0.011 },
+              { "id": "47", "period": "monthly", "price": 6.16 },
+              { "id": "48", "period": "yearly", "price": 59.12 }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "name": "Asia East",
+        "network_zone": "Zone E",
+        "city": "Tokyo",
+        "image": "assets/img/countries/japan.jpg",
+        "servers": [
+          {
+            "id": "17",
+            "name": "Tokyo - Basic",
+            "serverType": {
+              "id": "2",
+              "name": "Basic",
+              "cpu_cores": 2,
+              "ram": 4,
+              "storage": 40,
+              "network_speed": 1
+            },
+            "pricing": [
+              { "id": "49", "period": "hourly", "price": 0.0095 },
+              { "id": "50", "period": "monthly", "price": 5.55 },
+              { "id": "51", "period": "yearly", "price": 53.36 }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "name": "Asia South",
+        "network_zone": "Zone F",
+        "city": "Mumbai",
+        "image": "assets/img/countries/india.jpg",
+        "servers": [
+          {
+            "id": "18",
+            "name": "Mumbai - Basic",
+            "serverType": {
+              "id": "2",
+              "name": "Basic",
+              "cpu_cores": 2,
+              "ram": 4,
+              "storage": 40,
+              "network_speed": 1
+            },
+            "pricing": [
+              { "id": "52", "period": "hourly", "price": 0.009 },
+              { "id": "53", "period": "monthly", "price": 5.26 },
+              { "id": "54", "period": "yearly", "price": 50.54 }
+            ]
+          }
+        ]
+      }
+    ],
   "subscriptions": [
     {
       "id": "1",
@@ -2501,7 +1061,7 @@
     {
       "id": "3",
       "name": "Servers",
-      "route": "server",
+      "route": "servers",
       "icon": "/assets/img/nav-bullet.png",
       "is_navbar": true
     },
@@ -2528,7 +1088,7 @@
       "ram": 512,
       "storage": 5120,
       "network_speed": 10,
-      "link": "/server",
+      "link": "/servers",
       "linkText": "See Details",
       "id": "1c0d"
     },
@@ -2539,7 +1099,7 @@
       "ram": 512,
       "storage": 5120,
       "network_speed": 10,
-      "link": "/server",
+      "link": "/servers",
       "linkText": "See Details",
       "id": "e72c"
     },
@@ -2550,7 +1110,7 @@
       "ram": 512,
       "storage": 5120,
       "network_speed": 10,
-      "link": "/server",
+      "link": "/servers",
       "linkText": "See Details",
       "id": "b4a5"
     }

@@ -1,0 +1,49 @@
+<div class="container">
+  <h2 class="text-center mb-4">Select your preferred region</h2>
+
+  <div *ngFor="let location of locations" class="mb-3">
+    <button class="btn btn-primary btn-lg btn-block d-flex align-items-center justify-content-between w-100"
+      type="button" (click)="toggleLocation(location)">
+      <div class="d-flex flex-column mr-3 p-2">
+        <p class="location-name d-block">{{ location.name }}</p>
+        <p class="location-details d-block">{{ location.network_zone }} - {{ location.city }}</p>
+      </div>
+      <img [src]="location.image" alt="">
+    </button>
+    <div *ngIf="location.isOpen">
+      <div *ngFor="let server of location.servers" class="card card-body mt-2">
+        <h5 class="text-center">{{ server.serverType.name }}</h5>
+        <ul>
+          <li>CPU: {{ server.serverType.cpu_cores }} cores</li>
+          <li>RAM: {{ server.serverType.ram }} GB</li>
+          <li>Storage: {{ server.serverType.storage }} GB</li>
+          <li>Network Speed: {{ server.serverType.network_speed }}</li>
+          <li>Weekly Backups</li>
+          <li>DDoS Protection</li>
+          <li>Full Root Access</li>
+          <li>24/7/365 Tech Support</li>
+        </ul>
+        <button class="btn btn-secondary mt-2" type="button" (click)="toggleServer(server)">
+          Pricing Plans
+        </button>
+        <div *ngIf="server.isOpen">
+          <div *ngFor="let price of server.pricing" class="card card-body">
+            {{ ucfirst(price.period) }}: ${{ price.price }}
+            <ng-container *ngIf="['monthly', 'yearly'].includes(price.period)">
+              *
+            </ng-container>
+          </div>
+          <small>* Paid upfront.</small>
+        </div>
+
+        <ng-container *ngIf="isAuthenticated; else guestLink">
+          <a [routerLink]="['/rent-server']" [queryParams]="{ server: server.id }" class="btn btn-success mt-2"
+            (click)="saveRedirectUrl(server.id)">Rent now</a>
+        </ng-container>
+        <ng-template #guestLink>
+          <a [routerLink]="['/login']" (click)="saveRedirectUrl(server.id)" class="btn btn-success mt-2">Rent now</a>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, BehaviorSubject, forkJoin } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 import { User } from '../interfaces/user';
 import { Role } from '../interfaces/role';
 import { environment } from '../../environments/environment';
@@ -15,10 +15,24 @@ export class UserService {
 
   private userSubject: BehaviorSubject<User | null>;
   public user: Observable<User | null>;
+  public roles: Role[] = [];
 
   constructor(private http: HttpClient) {
     this.userSubject = new BehaviorSubject<User | null>(JSON.parse(localStorage.getItem('loggedUser')!));
     this.user = this.userSubject.asObservable();
+
+    this.fetchRoles().subscribe(roles => {
+      this.roles = roles;
+      const loggedUser = this.userSubject.value;
+      if (loggedUser) {
+        const role = this.roles.find(r => r.id === loggedUser.role_id);
+        if (role) {
+          loggedUser.roleName = role.name;
+          localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
+          this.userSubject.next(loggedUser);
+        }
+      }
+    });
   }
 
   public get userValue(): User | null {
@@ -30,6 +44,10 @@ export class UserService {
       map(users => {
         const user = users[0];
         if (user && this.validatePassword(user, password)) {
+          const role = this.roles.find(r => r.id === user.role_id);
+          if (role) {
+            user.roleName = role.name;
+          }
           localStorage.setItem('loggedUser', JSON.stringify(user));
           this.userSubject.next(user);
           return user;
@@ -69,5 +87,25 @@ export class UserService {
 
   register(user: Partial<User>): Observable<User> {
     return this.http.post<User>(this.usersUrl, user);
+  }
+
+  private fetchRoles(): Observable<Role[]> {
+    return this.http.get<Role[]>(this.rolesUrl).pipe(
+      tap(roles => {
+        this.roles = roles;
+      })
+    );
+  }
+
+  saveRedirectUrl(serverId: string): void {
+    localStorage.setItem('redirectUrl', `/rent-server?server=${serverId}`);
+  }
+
+  getRedirectUrl(): string | null {
+    return localStorage.getItem('redirectUrl');
+  }
+
+  clearRedirectUrl(): void {
+    localStorage.removeItem('redirectUrl');
   }
 }

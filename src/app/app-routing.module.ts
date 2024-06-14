@@ -8,6 +8,7 @@ import { ServiceComponent } from './pages/service/service.component';
 import { RentServerComponent } from './pages/rent-server/rent-server.component';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
+import { ServersComponent } from './pages/servers/servers.component';
 import { authGuard } from './services/auth-guard.service';
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'service', component: ServiceComponent },
   { path: 'rent-server', component: RentServerComponent },
   { path: 'login', component: LoginComponent, canActivate: [authGuard] },
-  { path: 'register', component: RegisterComponent, canActivate: [authGuard] }
+  { path: 'register', component: RegisterComponent, canActivate: [authGuard] },
+  { path: 'servers', component: ServersComponent }
 ];
 
 @NgModule({

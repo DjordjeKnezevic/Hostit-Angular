@@ -1,0 +1,29 @@
+<section class="service_section layout_padding">
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2>Our Services</h2>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div *ngFor="let service of services" class="col-md-6 col-lg-6 my-3">
+        <div class="box service-box position-relative text-center">
+          <div *ngIf="!service.link" class="coming-soon-overlay d-flex justify-content-center align-items-center">
+            <span class="coming-soon-text">Coming Soon</span>
+          </div>
+          <div class="img-box">
+            <img [src]="service.image" alt="" class="img-fluid">
+          </div>
+          <div class="detail-box">
+            <h4>{{ service.title }}</h4>
+            <p>{{ service.description }}</p>
+            <a *ngIf="service.link" [routerLink]="service.link">
+              {{ service.linkText }}
+              <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+<div class="container" id="login-page">
+  <div class="row justify-content-center w-75">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">Login</div>
+
+        <div class="card-body">
+          <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" name="email" required class="form-control" [(ngModel)]="email" #emailCtrl="ngModel"
+                [ngClass]="{'is-invalid': emailCtrl.invalid && emailCtrl.touched}">
+              <div *ngIf="emailCtrl.invalid && emailCtrl.touched" class="invalid-feedback">
+                <strong>Email is required</strong>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" name="password" required class="form-control" [(ngModel)]="password"
+                #passwordCtrl="ngModel" [ngClass]="{'is-invalid': passwordCtrl.invalid && passwordCtrl.touched}">
+              <div *ngIf="passwordCtrl.invalid && passwordCtrl.touched" class="invalid-feedback">
+                <strong>Password is required</strong>
+              </div>
+            </div>
+
+            <div *ngIf="error" class="alert alert-danger">
+              {{ error }}
+            </div>
+
+            <div class="form-group">
+              <input type="checkbox" name="remember" [(ngModel)]="remember">
+              <label for="remember">Remember Me</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

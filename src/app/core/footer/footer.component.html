@@ -1,0 +1,66 @@
+<div class="footer-page">
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="info_contact">
+            <h4>Address</h4>
+            <div class="contact_link_box">
+              <a href="">
+                <fa-icon [icon]="faMapMarker" aria-hidden="true"></fa-icon>
+                <span> Location</span>
+              </a>
+              <a href="">
+                <fa-icon [icon]="faPhone" aria-hidden="true"></fa-icon>
+                <span> Call +01 1234567890</span>
+              </a>
+              <a href="">
+                <fa-icon [icon]="faEnvelope" aria-hidden="true"></fa-icon>
+                <span> demo&#64;gmail.com</span>
+              </a>
+            </div>
+          </div>
+          <div class="info_social">
+            <a href="">
+              <fa-icon [icon]="faFacebook" aria-hidden="true"></fa-icon>
+            </a>
+            <a href="">
+              <fa-icon [icon]="faTwitter" aria-hidden="true"></fa-icon>
+            </a>
+            <a href="">
+              <fa-icon [icon]="faLinkedin" aria-hidden="true"></fa-icon>
+            </a>
+            <a href="">
+              <fa-icon [icon]="faInstagram" aria-hidden="true"></fa-icon>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="info_link_box">
+            <h4>Links</h4>
+            <div class="info_links">
+              <a *ngFor="let link of footerLinks" [routerLink]="link.route" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }">
+                <img *ngIf="link.icon" [src]="link.icon" alt="">
+                {{ link.name }}
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-0">
+          <h4>Subscribe to our mailing list</h4>
+          <form (submit)="subscribe($event)">
+            <input type="text" name="email" placeholder="Enter email">
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer_section">
+    <div class="container">
+      <p>&copy; <span id="displayYear"></span> All Rights Reserved</p>
+    </div>
+  </footer>
+</div>

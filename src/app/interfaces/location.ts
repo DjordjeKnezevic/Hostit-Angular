@@ -1,7 +1,7 @@
 import { Server } from './server';
 
 export interface Location {
-  id: string | number;
+  id: string;
   name: string;
   network_zone: string;
   city: string;

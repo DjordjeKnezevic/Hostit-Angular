@@ -98,7 +98,7 @@ export class UserService {
   }
 
   saveRedirectUrl(serverId: string): void {
-    localStorage.setItem('redirectUrl', `/rent-server?server=${serverId}`);
+    localStorage.setItem('redirectUrl', `/rent-server/${serverId}`);
   }
 
   getRedirectUrl(): string | null {

@@ -584,15 +584,15 @@
             "serverType": {
               "id": "2",
               "name": "Basic",
-              "cpu_cores": 2,
-              "ram": 4,
-              "storage": 40,
+              "cpu_cores": 1,
+              "ram": 2,
+              "storage": 20,
               "network_speed": 1
             },
             "pricing": [
-              { "id": "1", "period": "hourly", "price": 0.01 },
-              { "id": "2", "period": "monthly", "price": 5.84 },
-              { "id": "3", "period": "yearly", "price": 56.16 }
+              { "id": "1", "period": "hourly", "price": 0.02 },
+              { "id": "2", "period": "monthly", "price": 11.68 },
+              { "id": "3", "period": "yearly", "price": 112.13 }
             ]
           },
           {
@@ -601,15 +601,15 @@
             "serverType": {
               "id": "1",
               "name": "Starter",
-              "cpu_cores": 1,
-              "ram": 2,
-              "storage": 20,
+              "cpu_cores": 2,
+              "ram": 4,
+              "storage": 40,
               "network_speed": 1
             },
             "pricing": [
               { "id": "4", "period": "hourly", "price": 0.01 },
               { "id": "5", "period": "monthly", "price": 5.84 },
-              { "id": "6", "period": "yearly", "price": 56.16 }
+              { "id": "6", "period": "yearly", "price": 56.06 }
             ]
           },
           {
@@ -624,9 +624,9 @@
               "network_speed": 2
             },
             "pricing": [
-              { "id": "7", "period": "hourly", "price": 0.02 },
-              { "id": "8", "period": "monthly", "price": 11.68 },
-              { "id": "9", "period": "yearly", "price": 112.32 }
+              { "id": "7", "period": "hourly", "price": 0.04 },
+              { "id": "8", "period": "monthly", "price": 23.36 },
+              { "id": "9", "period": "yearly", "price": 224.26 }
             ]
           },
           {
@@ -641,9 +641,9 @@
               "network_speed": 2
             },
             "pricing": [
-              { "id": "10", "period": "hourly", "price": 0.04 },
-              { "id": "11", "period": "monthly", "price": 23.36 },
-              { "id": "12", "period": "yearly", "price": 224.64 }
+              { "id": "10", "period": "hourly", "price": 0.08 },
+              { "id": "11", "period": "monthly", "price": 46.72 },
+              { "id": "12", "period": "yearly", "price": 448.51 }
             ]
           },
           {
@@ -658,9 +658,9 @@
               "network_speed": 5
             },
             "pricing": [
-              { "id": "13", "period": "hourly", "price": 0.08 },
-              { "id": "14", "period": "monthly", "price": 46.72 },
-              { "id": "15", "period": "yearly", "price": 448.64 }
+              { "id": "13", "period": "hourly", "price": 0.16 },
+              { "id": "14", "period": "monthly", "price": 93.44 },
+              { "id": "15", "period": "yearly", "price": 897.02 }
             ]
           },
           {
@@ -675,64 +675,13 @@
               "network_speed": 5
             },
             "pricing": [
-              { "id": "16", "period": "hourly", "price": 0.16 },
-              { "id": "17", "period": "monthly", "price": 93.44 },
-              { "id": "18", "period": "yearly", "price": 897.28 }
+              { "id": "16", "period": "hourly", "price": 0.32 },
+              { "id": "17", "period": "monthly", "price": 186.88 },
+              { "id": "18", "period": "yearly", "price": 1794.05 }
             ]
           },
           {
             "id": "7",
-            "name": "New York - Mega",
-            "serverType": {
-              "id": "7",
-              "name": "Mega",
-              "cpu_cores": 48,
-              "ram": 128,
-              "storage": 1280,
-              "network_speed": 10
-            },
-            "pricing": [
-              { "id": "19", "period": "hourly", "price": 0.24 },
-              { "id": "20", "period": "monthly", "price": 140.16 },
-              { "id": "21", "period": "yearly", "price": 1345.92 }
-            ]
-          },
-          {
-            "id": "8",
-            "name": "New York - Giga",
-            "serverType": {
-              "id": "8",
-              "name": "Giga",
-              "cpu_cores": 64,
-              "ram": 256,
-              "storage": 2560,
-              "network_speed": 10
-            },
-            "pricing": [
-              { "id": "22", "period": "hourly", "price": 0.32 },
-              { "id": "23", "period": "monthly", "price": 186.88 },
-              { "id": "24", "period": "yearly", "price": 1794.56 }
-            ]
-          },
-          {
-            "id": "9",
-            "name": "New York - Tera",
-            "serverType": {
-              "id": "9",
-              "name": "Tera",
-              "cpu_cores": 96,
-              "ram": 384,
-              "storage": 3840,
-              "network_speed": 10
-            },
-            "pricing": [
-              { "id": "25", "period": "hourly", "price": 0.48 },
-              { "id": "26", "period": "monthly", "price": 280.32 },
-              { "id": "27", "period": "yearly", "price": 2691.84 }
-            ]
-          },
-          {
-            "id": "10",
             "name": "New York - Max",
             "serverType": {
               "id": "10",
@@ -743,9 +692,60 @@
               "network_speed": 10
             },
             "pricing": [
-              { "id": "28", "period": "hourly", "price": 0.64 },
-              { "id": "29", "period": "monthly", "price": 373.76 },
-              { "id": "30", "period": "yearly", "price": 3588.48 }
+              { "id": "19", "period": "hourly", "price": 1.28 },
+              { "id": "20", "period": "monthly", "price": 747.52 },
+              { "id": "21", "period": "yearly", "price": 7176.19 }
+            ]
+          },
+          {
+            "id": "8",
+            "name": "New York - Mega",
+            "serverType": {
+              "id": "7",
+              "name": "Mega",
+              "cpu_cores": 48,
+              "ram": 128,
+              "storage": 1280,
+              "network_speed": 10
+            },
+            "pricing": [
+              { "id": "22", "period": "hourly", "price": 0.48 },
+              { "id": "23", "period": "monthly", "price": 280.32 },
+              { "id": "24", "period": "yearly", "price": 2691.07 }
+            ]
+          },
+          {
+            "id": "9",
+            "name": "New York - Giga",
+            "serverType": {
+              "id": "8",
+              "name": "Giga",
+              "cpu_cores": 64,
+              "ram": 256,
+              "storage": 2560,
+              "network_speed": 10
+            },
+            "pricing": [
+              { "id": "25", "period": "hourly", "price": 0.64 },
+              { "id": "26", "period": "monthly", "price": 373.76 },
+              { "id": "27", "period": "yearly", "price": 3588.10 }
+            ]
+          },
+          {
+            "id": "10",
+            "name": "New York - Tera",
+            "serverType": {
+              "id": "9",
+              "name": "Tera",
+              "cpu_cores": 96,
+              "ram": 384,
+              "storage": 3840,
+              "network_speed": 10
+            },
+            "pricing": [
+              { "id": "28", "period": "hourly", "price": 0.96 },
+              { "id": "29", "period": "monthly", "price": 560.64 },
+              { "id": "30", "period": "yearly", "price": 5382.14 }
             ]
           }
         ]
@@ -763,15 +763,15 @@
             "serverType": {
               "id": "2",
               "name": "Basic",
-              "cpu_cores": 2,
-              "ram": 4,
-              "storage": 40,
+              "cpu_cores": 1,
+              "ram": 2,
+              "storage": 20,
               "network_speed": 1
             },
             "pricing": [
-              { "id": "31", "period": "hourly", "price": 0.01 },
-              { "id": "32", "period": "monthly", "price": 5.84 },
-              { "id": "33", "period": "yearly", "price": 56.16 }
+              { "id": "31", "period": "hourly", "price": 0.02 },
+              { "id": "32", "period": "monthly", "price": 12.26 },
+              { "id": "33", "period": "yearly", "price": 117.70 }
             ]
           },
           {
@@ -780,15 +780,15 @@
             "serverType": {
               "id": "1",
               "name": "Starter",
-              "cpu_cores": 1,
-              "ram": 2,
-              "storage": 20,
+              "cpu_cores": 2,
+              "ram": 4,
+              "storage": 40,
               "network_speed": 1
             },
             "pricing": [
               { "id": "34", "period": "hourly", "price": 0.01 },
-              { "id": "35", "period": "monthly", "price": 5.84 },
-              { "id": "36", "period": "yearly", "price": 56.16 }
+              { "id": "35", "period": "monthly", "price": 6.13 },
+              { "id": "36", "period": "yearly", "price": 58.85 }
             ]
           },
           {
@@ -803,9 +803,111 @@
               "network_speed": 2
             },
             "pricing": [
-              { "id": "37", "period": "hourly", "price": 0.02 },
-              { "id": "38", "period": "monthly", "price": 11.68 },
-              { "id": "39", "period": "yearly", "price": 112.32 }
+              { "id": "37", "period": "hourly", "price": 0.04 },
+              { "id": "38", "period": "monthly", "price": 24.53 },
+              { "id": "39", "period": "yearly", "price": 235.49 }
+            ]
+          },
+          {
+            "id": "14",
+            "name": "San Francisco - Advanced",
+            "serverType": {
+              "id": "4",
+              "name": "Advanced",
+              "cpu_cores": 8,
+              "ram": 16,
+              "storage": 160,
+              "network_speed": 2
+            },
+            "pricing": [
+              { "id": "40", "period": "hourly", "price": 0.08 },
+              { "id": "41", "period": "monthly", "price": 49.06 },
+              { "id": "42", "period": "yearly", "price": 470.98 }
+            ]
+          },
+          {
+            "id": "15",
+            "name": "San Francisco - Pro",
+            "serverType": {
+              "id": "5",
+              "name": "Pro",
+              "cpu_cores": 16,
+              "ram": 32,
+              "storage": 320,
+              "network_speed": 5
+            },
+            "pricing": [
+              { "id": "43", "period": "hourly", "price": 0.17 },
+              { "id": "44", "period": "monthly", "price": 98.11 },
+              { "id": "45", "period": "yearly", "price": 941.86 }
+            ]
+          },
+          {
+            "id": "16",
+            "name": "San Francisco - Ultra",
+            "serverType": {
+              "id": "6",
+              "name": "Ultra",
+              "cpu_cores": 32,
+              "ram": 64,
+              "storage": 640,
+              "network_speed": 5
+            },
+            "pricing": [
+              { "id": "46", "period": "hourly", "price": 0.34 },
+              { "id": "47", "period": "monthly", "price": 196.22 },
+              { "id": "48", "period": "yearly", "price": 1883.71 }
+            ]
+          },
+          {
+            "id": "17",
+            "name": "San Francisco - Max",
+            "serverType": {
+              "id": "10",
+              "name": "Max",
+              "cpu_cores": 128,
+              "ram": 512,
+              "storage": 5120,
+              "network_speed": 10
+            },
+            "pricing": [
+              { "id": "49", "period": "hourly", "price": 1.34 },
+              { "id": "50", "period": "monthly", "price": 784.90 },
+              { "id": "51", "period": "yearly", "price": 7535.04 }
+            ]
+          },
+          {
+            "id": "18",
+            "name": "San Francisco - Mega",
+            "serverType": {
+              "id": "7",
+              "name": "Mega",
+              "cpu_cores": 48,
+              "ram": 128,
+              "storage": 1280,
+              "network_speed": 10
+            },
+            "pricing": [
+              { "id": "52", "period": "hourly", "price": 0.50 },
+              { "id": "53", "period": "monthly", "price": 294.34 },
+              { "id": "54", "period": "yearly", "price": 2825.66 }
+            ]
+          },
+          {
+            "id": "19",
+            "name": "San Francisco - Giga",
+            "serverType": {
+              "id": "8",
+              "name": "Giga",
+              "cpu_cores": 64,
+              "ram": 256,
+              "storage": 2560,
+              "network_speed": 10
+            },
+            "pricing": [
+              { "id": "55", "period": "hourly", "price": 0.67 },
+              { "id": "56", "period": "monthly", "price": 392.45 },
+              { "id": "57", "period": "yearly", "price": 3767.52 }
             ]
           }
         ]
@@ -818,37 +920,139 @@
         "image": "assets/img/countries/uk.jpg",
         "servers": [
           {
-            "id": "14",
+            "id": "20",
             "name": "London - Basic",
             "serverType": {
               "id": "2",
               "name": "Basic",
-              "cpu_cores": 2,
-              "ram": 4,
-              "storage": 40,
-              "network_speed": 1
-            },
-            "pricing": [
-              { "id": "40", "period": "hourly", "price": 0.011 },
-              { "id": "41", "period": "monthly", "price": 6.16 },
-              { "id": "42", "period": "yearly", "price": 59.12 }
-            ]
-          },
-          {
-            "id": "15",
-            "name": "London - Starter",
-            "serverType": {
-              "id": "1",
-              "name": "Starter",
               "cpu_cores": 1,
               "ram": 2,
               "storage": 20,
               "network_speed": 1
             },
             "pricing": [
-              { "id": "43", "period": "hourly", "price": 0.011 },
-              { "id": "44", "period": "monthly", "price": 6.16 },
-              { "id": "45", "period": "yearly", "price": 59.12 }
+              { "id": "58", "period": "hourly", "price": 0.02 },
+              { "id": "59", "period": "monthly", "price": 12.85 },
+              { "id": "60", "period": "yearly", "price": 123.36 }
+            ]
+          },
+          {
+            "id": "21",
+            "name": "London - Starter",
+            "serverType": {
+              "id": "1",
+              "name": "Starter",
+              "cpu_cores": 2,
+              "ram": 4,
+              "storage": 40,
+              "network_speed": 1
+            },
+            "pricing": [
+              { "id": "61", "period": "hourly", "price": 0.01 },
+              { "id": "62", "period": "monthly", "price": 6.42 },
+              { "id": "63", "period": "yearly", "price": 61.63 }
+            ]
+          },
+          {
+            "id": "22",
+            "name": "London - Intermediate",
+            "serverType": {
+              "id": "3",
+              "name": "Intermediate",
+              "cpu_cores": 4,
+              "ram": 8,
+              "storage": 80,
+              "network_speed": 2
+            },
+            "pricing": [
+              { "id": "64", "period": "hourly", "price": 0.04 },
+              { "id": "65", "period": "monthly", "price": 25.70 },
+              { "id": "66", "period": "yearly", "price": 246.72 }
+            ]
+          },
+          {
+            "id": "23",
+            "name": "London - Advanced",
+            "serverType": {
+              "id": "4",
+              "name": "Advanced",
+              "cpu_cores": 8,
+              "ram": 16,
+              "storage": 160,
+              "network_speed": 2
+            },
+            "pricing": [
+              { "id": "67", "period": "hourly", "price": 0.09 },
+              { "id": "68", "period": "monthly", "price": 51.39 },
+              { "id": "69", "period": "yearly", "price": 493.34 }
+            ]
+          },
+          {
+            "id": "24",
+            "name": "London - Pro",
+            "serverType": {
+              "id": "5",
+              "name": "Pro",
+              "cpu_cores": 16,
+              "ram": 32,
+              "storage": 320,
+              "network_speed": 5
+            },
+            "pricing": [
+              { "id": "70", "period": "hourly", "price": 0.18 },
+              { "id": "71", "period": "monthly", "price": 102.78 },
+              { "id": "72", "period": "yearly", "price": 986.69 }
+            ]
+          },
+          {
+            "id": "25",
+            "name": "London - Ultra",
+            "serverType": {
+              "id": "6",
+              "name": "Ultra",
+              "cpu_cores": 32,
+              "ram": 64,
+              "storage": 640,
+              "network_speed": 5
+            },
+            "pricing": [
+              { "id": "73", "period": "hourly", "price": 0.35 },
+              { "id": "74", "period": "monthly", "price": 205.57 },
+              { "id": "75", "period": "yearly", "price": 1973.47 }
+            ]
+          },
+          {
+            "id": "26",
+            "name": "London - Max",
+            "serverType": {
+              "id": "10",
+              "name": "Max",
+              "cpu_cores": 128,
+              "ram": 512,
+              "storage": 5120,
+              "network_speed": 10
+            },
+            "pricing": [
+              { "id": "76", "period": "hourly", "price": 1.41 },
+              { "id": "77", "period": "monthly", "price": 822.27 },
+              { "id": "78", "period": "yearly", "price": 7893.79 }
+            ]
+          },
+          {
+            "id": "27",
+            "name": "London - Mega",
+            "serverType": {
+              "id": "7",
+              "name": "Mega",
+              "cpu_cores": 48,
+              "ram": 128,
+              "storage": 1280,
+              "network_speed": 10
+            },
+            "pricing": [
+              { "id": "79", "period": "hourly", "price": 0.53 },
+              { "id": "80", "period": "monthly", "price": 308.35 },
+              { "id": "81", "period": "yearly", "price": 2960.16 }
             ]
           }
         ]
@@ -861,20 +1065,122 @@
         "image": "assets/img/countries/germany.jpg",
         "servers": [
           {
-            "id": "16",
+            "id": "28",
             "name": "Frankfurt - Basic",
             "serverType": {
               "id": "2",
               "name": "Basic",
+              "cpu_cores": 1,
+              "ram": 2,
+              "storage": 20,
+              "network_speed": 1
+            },
+            "pricing": [
+              { "id": "82", "period": "hourly", "price": 0.02 },
+              { "id": "83", "period": "monthly", "price": 12.26 },
+              { "id": "84", "period": "yearly", "price": 117.70 }
+            ]
+          },
+          {
+            "id": "29",
+            "name": "Frankfurt - Starter",
+            "serverType": {
+              "id": "1",
+              "name": "Starter",
               "cpu_cores": 2,
               "ram": 4,
               "storage": 40,
               "network_speed": 1
             },
             "pricing": [
-              { "id": "46", "period": "hourly", "price": 0.011 },
-              { "id": "47", "period": "monthly", "price": 6.16 },
-              { "id": "48", "period": "yearly", "price": 59.12 }
+              { "id": "85", "period": "hourly", "price": 0.01 },
+              { "id": "86", "period": "monthly", "price": 6.13 },
+              { "id": "87", "period": "yearly", "price": 58.85 }
+            ]
+          },
+          {
+            "id": "30",
+            "name": "Frankfurt - Intermediate",
+            "serverType": {
+              "id": "3",
+              "name": "Intermediate",
+              "cpu_cores": 4,
+              "ram": 8,
+              "storage": 80,
+              "network_speed": 2
+            },
+            "pricing": [
+              { "id": "88", "period": "hourly", "price": 0.04 },
+              { "id": "89", "period": "monthly", "price": 24.53 },
+              { "id": "90", "period": "yearly", "price": 235.49 }
+            ]
+          },
+          {
+            "id": "31",
+            "name": "Frankfurt - Advanced",
+            "serverType": {
+              "id": "4",
+              "name": "Advanced",
+              "cpu_cores": 8,
+              "ram": 16,
+              "storage": 160,
+              "network_speed": 2
+            },
+            "pricing": [
+              { "id": "91", "period": "hourly", "price": 0.08 },
+              { "id": "92", "period": "monthly", "price": 49.06 },
+              { "id": "93", "period": "yearly", "price": 470.98 }
+            ]
+          },
+          {
+            "id": "32",
+            "name": "Frankfurt - Pro",
+            "serverType": {
+              "id": "5",
+              "name": "Pro",
+              "cpu_cores": 16,
+              "ram": 32,
+              "storage": 320,
+              "network_speed": 5
+            },
+            "pricing": [
+              { "id": "94", "period": "hourly", "price": 0.17 },
+              { "id": "95", "period": "monthly", "price": 98.11 },
+              { "id": "96", "period": "yearly", "price": 941.86 }
+            ]
+          },
+          {
+            "id": "33",
+            "name": "Frankfurt - Ultra",
+            "serverType": {
+              "id": "6",
+              "name": "Ultra",
+              "cpu_cores": 32,
+              "ram": 64,
+              "storage": 640,
+              "network_speed": 5
+            },
+            "pricing": [
+              { "id": "97", "period": "hourly", "price": 0.34 },
+              { "id": "98", "period": "monthly", "price": 196.22 },
+              { "id": "99", "period": "yearly", "price": 1883.71 }
+            ]
+          },
+          {
+            "id": "34",
+            "name": "Frankfurt - Max",
+            "serverType": {
+              "id": "10",
+              "name": "Max",
+              "cpu_cores": 128,
+              "ram": 512,
+              "storage": 5120,
+              "network_speed": 10
+            },
+            "pricing": [
+              { "id": "100", "period": "hourly", "price": 1.34 },
+              { "id": "101", "period": "monthly", "price": 784.90 },
+              { "id": "102", "period": "yearly", "price": 7535.04 }
             ]
           }
         ]
@@ -887,20 +1193,105 @@
         "image": "assets/img/countries/japan.jpg",
         "servers": [
           {
-            "id": "17",
+            "id": "35",
             "name": "Tokyo - Basic",
             "serverType": {
               "id": "2",
               "name": "Basic",
+              "cpu_cores": 1,
+              "ram": 2,
+              "storage": 20,
+              "network_speed": 1
+            },
+            "pricing": [
+              { "id": "103", "period": "hourly", "price": 0.02 },
+              { "id": "104", "period": "monthly", "price": 11.10 },
+              { "id": "105", "period": "yearly", "price": 106.56 }
+            ]
+          },
+          {
+            "id": "36",
+            "name": "Tokyo - Starter",
+            "serverType": {
+              "id": "1",
+              "name": "Starter",
               "cpu_cores": 2,
               "ram": 4,
               "storage": 40,
               "network_speed": 1
             },
             "pricing": [
-              { "id": "49", "period": "hourly", "price": 0.0095 },
-              { "id": "50", "period": "monthly", "price": 5.55 },
-              { "id": "51", "period": "yearly", "price": 53.36 }
+              { "id": "106", "period": "hourly", "price": 0.01 },
+              { "id": "107", "period": "monthly", "price": 5.55 },
+              { "id": "108", "period": "yearly", "price": 53.28 }
+            ]
+          },
+          {
+            "id": "37",
+            "name": "Tokyo - Intermediate",
+            "serverType": {
+              "id": "3",
+              "name": "Intermediate",
+              "cpu_cores": 4,
+              "ram": 8,
+              "storage": 80,
+              "network_speed": 2
+            },
+            "pricing": [
+              { "id": "109", "period": "hourly", "price": 0.04 },
+              { "id": "110", "period": "monthly", "price": 22.19 },
+              { "id": "111", "period": "yearly", "price": 213.02 }
+            ]
+          },
+          {
+            "id": "38",
+            "name": "Tokyo - Advanced",
+            "serverType": {
+              "id": "4",
+              "name": "Advanced",
+              "cpu_cores": 8,
+              "ram": 16,
+              "storage": 160,
+              "network_speed": 2
+            },
+            "pricing": [
+              { "id": "112", "period": "hourly", "price": 0.08 },
+              { "id": "113", "period": "monthly", "price": 44.38 },
+              { "id": "114", "period": "yearly", "price": 426.05 }
+            ]
+          },
+          {
+            "id": "39",
+            "name": "Tokyo - Pro",
+            "serverType": {
+              "id": "5",
+              "name": "Pro",
+              "cpu_cores": 16,
+              "ram": 32,
+              "storage": 320,
+              "network_speed": 5
+            },
+            "pricing": [
+              { "id": "115", "period": "hourly", "price": 0.15 },
+              { "id": "116", "period": "monthly", "price": 88.77 },
+              { "id": "117", "period": "yearly", "price": 852.19 }
+            ]
+          },
+          {
+            "id": "40",
+            "name": "Tokyo - Ultra",
+            "serverType": {
+              "id": "6",
+              "name": "Ultra",
+              "cpu_cores": 32,
+              "ram": 64,
+              "storage": 640,
+              "network_speed": 5
+            },
+            "pricing": [
+              { "id": "118", "period": "hourly", "price": 0.30 },
+              { "id": "119", "period": "monthly", "price": 177.54 },
+              { "id": "120", "period": "yearly", "price": 1704.38 }
             ]
           }
         ]
@@ -913,20 +1304,88 @@
         "image": "assets/img/countries/india.jpg",
         "servers": [
           {
-            "id": "18",
+            "id": "41",
             "name": "Mumbai - Basic",
             "serverType": {
               "id": "2",
               "name": "Basic",
+              "cpu_cores": 1,
+              "ram": 2,
+              "storage": 20,
+              "network_speed": 1
+            },
+            "pricing": [
+              { "id": "121", "period": "hourly", "price": 0.02 },
+              { "id": "122", "period": "monthly", "price": 10.51 },
+              { "id": "123", "period": "yearly", "price": 100.90 }
+            ]
+          },
+          {
+            "id": "42",
+            "name": "Mumbai - Starter",
+            "serverType": {
+              "id": "1",
+              "name": "Starter",
               "cpu_cores": 2,
               "ram": 4,
               "storage": 40,
               "network_speed": 1
             },
             "pricing": [
-              { "id": "52", "period": "hourly", "price": 0.009 },
-              { "id": "53", "period": "monthly", "price": 5.26 },
-              { "id": "54", "period": "yearly", "price": 50.54 }
+              { "id": "124", "period": "hourly", "price": 0.01 },
+              { "id": "125", "period": "monthly", "price": 5.26 },
+              { "id": "126", "period": "yearly", "price": 50.50 }
+            ]
+          },
+          {
+            "id": "43",
+            "name": "Mumbai - Intermediate",
+            "serverType": {
+              "id": "3",
+              "name": "Intermediate",
+              "cpu_cores": 4,
+              "ram": 8,
+              "storage": 80,
+              "network_speed": 2
+            },
+            "pricing": [
+              { "id": "127", "period": "hourly", "price": 0.04 },
+              { "id": "128", "period": "monthly", "price": 21.02 },
+              { "id": "129", "period": "yearly", "price": 201.79 }
+            ]
+          },
+          {
+            "id": "44",
+            "name": "Mumbai - Advanced",
+            "serverType": {
+              "id": "4",
+              "name": "Advanced",
+              "cpu_cores": 8,
+              "ram": 16,
+              "storage": 160,
+              "network_speed": 2
+            },
+            "pricing": [
+              { "id": "130", "period": "hourly", "price": 0.07 },
+              { "id": "131", "period": "monthly", "price": 42.05 },
+              { "id": "132", "period": "yearly", "price": 403.68 }
+            ]
+          },
+          {
+            "id": "45",
+            "name": "Mumbai - Pro",
+            "serverType": {
+              "id": "5",
+              "name": "Pro",
+              "cpu_cores": 16,
+              "ram": 32,
+              "storage": 320,
+              "network_speed": 5
+            },
+            "pricing": [
+              { "id": "133", "period": "hourly", "price": 0.14 },
+              { "id": "134", "period": "monthly", "price": 84.10 },
+              { "id": "135", "period": "yearly", "price": 807.36 }
             ]
           }
         ]
@@ -937,7 +1396,6 @@
       "id": "1",
       "user_id": "1",
       "service_id": "1",
-      "service_type": "App\\Models\\Server",
       "pricing_id": "1",
       "start_date": "2024-01-01T00:00:00Z",
       "end_date": null
@@ -1113,6 +1571,1268 @@
       "link": "/servers",
       "linkText": "See Details",
       "id": "b4a5"
+    }
+  ],
+  "pricing": [
+    {
+      "id": "1",
+      "service_id": "1",
+      "name": "Basic - hourly - New York",
+      "price": 0.01,
+      "period": "hourly"
+    },
+    {
+      "id": "2",
+      "service_id": "1",
+      "name": "Basic - monthly - New York",
+      "price": 5.84,
+      "period": "monthly"
+    },
+    {
+      "id": "3",
+      "service_id": "1",
+      "name": "Basic - yearly - New York",
+      "price": 56.16,
+      "period": "yearly"
+    },
+    {
+      "id": "4",
+      "service_id": "2",
+      "name": "Starter - hourly - New York",
+      "price": 0.01,
+      "period": "hourly"
+    },
+    {
+      "id": "5",
+      "service_id": "2",
+      "name": "Starter - monthly - New York",
+      "price": 5.84,
+      "period": "monthly"
+    },
+    {
+      "id": "6",
+      "service_id": "2",
+      "name": "Starter - yearly - New York",
+      "price": 56.16,
+      "period": "yearly"
+    },
+    {
+      "id": "7",
+      "service_id": "3",
+      "name": "Intermediate - hourly - New York",
+      "price": 0.02,
+      "period": "hourly"
+    },
+    {
+      "id": "8",
+      "service_id": "3",
+      "name": "Intermediate - monthly - New York",
+      "price": 11.68,
+      "period": "monthly"
+    },
+    {
+      "id": "9",
+      "service_id": "3",
+      "name": "Intermediate - yearly - New York",
+      "price": 112.32,
+      "period": "yearly"
+    },
+    {
+      "id": "10",
+      "service_id": "4",
+      "name": "Advanced - hourly - New York",
+      "price": 0.04,
+      "period": "hourly"
+    },
+    {
+      "id": "11",
+      "service_id": "4",
+      "name": "Advanced - monthly - New York",
+      "price": 23.36,
+      "period": "monthly"
+    },
+    {
+      "id": "12",
+      "service_id": "4",
+      "name": "Advanced - yearly - New York",
+      "price": 224.64,
+      "period": "yearly"
+    },
+    {
+      "id": "13",
+      "service_id": "5",
+      "name": "Pro - hourly - New York",
+      "price": 0.08,
+      "period": "hourly"
+    },
+    {
+      "id": "14",
+      "service_id": "5",
+      "name": "Pro - monthly - New York",
+      "price": 46.72,
+      "period": "monthly"
+    },
+    {
+      "id": "15",
+      "service_id": "5",
+      "name": "Pro - yearly - New York",
+      "price": 449.28,
+      "period": "yearly"
+    },
+    {
+      "id": "16",
+      "service_id": "6",
+      "name": "Ultra - hourly - New York",
+      "price": 0.16,
+      "period": "hourly"
+    },
+    {
+      "id": "17",
+      "service_id": "6",
+      "name": "Ultra - monthly - New York",
+      "price": 93.44,
+      "period": "monthly"
+    },
+    {
+      "id": "18",
+      "service_id": "6",
+      "name": "Ultra - yearly - New York",
+      "price": 898.56,
+      "period": "yearly"
+    },
+    {
+      "id": "19",
+      "service_id": "7",
+      "name": "Max - hourly - New York",
+      "price": 0.32,
+      "period": "hourly"
+    },
+    {
+      "id": "20",
+      "service_id": "7",
+      "name": "Max - monthly - New York",
+      "price": 186.88,
+      "period": "monthly"
+    },
+    {
+      "id": "21",
+      "service_id": "7",
+      "name": "Max - yearly - New York",
+      "price": 1797.12,
+      "period": "yearly"
+    },
+    {
+      "id": "22",
+      "service_id": "8",
+      "name": "Mega - hourly - New York",
+      "price": 0.48,
+      "period": "hourly"
+    },
+    {
+      "id": "23",
+      "service_id": "8",
+      "name": "Mega - monthly - New York",
+      "price": 280.32,
+      "period": "monthly"
+    },
+    {
+      "id": "24",
+      "service_id": "8",
+      "name": "Mega - yearly - New York",
+      "price": 2695.68,
+      "period": "yearly"
+    },
+    {
+      "id": "25",
+      "service_id": "9",
+      "name": "Giga - hourly - New York",
+      "price": 0.64,
+      "period": "hourly"
+    },
+    {
+      "id": "26",
+      "service_id": "9",
+      "name": "Giga - monthly - New York",
+      "price": 373.76,
+      "period": "monthly"
+    },
+    {
+      "id": "27",
+      "service_id": "9",
+      "name": "Giga - yearly - New York",
+      "price": 3594.24,
+      "period": "yearly"
+    },
+    {
+      "id": "28",
+      "service_id": "10",
+      "name": "Tera - hourly - New York",
+      "price": 0.96,
+      "period": "hourly"
+    },
+    {
+      "id": "29",
+      "service_id": "10",
+      "name": "Tera - monthly - New York",
+      "price": 560.64,
+      "period": "monthly"
+    },
+    {
+      "id": "30",
+      "service_id": "10",
+      "name": "Tera - yearly - New York",
+      "price": 5391.36,
+      "period": "yearly"
+    },
+    {
+      "id": "31",
+      "service_id": "11",
+      "name": "Basic - hourly - San Francisco",
+      "price": 0.01,
+      "period": "hourly"
+    },
+    {
+      "id": "32",
+      "service_id": "11",
+      "name": "Basic - monthly - San Francisco",
+      "price": 6.13,
+      "period": "monthly"
+    },
+    {
+      "id": "33",
+      "service_id": "11",
+      "name": "Basic - yearly - San Francisco",
+      "price": 58.82,
+      "period": "yearly"
+    },
+    {
+      "id": "34",
+      "service_id": "12",
+      "name": "Starter - hourly - San Francisco",
+      "price": 0.01,
+      "period": "hourly"
+    },
+    {
+      "id": "35",
+      "service_id": "12",
+      "name": "Starter - monthly - San Francisco",
+      "price": 6.13,
+      "period": "monthly"
+    },
+    {
+      "id": "36",
+      "service_id": "12",
+      "name": "Starter - yearly - San Francisco",
+      "price": 58.82,
+      "period": "yearly"
+    },
+    {
+      "id": "37",
+      "service_id": "13",
+      "name": "Intermediate - hourly - San Francisco",
+      "price": 0.02,
+      "period": "hourly"
+    },
+    {
+      "id": "38",
+      "service_id": "13",
+      "name": "Intermediate - monthly - San Francisco",
+      "price": 12.26,
+      "period": "monthly"
+    },
+    {
+      "id": "39",
+      "service_id": "13",
+      "name": "Intermediate - yearly - San Francisco",
+      "price": 117.63,
+      "period": "yearly"
+    },
+    {
+      "id": "40",
+      "service_id": "14",
+      "name": "Advanced - hourly - San Francisco",
+      "price": 0.04,
+      "period": "hourly"
+    },
+    {
+      "id": "41",
+      "service_id": "14",
+      "name": "Advanced - monthly - San Francisco",
+      "price": 24.51,
+      "period": "monthly"
+    },
+    {
+      "id": "42",
+      "service_id": "14",
+      "name": "Advanced - yearly - San Francisco",
+      "price": 235.26,
+      "period": "yearly"
+    },
+    {
+      "id": "43",
+      "service_id": "15",
+      "name": "Pro - hourly - San Francisco",
+      "price": 0.08,
+      "period": "hourly"
+    },
+    {
+      "id": "44",
+      "service_id": "15",
+      "name": "Pro - monthly - San Francisco",
+      "price": 49.01,
+      "period": "monthly"
+    },
+    {
+      "id": "45",
+      "service_id": "15",
+      "name": "Pro - yearly - San Francisco",
+      "price": 470.52,
+      "period": "yearly"
+    },
+    {
+      "id": "46",
+      "service_id": "16",
+      "name": "Ultra - hourly - San Francisco",
+      "price": 0.16,
+      "period": "hourly"
+    },
+    {
+      "id": "47",
+      "service_id": "16",
+      "name": "Ultra - monthly - San Francisco",
+      "price": 98.02,
+      "period": "monthly"
+    },
+    {
+      "id": "48",
+      "service_id": "16",
+      "name": "Ultra - yearly - San Francisco",
+      "price": 941.04,
+      "period": "yearly"
+    },
+    {
+      "id": "49",
+      "service_id": "17",
+      "name": "Max - hourly - San Francisco",
+      "price": 0.32,
+      "period": "hourly"
+    },
+    {
+      "id": "50",
+      "service_id": "17",
+      "name": "Max - monthly - San Francisco",
+      "price": 196.03,
+      "period": "monthly"
+    },
+    {
+      "id": "51",
+      "service_id": "17",
+      "name": "Max - yearly - San Francisco",
+      "price": 1882.07,
+      "period": "yearly"
+    },
+    {
+      "id": "52",
+      "service_id": "18",
+      "name": "Mega - hourly - San Francisco",
+      "price": 0.48,
+      "period": "hourly"
+    },
+    {
+      "id": "53",
+      "service_id": "18",
+      "name": "Mega - monthly - San Francisco",
+      "price": 294.05,
+      "period": "monthly"
+    },
+    {
+      "id": "54",
+      "service_id": "18",
+      "name": "Mega - yearly - San Francisco",
+      "price": 2823.11,
+      "period": "yearly"
+    },
+    {
+      "id": "55",
+      "service_id": "19",
+      "name": "Giga - hourly - San Francisco",
+      "price": 0.64,
+      "period": "hourly"
+    },
+    {
+      "id": "56",
+      "service_id": "19",
+      "name": "Giga - monthly - San Francisco",
+      "price": 392.07,
+      "period": "monthly"
+    },
+    {
+      "id": "57",
+      "service_id": "19",
+      "name": "Giga - yearly - San Francisco",
+      "price": 3764.14,
+      "period": "yearly"
+    },
+    {
+      "id": "58",
+      "service_id": "20",
+      "name": "Tera - hourly - San Francisco",
+      "price": 0.96,
+      "period": "hourly"
+    },
+    {
+      "id": "59",
+      "service_id": "20",
+      "name": "Tera - monthly - San Francisco",
+      "price": 588.1,
+      "period": "monthly"
+    },
+    {
+      "id": "60",
+      "service_id": "20",
+      "name": "Tera - yearly - San Francisco",
+      "price": 5646.21,
+      "period": "yearly"
+    },
+    {
+      "id": "61",
+      "service_id": "21",
+      "name": "Basic - hourly - London",
+      "price": 0.01,
+      "period": "hourly"
+    },
+    {
+      "id": "62",
+      "service_id": "21",
+      "name": "Basic - monthly - London",
+      "price": 6.42,
+      "period": "monthly"
+    },
+    {
+      "id": "63",
+      "service_id": "21",
+      "name": "Basic - yearly - London",
+      "price": 61.49,
+      "period": "yearly"
+    },
+    {
+      "id": "64",
+      "service_id": "22",
+      "name": "Starter - hourly - London",
+      "price": 0.01,
+      "period": "hourly"
+    },
+    {
+      "id": "65",
+      "service_id": "22",
+      "name": "Starter - monthly - London",
+      "price": 6.42,
+      "period": "monthly"
+    },
+    {
+      "id": "66",
+      "service_id": "22",
+      "name": "Starter - yearly - London",
+      "price": 61.49,
+      "period": "yearly"
+    },
+    {
+      "id": "67",
+      "service_id": "23",
+      "name": "Intermediate - hourly - London",
+      "price": 0.02,
+      "period": "hourly"
+    },
+    {
+      "id": "68",
+      "service_id": "23",
+      "name": "Intermediate - monthly - London",
+      "price": 12.84,
+      "period": "monthly"
+    },
+    {
+      "id": "69",
+      "service_id": "23",
+      "name": "Intermediate - yearly - London",
+      "price": 122.98,
+      "period": "yearly"
+    },
+    {
+      "id": "70",
+      "service_id": "24",
+      "name": "Advanced - hourly - London",
+      "price": 0.04,
+      "period": "hourly"
+    },
+    {
+      "id": "71",
+      "service_id": "24",
+      "name": "Advanced - monthly - London",
+      "price": 25.68,
+      "period": "monthly"
+    },
+    {
+      "id": "72",
+      "service_id": "24",
+      "name": "Advanced - yearly - London",
+      "price": 245.96,
+      "period": "yearly"
+    },
+    {
+      "id": "73",
+      "service_id": "25",
+      "name": "Pro - hourly - London",
+      "price": 0.08,
+      "period": "hourly"
+    },
+    {
+      "id": "74",
+      "service_id": "25",
+      "name": "Pro - monthly - London",
+      "price": 51.36,
+      "period": "monthly"
+    },
+    {
+      "id": "75",
+      "service_id": "25",
+      "name": "Pro - yearly - London",
+      "price": 491.92,
+      "period": "yearly"
+    },
+    {
+      "id": "76",
+      "service_id": "26",
+      "name": "Ultra - hourly - London",
+      "price": 0.16,
+      "period": "hourly"
+    },
+    {
+      "id": "77",
+      "service_id": "26",
+      "name": "Ultra - monthly - London",
+      "price": 102.72,
+      "period": "monthly"
+    },
+    {
+      "id": "78",
+      "service_id": "26",
+      "name": "Ultra - yearly - London",
+      "price": 983.84,
+      "period": "yearly"
+    },
+    {
+      "id": "79",
+      "service_id": "27",
+      "name": "Max - hourly - London",
+      "price": 0.32,
+      "period": "hourly"
+    },
+    {
+      "id": "80",
+      "service_id": "27",
+      "name": "Max - monthly - London",
+      "price": 205.44,
+      "period": "monthly"
+    },
+    {
+      "id": "81",
+      "service_id": "27",
+      "name": "Max - yearly - London",
+      "price": 1967.68,
+      "period": "yearly"
+    },
+    {
+      "id": "82",
+      "service_id": "28",
+      "name": "Mega - hourly - London",
+      "price": 0.48,
+      "period": "hourly"
+    },
+    {
+      "id": "83",
+      "service_id": "28",
+      "name": "Mega - monthly - London",
+      "price": 308.16,
+      "period": "monthly"
+    },
+    {
+      "id": "84",
+      "service_id": "28",
+      "name": "Mega - yearly - London",
+      "price": 2951.52,
+      "period": "yearly"
+    },
+    {
+      "id": "85",
+      "service_id": "29",
+      "name": "Giga - hourly - London",
+      "price": 0.64,
+      "period": "hourly"
+    },
+    {
+      "id": "86",
+      "service_id": "29",
+      "name": "Giga - monthly - London",
+      "price": 410.88,
+      "period": "monthly"
+    },
+    {
+      "id": "87",
+      "service_id": "29",
+      "name": "Giga - yearly - London",
+      "price": 3935.36,
+      "period": "yearly"
+    },
+    {
+      "id": "88",
+      "service_id": "30",
+      "name": "Tera - hourly - London",
+      "price": 0.96,
+      "period": "hourly"
+    },
+    {
+      "id": "89",
+      "service_id": "30",
+      "name": "Tera - monthly - London",
+      "price": 615.84,
+      "period": "monthly"
+    },
+    {
+      "id": "90",
+      "service_id": "30",
+      "name": "Tera - yearly - London",
+      "price": 5902.96,
+      "period": "yearly"
+    },
+    {
+      "id": "91",
+      "service_id": "31",
+      "name": "Basic - hourly - Frankfurt",
+      "price": 0.01,
+      "period": "hourly"
+    },
+    {
+      "id": "92",
+      "service_id": "31",
+      "name": "Basic - monthly - Frankfurt",
+      "price": 6.13,
+      "period": "monthly"
+    },
+    {
+      "id": "93",
+      "service_id": "31",
+      "name": "Basic - yearly - Frankfurt",
+      "price": 58.82,
+      "period": "yearly"
+    },
+    {
+      "id": "94",
+      "service_id": "32",
+      "name": "Starter - hourly - Frankfurt",
+      "price": 0.01,
+      "period": "hourly"
+    },
+    {
+      "id": "95",
+      "service_id": "32",
+      "name": "Starter - monthly - Frankfurt",
+      "price": 6.13,
+      "period": "monthly"
+    },
+    {
+      "id": "96",
+      "service_id": "32",
+      "name": "Starter - yearly - Frankfurt",
+      "price": 58.82,
+      "period": "yearly"
+    },
+    {
+      "id": "97",
+      "service_id": "33",
+      "name": "Intermediate - hourly - Frankfurt",
+      "price": 0.02,
+      "period": "hourly"
+    },
+    {
+      "id": "98",
+      "service_id": "33",
+      "name": "Intermediate - monthly - Frankfurt",
+      "price": 12.26,
+      "period": "monthly"
+    },
+    {
+      "id": "99",
+      "service_id": "33",
+      "name": "Intermediate - yearly - Frankfurt",
+      "price": 117.63,
+      "period": "yearly"
+    },
+    {
+      "id": "100",
+      "service_id": "34",
+      "name": "Advanced - hourly - Frankfurt",
+      "price": 0.04,
+      "period": "hourly"
+    },
+    {
+      "id": "101",
+      "service_id": "34",
+      "name": "Advanced - monthly - Frankfurt",
+      "price": 24.51,
+      "period": "monthly"
+    },
+    {
+      "id": "102",
+      "service_id": "34",
+      "name": "Advanced - yearly - Frankfurt",
+      "price": 235.26,
+      "period": "yearly"
+    },
+    {
+      "id": "103",
+      "service_id": "35",
+      "name": "Pro - hourly - Frankfurt",
+      "price": 0.08,
+      "period": "hourly"
+    },
+    {
+      "id": "104",
+      "service_id": "35",
+      "name": "Pro - monthly - Frankfurt",
+      "price": 49.01,
+      "period": "monthly"
+    },
+    {
+      "id": "105",
+      "service_id": "35",
+      "name": "Pro - yearly - Frankfurt",
+      "price": 470.52,
+      "period": "yearly"
+    },
+    {
+      "id": "106",
+      "service_id": "36",
+      "name": "Ultra - hourly - Frankfurt",
+      "price": 0.16,
+      "period": "hourly"
+    },
+    {
+      "id": "107",
+      "service_id": "36",
+      "name": "Ultra - monthly - Frankfurt",
+      "price": 98.02,
+      "period": "monthly"
+    },
+    {
+      "id": "108",
+      "service_id": "36",
+      "name": "Ultra - yearly - Frankfurt",
+      "price": 941.04,
+      "period": "yearly"
+    },
+    {
+      "id": "109",
+      "service_id": "37",
+      "name": "Max - hourly - Frankfurt",
+      "price": 0.32,
+      "period": "hourly"
+    },
+    {
+      "id": "110",
+      "service_id": "37",
+      "name": "Max - monthly - Frankfurt",
+      "price": 196.03,
+      "period": "monthly"
+    },
+    {
+      "id": "111",
+      "service_id": "37",
+      "name": "Max - yearly - Frankfurt",
+      "price": 1882.07,
+      "period": "yearly"
+    },
+    {
+      "id": "112",
+      "service_id": "38",
+      "name": "Mega - hourly - Frankfurt",
+      "price": 0.48,
+      "period": "hourly"
+    },
+    {
+      "id": "113",
+      "service_id": "38",
+      "name": "Mega - monthly - Frankfurt",
+      "price": 294.05,
+      "period": "monthly"
+    },
+    {
+      "id": "114",
+      "service_id": "38",
+      "name": "Mega - yearly - Frankfurt",
+      "price": 2823.11,
+      "period": "yearly"
+    },
+    {
+      "id": "115",
+      "service_id": "39",
+      "name": "Giga - hourly - Frankfurt",
+      "price": 0.64,
+      "period": "hourly"
+    },
+    {
+      "id": "116",
+      "service_id": "39",
+      "name": "Giga - monthly - Frankfurt",
+      "price": 392.07,
+      "period": "monthly"
+    },
+    {
+      "id": "117",
+      "service_id": "39",
+      "name": "Giga - yearly - Frankfurt",
+      "price": 3764.14,
+      "period": "yearly"
+    },
+    {
+      "id": "118",
+      "service_id": "40",
+      "name": "Tera - hourly - Frankfurt",
+      "price": 0.96,
+      "period": "hourly"
+    },
+    {
+      "id": "119",
+      "service_id": "40",
+      "name": "Tera - monthly - Frankfurt",
+      "price": 588.1,
+      "period": "monthly"
+    },
+    {
+      "id": "120",
+      "service_id": "40",
+      "name": "Tera - yearly - Frankfurt",
+      "price": 5646.21,
+      "period": "yearly"
+    },
+    {
+      "id": "121",
+      "service_id": "41",
+      "name": "Basic - hourly - Tokyo",
+      "price": 0.01,
+      "period": "hourly"
+    },
+    {
+      "id": "122",
+      "service_id": "41",
+      "name": "Basic - monthly - Tokyo",
+      "price": 5.55,
+      "period": "monthly"
+    },
+    {
+      "id": "123",
+      "service_id": "41",
+      "name": "Basic - yearly - Tokyo",
+      "price": 53.28,
+      "period": "yearly"
+    },
+    {
+      "id": "124",
+      "service_id": "42",
+      "name": "Starter - hourly - Tokyo",
+      "price": 0.01,
+      "period": "hourly"
+    },
+    {
+      "id": "125",
+      "service_id": "42",
+      "name": "Starter - monthly - Tokyo",
+      "price": 5.55,
+      "period": "monthly"
+    },
+    {
+      "id": "126",
+      "service_id": "42",
+      "name": "Starter - yearly - Tokyo",
+      "price": 53.28,
+      "period": "yearly"
+    },
+    {
+      "id": "127",
+      "service_id": "43",
+      "name": "Intermediate - hourly - Tokyo",
+      "price": 0.02,
+      "period": "hourly"
+    },
+    {
+      "id": "128",
+      "service_id": "43",
+      "name": "Intermediate - monthly - Tokyo",
+      "price": 11.09,
+      "period": "monthly"
+    },
+    {
+      "id": "129",
+      "service_id": "43",
+      "name": "Intermediate - yearly - Tokyo",
+      "price": 106.56,
+      "period": "yearly"
+    },
+    {
+      "id": "130",
+      "service_id": "44",
+      "name": "Advanced - hourly - Tokyo",
+      "price": 0.04,
+      "period": "hourly"
+    },
+    {
+      "id": "131",
+      "service_id": "44",
+      "name": "Advanced - monthly - Tokyo",
+      "price": 22.18,
+      "period": "monthly"
+    },
+    {
+      "id": "132",
+      "service_id": "44",
+      "name": "Advanced - yearly - Tokyo",
+      "price": 213.12,
+      "period": "yearly"
+    },
+    {
+      "id": "133",
+      "service_id": "45",
+      "name": "Pro - hourly - Tokyo",
+      "price": 0.08,
+      "period": "hourly"
+    },
+    {
+      "id": "134",
+      "service_id": "45",
+      "name": "Pro - monthly - Tokyo",
+      "price": 44.37,
+      "period": "monthly"
+    },
+    {
+      "id": "135",
+      "service_id": "45",
+      "name": "Pro - yearly - Tokyo",
+      "price": 426.24,
+      "period": "yearly"
+    },
+    {
+      "id": "136",
+      "service_id": "46",
+      "name": "Ultra - hourly - Tokyo",
+      "price": 0.16,
+      "period": "hourly"
+    },
+    {
+      "id": "137",
+      "service_id": "46",
+      "name": "Ultra - monthly - Tokyo",
+      "price": 88.73,
+      "period": "monthly"
+    },
+    {
+      "id": "138",
+      "service_id": "46",
+      "name": "Ultra - yearly - Tokyo",
+      "price": 852.48,
+      "period": "yearly"
+    },
+    {
+      "id": "139",
+      "service_id": "47",
+      "name": "Max - hourly - Tokyo",
+      "price": 0.32,
+      "period": "hourly"
+    },
+    {
+      "id": "140",
+      "service_id": "47",
+      "name": "Max - monthly - Tokyo",
+      "price": 177.47,
+      "period": "monthly"
+    },
+    {
+      "id": "141",
+      "service_id": "47",
+      "name": "Max - yearly - Tokyo",
+      "price": 1704.96,
+      "period": "yearly"
+    },
+    {
+      "id": "142",
+      "service_id": "48",
+      "name": "Mega - hourly - Tokyo",
+      "price": 0.48,
+      "period": "hourly"
+    },
+    {
+      "id": "143",
+      "service_id": "48",
+      "name": "Mega - monthly - Tokyo",
+      "price": 266.2,
+      "period": "monthly"
+    },
+    {
+      "id": "144",
+      "service_id": "48",
+      "name": "Mega - yearly - Tokyo",
+      "price": 2557.44,
+      "period": "yearly"
+    },
+    {
+      "id": "145",
+      "service_id": "49",
+      "name": "Giga - hourly - Tokyo",
+      "price": 0.64,
+      "period": "hourly"
+    },
+    {
+      "id": "146",
+      "service_id": "49",
+      "name": "Giga - monthly - Tokyo",
+      "price": 354.94,
+      "period": "monthly"
+    },
+    {
+      "id": "147",
+      "service_id": "49",
+      "name": "Giga - yearly - Tokyo",
+      "price": 3411.36,
+      "period": "yearly"
+    },
+    {
+      "id": "148",
+      "service_id": "50",
+      "name": "Tera - hourly - Tokyo",
+      "price": 0.96,
+      "period": "hourly"
+    },
+    {
+      "id": "149",
+      "service_id": "50",
+      "name": "Tera - monthly - Tokyo",
+      "price": 532.4,
+      "period": "monthly"
+    },
+    {
+      "id": "150",
+      "service_id": "50",
+      "name": "Tera - yearly - Tokyo",
+      "price": 5117.04,
+      "period": "yearly"
+    },
+    {
+      "id": "151",
+      "service_id": "51",
+      "name": "Basic - hourly - Mumbai",
+      "price": 0.01,
+      "period": "hourly"
+    },
+    {
+      "id": "152",
+      "service_id": "51",
+      "name": "Basic - monthly - Mumbai",
+      "price": 5.13,
+      "period": "monthly"
+    },
+    {
+      "id": "153",
+      "service_id": "51",
+      "name": "Basic - yearly - Mumbai",
+      "price": 49.22,
+      "period": "yearly"
+    },
+    {
+      "id": "154",
+      "service_id": "52",
+      "name": "Starter - hourly - Mumbai",
+      "price": 0.01,
+      "period": "hourly"
+    },
+    {
+      "id": "155",
+      "service_id": "52",
+      "name": "Starter - monthly - Mumbai",
+      "price": 5.13,
+      "period": "monthly"
+    },
+    {
+      "id": "156",
+      "service_id": "52",
+      "name": "Starter - yearly - Mumbai",
+      "price": 49.22,
+      "period": "yearly"
+    },
+    {
+      "id": "157",
+      "service_id": "53",
+      "name": "Intermediate - hourly - Mumbai",
+      "price": 0.02,
+      "period": "hourly"
+    },
+    {
+      "id": "158",
+      "service_id": "53",
+      "name": "Intermediate - monthly - Mumbai",
+      "price": 10.26,
+      "period": "monthly"
+    },
+    {
+      "id": "159",
+      "service_id": "53",
+      "name": "Intermediate - yearly - Mumbai",
+      "price": 98.45,
+      "period": "yearly"
+    },
+    {
+      "id": "160",
+      "service_id": "54",
+      "name": "Advanced - hourly - Mumbai",
+      "price": 0.04,
+      "period": "hourly"
+    },
+    {
+      "id": "161",
+      "service_id": "54",
+      "name": "Advanced - monthly - Mumbai",
+      "price": 20.51,
+      "period": "monthly"
+    },
+    {
+      "id": "162",
+      "service_id": "54",
+      "name": "Advanced - yearly - Mumbai",
+      "price": 196.9,
+      "period": "yearly"
+    },
+    {
+      "id": "163",
+      "service_id": "55",
+      "name": "Pro - hourly - Mumbai",
+      "price": 0.08,
+      "period": "hourly"
+    },
+    {
+      "id": "164",
+      "service_id": "55",
+      "name": "Pro - monthly - Mumbai",
+      "price": 41.01,
+      "period": "monthly"
+    },
+    {
+      "id": "165",
+      "service_id": "55",
+      "name": "Pro - yearly - Mumbai",
+      "price": 393.79,
+      "period": "yearly"
+    },
+    {
+      "id": "166",
+      "service_id": "56",
+      "name": "Ultra - hourly - Mumbai",
+      "price": 0.16,
+      "period": "hourly"
+    },
+    {
+      "id": "167",
+      "service_id": "56",
+      "name": "Ultra - monthly - Mumbai",
+      "price": 82.03,
+      "period": "monthly"
+    },
+    {
+      "id": "168",
+      "service_id": "56",
+      "name": "Ultra - yearly - Mumbai",
+      "price": 787.58,
+      "period": "yearly"
+    },
+    {
+      "id": "169",
+      "service_id": "57",
+      "name": "Max - hourly - Mumbai",
+      "price": 0.32,
+      "period": "hourly"
+    },
+    {
+      "id": "170",
+      "service_id": "57",
+      "name": "Max - monthly - Mumbai",
+      "price": 164.06,
+      "period": "monthly"
+    },
+    {
+      "id": "171",
+      "service_id": "57",
+      "name": "Max - yearly - Mumbai",
+      "price": 1575.15,
+      "period": "yearly"
+    },
+    {
+      "id": "172",
+      "service_id": "58",
+      "name": "Mega - hourly - Mumbai",
+      "price": 0.48,
+      "period": "hourly"
+    },
+    {
+      "id": "173",
+      "service_id": "58",
+      "name": "Mega - monthly - Mumbai",
+      "price": 246.09,
+      "period": "monthly"
+    },
+    {
+      "id": "174",
+      "service_id": "58",
+      "name": "Mega - yearly - Mumbai",
+      "price": 2362.73,
+      "period": "yearly"
+    },
+    {
+      "id": "175",
+      "service_id": "59",
+      "name": "Giga - hourly - Mumbai",
+      "price": 0.64,
+      "period": "hourly"
+    },
+    {
+      "id": "176",
+      "service_id": "59",
+      "name": "Giga - monthly - Mumbai",
+      "price": 328.12,
+      "period": "monthly"
+    },
+    {
+      "id": "177",
+      "service_id": "59",
+      "name": "Giga - yearly - Mumbai",
+      "price": 3150.31,
+      "period": "yearly"
+    },
+    {
+      "id": "178",
+      "service_id": "60",
+      "name": "Tera - hourly - Mumbai",
+      "price": 0.96,
+      "period": "hourly"
+    },
+    {
+      "id": "179",
+      "service_id": "60",
+      "name": "Tera - monthly - Mumbai",
+      "price": 492.18,
+      "period": "monthly"
+    },
+    {
+      "id": "180",
+      "service_id": "60",
+      "name": "Tera - yearly - Mumbai",
+      "price": 4725.46,
+      "period": "yearly"
     }
   ]
 }

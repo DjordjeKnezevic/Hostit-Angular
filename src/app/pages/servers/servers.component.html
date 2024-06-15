@@ -37,7 +37,7 @@
         </div>
 
         <ng-container *ngIf="isAuthenticated; else guestLink">
-          <a [routerLink]="['/rent-server']" [queryParams]="{ server: server.id }" class="btn btn-success mt-2"
+          <a [routerLink]="['/rent-server', server.id]" class="btn btn-success mt-2"
             (click)="saveRedirectUrl(server.id)">Rent now</a>
         </ng-container>
         <ng-template #guestLink>

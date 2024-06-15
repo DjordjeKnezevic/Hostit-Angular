@@ -20,7 +20,9 @@ const routes: Routes = [
   { path: 'rent-server', component: RentServerComponent },
   { path: 'login', component: LoginComponent, canActivate: [authGuard] },
   { path: 'register', component: RegisterComponent, canActivate: [authGuard] },
-  { path: 'servers', component: ServersComponent }
+  { path: 'servers', component: ServersComponent },
+  { path: 'rent-server', component: RentServerComponent },
+  { path: 'rent-server/:serverId', component: RentServerComponent },
 ];
 
 @NgModule({

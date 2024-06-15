@@ -11,6 +11,7 @@ import { RentServerComponent } from './rent-server/rent-server.component';
 import { NgbModule, NgbCarouselModule, NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from '../shared/shared.module';
 import { ServersComponent } from './servers/servers.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,9 @@ import { ServersComponent } from './servers/servers.component';
     NgbModule,
     NgbCarouselModule,
     SharedModule,
-    NgbDropdownModule
+    NgbDropdownModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class PagesModule { }

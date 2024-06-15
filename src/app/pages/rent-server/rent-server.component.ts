@@ -100,7 +100,6 @@ export class RentServerComponent implements OnInit {
   }
 
   completeRenting(): void {
-    // Add renting logic here
   }
 
   private resetForm(): void {

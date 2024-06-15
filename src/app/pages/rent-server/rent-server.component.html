@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<div class="container mt-5" id="rent-server-page">
   <div class="row">
     <div class="col-md-6">
       <h2>Server Renting</h2>
@@ -7,43 +7,57 @@
           <label for="location">Location</label>
           <select id="location" class="form-control" [(ngModel)]="selectedLocationId" (change)="onLocationChange()"
             name="location">
+            <option [value]="''">{{ locationPlaceholder }}</option>
             <option *ngFor="let location of locations" [value]="location.id">{{ location.name }}</option>
           </select>
         </div>
         <div class="form-group">
           <label for="server">Server</label>
           <select id="server" class="form-control" [(ngModel)]="selectedServerId" (change)="onServerChange()"
-            name="server">
+            name="server" [disabled]="!locationInfo">
+            <option [value]="''">{{ serverPlaceholder }}</option>
             <option *ngFor="let server of servers" [value]="server.id">{{ server.name }}</option>
           </select>
         </div>
         <div class="form-group">
           <label for="pricing">Pricing Plan</label>
           <select id="pricing" class="form-control" [(ngModel)]="selectedPricingId" (change)="onPricingChange()"
-            name="pricing">
+            name="pricing" [disabled]="!serverInfo">
+            <option [value]="''">{{ pricingPlaceholder }}</option>
             <option *ngFor="let pricing of pricingOptions" [value]="pricing.id">{{ pricing.period }}: ${{ pricing.price
               }}</option>
           </select>
         </div>
-        <button type="button" class="btn btn-primary" (click)="completeRenting()">Complete Renting</button>
+        <button type="button" class="btn btn-primary" (click)="completeRenting()"
+          [disabled]="!selectedLocationId || !selectedServerId || !selectedPricingId">Complete Renting</button>
       </form>
     </div>
     <div class="col-md-6">
-      <h4>Location information:</h4>
-      <p>Name: {{ locationInfo?.name ?? 'N/A' }}</p>
-      <p>Network Zone: {{ locationInfo?.network_zone ?? 'N/A' }}</p>
-      <p>City: {{ locationInfo?.city ?? 'N/A' }}</p>
-
-      <h4>Server information:</h4>
-      <p>Name: {{ serverInfo?.name ?? 'N/A' }}</p>
-      <p>CPU Cores: {{ serverInfo?.serverType?.cpu_cores ?? 'N/A' }}</p>
-      <p>RAM: {{ serverInfo?.serverType?.ram ?? 'N/A' }} GB</p>
-      <p>Storage: {{ serverInfo?.serverType?.storage ?? 'N/A' }} GB</p>
-      <p>Network Speed: {{ serverInfo?.serverType?.network_speed ?? 'N/A' }} Gbps</p>
-
-      <h4>Pricing information:</h4>
-      <p>Period: {{ pricingInfo?.period ?? 'N/A' }}</p>
-      <p>Price: ${{ pricingInfo?.price ?? 'N/A' }}</p>
+      <div *ngIf="locationInfo">
+        <h4>Location information:</h4>
+        <ul class="list-group">
+          <li class="list-group-item">Name: {{ locationInfo.name }}</li>
+          <li class="list-group-item">Network Zone: {{ locationInfo.network_zone}}</li>
+          <li class="list-group-item">City: {{ locationInfo.city}}</li>
+        </ul>
+      </div>
+      <div *ngIf="serverInfo">
+        <h4>Server information:</h4>
+        <ul class="list-group">
+          <li class="list-group-item">Name: {{ serverInfo.name }}</li>
+          <li class="list-group-item">CPU Cores: {{ serverInfo.serverType.cpu_cores }}</li>
+          <li class="list-group-item">RAM: {{ serverInfo.serverType.ram}} GB</li>
+          <li class="list-group-item">Storage: {{ serverInfo.serverType.storage }} GB</li>
+          <li class="list-group-item">Network Speed: {{ serverInfo.serverType.network_speed }} Gbps</li>
+        </ul>
+      </div>
+      <div *ngIf="pricingInfo">
+        <h4>Pricing information:</h4>
+        <ul class="list-group">
+          <li class="list-group-item">Period: {{ pricingInfo.period }}</li>
+          <li class="list-group-item">Price: ${{ pricingInfo.price }}</li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

@@ -23,6 +23,10 @@ export class RentServerComponent implements OnInit {
   serverInfo: Server | null = null;
   pricingInfo: Pricing | null = null;
 
+  locationPlaceholder = 'Select a Location';
+  serverPlaceholder = 'Please select a location first';
+  pricingPlaceholder = 'Please select a location first';
+
   constructor(private serverService: ServerService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
@@ -36,66 +40,88 @@ export class RentServerComponent implements OnInit {
 
   loadInitialData(): void {
     this.serverService.getServerOptions().subscribe((data: LocationWithServers[]) => {
-      console.log('Fetched locations with servers:', data);
       this.locations = data;
     });
   }
 
   initializeWithServerId(serverId: string): void {
     this.serverService.getServerWithDetails(serverId).subscribe((server: Server) => {
-      console.log('Initial Server Info:', server);
-
       const location = this.locations.find(loc => loc.servers.some(s => s.id === server.id));
       if (location) {
         this.selectedLocationId = location.id;
         this.locationInfo = location;
         this.servers = location.servers;
+        this.serverPlaceholder = 'Select a Server';
         this.selectedServerId = server.id;
         this.serverInfo = server;
         this.pricingOptions = server.pricing;
         if (server.pricing.length > 0) {
           this.selectedPricingId = server.pricing[0].id;
           this.pricingInfo = server.pricing[0];
+          this.pricingPlaceholder = 'Select a Pricing Plan';
         }
       }
     });
   }
 
   onLocationChange(): void {
-    console.log('Selected Location ID:', this.selectedLocationId);
     this.locationInfo = this.locations.find(location => location.id === this.selectedLocationId) || null;
     if (this.locationInfo) {
-      console.log('Location Info:', this.locationInfo);
       this.servers = this.locationInfo.servers;
       this.serverInfo = null;
       this.pricingOptions = [];
       this.pricingInfo = null;
       this.selectedServerId = '';
       this.selectedPricingId = '';
+      this.serverPlaceholder = 'Select a Server';
+      this.pricingPlaceholder = 'Please select a server first';
+    } else {
+      this.resetForm();
     }
   }
 
   onServerChange(): void {
-    console.log('Selected Server ID:', this.selectedServerId);
     const selectedServer = this.servers.find(server => server.id === this.selectedServerId) || null;
     if (selectedServer) {
       this.serverService.getServerWithDetails(selectedServer.id).subscribe((serverWithDetails: Server) => {
-        console.log('Server Info:', serverWithDetails);
         this.serverInfo = serverWithDetails;
         this.pricingOptions = serverWithDetails.pricing;
         this.pricingInfo = null;
         this.selectedPricingId = '';
+        this.pricingPlaceholder = 'Select a Pricing Plan';
       });
+    } else {
+      this.resetServerAndPricing();
     }
   }
 
   onPricingChange(): void {
-    console.log('Selected Pricing ID:', this.selectedPricingId);
     this.pricingInfo = this.pricingOptions.find(pricing => pricing.id === this.selectedPricingId) || null;
-    console.log('Pricing Info:', this.pricingInfo);
   }
 
   completeRenting(): void {
     // Add renting logic here
+  }
+
+  private resetForm(): void {
+    this.selectedLocationId = '';
+    this.selectedServerId = '';
+    this.selectedPricingId = '';
+    this.servers = [];
+    this.pricingOptions = [];
+    this.locationInfo = null;
+    this.serverInfo = null;
+    this.pricingInfo = null;
+    this.serverPlaceholder = 'Please select a location first';
+    this.pricingPlaceholder = 'Please select a location first';
+  }
+
+  private resetServerAndPricing(): void {
+    this.selectedServerId = '';
+    this.selectedPricingId = '';
+    this.serverInfo = null;
+    this.pricingOptions = [];
+    this.pricingInfo = null;
+    this.pricingPlaceholder = 'Please select a server first';
   }
 }

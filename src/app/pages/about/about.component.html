@@ -40,7 +40,7 @@
     <div class="row">
       <div *ngFor="let location of locations; let i = index" class="col-md-4">
         <div class="location_box">
-          <img [src]="'assets/' + location.image" [alt]="location.name">
+          <img [src]="location.image" [alt]="location.name">
           <div class="location_info">
             <h4>{{ location.city }}</h4>
             <p>{{ location.name }} - {{ location.network_zone }}</p>

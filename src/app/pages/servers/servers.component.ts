@@ -37,7 +37,7 @@ export class ServersComponent implements OnInit {
   }
 
   saveRedirectUrl(serverId: string): void {
-    this.userService.saveRedirectUrl(serverId);
+    this.userService.saveRedirectUrl(`rent-server/${serverId}`);
   }
 
   ucfirst(string: string): string {

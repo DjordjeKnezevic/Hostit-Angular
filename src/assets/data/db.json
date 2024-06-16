@@ -80,6 +80,13 @@
       "email": "admin5@example.com",
       "password": "adsgfdgfd%345@fGDf",
       "role_id": "1"
+    },
+    {
+      "id": "45f8",
+      "name": "Ipsum atque fuga Ut",
+      "email": "lomucyr@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "role_id": "1"
     }
   ],
   "server_types": [

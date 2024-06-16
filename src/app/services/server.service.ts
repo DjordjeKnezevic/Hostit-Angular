@@ -5,13 +5,13 @@ import { map, switchMap } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
 import { LocationWithServers } from '../interfaces/location';
 import { Server } from '../interfaces/server';
-import { Pricing } from '../interfaces/pricing';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServerService {
   private serverOptionsUrl = `${environment.apiUrl}/server_options`;
+  private subscriptionsUrl = `${environment.apiUrl}/subscriptions`;
 
   constructor(private http: HttpClient) {}
 
@@ -58,5 +58,9 @@ export class ServerService {
         );
       })
     );
+  }
+
+  createSubscription(subscription: any): Observable<any> {
+    return this.http.post<any>(this.subscriptionsUrl, subscription);
   }
 }

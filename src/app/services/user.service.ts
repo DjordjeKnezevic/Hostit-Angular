@@ -97,8 +97,8 @@ export class UserService {
     );
   }
 
-  saveRedirectUrl(serverId: string): void {
-    localStorage.setItem('redirectUrl', `/rent-server/${serverId}`);
+  saveRedirectUrl(url: string): void {
+    localStorage.setItem('redirectUrl', url);
   }
 
   getRedirectUrl(): string | null {

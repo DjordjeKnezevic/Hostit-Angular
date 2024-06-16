@@ -211,14 +211,14 @@
   "servers": [
     {
       "id": "1",
-      "name": "New York - Basic",
-      "server_type_id": "2",
+      "name": "New York - Starter",
+      "server_type_id": "1",
       "location_id": "1"
     },
     {
       "id": "2",
-      "name": "New York - Starter",
-      "server_type_id": "1",
+      "name": "New York - Basic",
+      "server_type_id": "2",
       "location_id": "1"
     },
     {
@@ -247,38 +247,38 @@
     },
     {
       "id": "7",
-      "name": "New York - Max",
-      "server_type_id": "10",
-      "location_id": "1"
-    },
-    {
-      "id": "8",
       "name": "New York - Mega",
       "server_type_id": "7",
       "location_id": "1"
     },
     {
-      "id": "9",
+      "id": "8",
       "name": "New York - Giga",
       "server_type_id": "8",
       "location_id": "1"
     },
     {
-      "id": "10",
+      "id": "9",
       "name": "New York - Tera",
       "server_type_id": "9",
       "location_id": "1"
     },
     {
+      "id": "10",
+      "name": "New York - Max",
+      "server_type_id": "10",
+      "location_id": "1"
+    },
+    {
       "id": "11",
-      "name": "San Francisco - Basic",
-      "server_type_id": "2",
+      "name": "San Francisco - Starter",
+      "server_type_id": "1",
       "location_id": "2"
     },
     {
       "id": "12",
-      "name": "San Francisco - Starter",
-      "server_type_id": "1",
+      "name": "San Francisco - Basic",
+      "server_type_id": "2",
       "location_id": "2"
     },
     {
@@ -307,38 +307,38 @@
     },
     {
       "id": "17",
-      "name": "San Francisco - Max",
-      "server_type_id": "10",
-      "location_id": "2"
-    },
-    {
-      "id": "18",
       "name": "San Francisco - Mega",
       "server_type_id": "7",
       "location_id": "2"
     },
     {
-      "id": "19",
+      "id": "18",
       "name": "San Francisco - Giga",
       "server_type_id": "8",
       "location_id": "2"
     },
     {
-      "id": "20",
+      "id": "19",
       "name": "San Francisco - Tera",
       "server_type_id": "9",
       "location_id": "2"
     },
     {
+      "id": "20",
+      "name": "San Francisco - Max",
+      "server_type_id": "10",
+      "location_id": "2"
+    },
+    {
       "id": "21",
-      "name": "London - Basic",
-      "server_type_id": "2",
+      "name": "London - Starter",
+      "server_type_id": "1",
       "location_id": "3"
     },
     {
       "id": "22",
-      "name": "London - Starter",
-      "server_type_id": "1",
+      "name": "London - Basic",
+      "server_type_id": "2",
       "location_id": "3"
     },
     {
@@ -367,38 +367,38 @@
     },
     {
       "id": "27",
-      "name": "London - Max",
-      "server_type_id": "10",
-      "location_id": "3"
-    },
-    {
-      "id": "28",
       "name": "London - Mega",
       "server_type_id": "7",
       "location_id": "3"
     },
     {
-      "id": "29",
+      "id": "28",
       "name": "London - Giga",
       "server_type_id": "8",
       "location_id": "3"
     },
     {
-      "id": "30",
+      "id": "29",
       "name": "London - Tera",
       "server_type_id": "9",
       "location_id": "3"
     },
     {
+      "id": "30",
+      "name": "London - Max",
+      "server_type_id": "10",
+      "location_id": "3"
+    },
+    {
       "id": "31",
-      "name": "Frankfurt - Basic",
-      "server_type_id": "2",
+      "name": "Frankfurt - Starter",
+      "server_type_id": "1",
       "location_id": "4"
     },
     {
       "id": "32",
-      "name": "Frankfurt - Starter",
-      "server_type_id": "1",
+      "name": "Frankfurt - Basic",
+      "server_type_id": "2",
       "location_id": "4"
     },
     {
@@ -427,38 +427,38 @@
     },
     {
       "id": "37",
-      "name": "Frankfurt - Max",
-      "server_type_id": "10",
-      "location_id": "4"
-    },
-    {
-      "id": "38",
       "name": "Frankfurt - Mega",
       "server_type_id": "7",
       "location_id": "4"
     },
     {
-      "id": "39",
+      "id": "38",
       "name": "Frankfurt - Giga",
       "server_type_id": "8",
       "location_id": "4"
     },
     {
-      "id": "40",
+      "id": "39",
       "name": "Frankfurt - Tera",
       "server_type_id": "9",
       "location_id": "4"
     },
     {
+      "id": "40",
+      "name": "Frankfurt - Max",
+      "server_type_id": "10",
+      "location_id": "4"
+    },
+    {
       "id": "41",
-      "name": "Tokyo - Basic",
-      "server_type_id": "2",
+      "name": "Tokyo - Starter",
+      "server_type_id": "1",
       "location_id": "5"
     },
     {
       "id": "42",
-      "name": "Tokyo - Starter",
-      "server_type_id": "1",
+      "name": "Tokyo - Basic",
+      "server_type_id": "2",
       "location_id": "5"
     },
     {
@@ -487,38 +487,38 @@
     },
     {
       "id": "47",
-      "name": "Tokyo - Max",
-      "server_type_id": "10",
-      "location_id": "5"
-    },
-    {
-      "id": "48",
       "name": "Tokyo - Mega",
       "server_type_id": "7",
       "location_id": "5"
     },
     {
-      "id": "49",
+      "id": "48",
       "name": "Tokyo - Giga",
       "server_type_id": "8",
       "location_id": "5"
     },
     {
-      "id": "50",
+      "id": "49",
       "name": "Tokyo - Tera",
       "server_type_id": "9",
       "location_id": "5"
     },
     {
+      "id": "50",
+      "name": "Tokyo - Max",
+      "server_type_id": "10",
+      "location_id": "5"
+    },
+    {
       "id": "51",
-      "name": "Mumbai - Basic",
-      "server_type_id": "2",
+      "name": "Mumbai - Starter",
+      "server_type_id": "1",
       "location_id": "6"
     },
     {
       "id": "52",
-      "name": "Mumbai - Starter",
-      "server_type_id": "1",
+      "name": "Mumbai - Basic",
+      "server_type_id": "2",
       "location_id": "6"
     },
     {
@@ -547,850 +547,1825 @@
     },
     {
       "id": "57",
-      "name": "Mumbai - Max",
-      "server_type_id": "10",
-      "location_id": "6"
-    },
-    {
-      "id": "58",
       "name": "Mumbai - Mega",
       "server_type_id": "7",
       "location_id": "6"
     },
     {
-      "id": "59",
+      "id": "58",
       "name": "Mumbai - Giga",
       "server_type_id": "8",
       "location_id": "6"
     },
     {
-      "id": "60",
+      "id": "59",
       "name": "Mumbai - Tera",
       "server_type_id": "9",
       "location_id": "6"
+    },
+    {
+      "id": "60",
+      "name": "Mumbai - Max",
+      "server_type_id": "10",
+      "location_id": "6"
     }
   ],
-    "server_options": [
-      {
-        "id": "1",
-        "name": "US East",
-        "network_zone": "Zone A",
-        "city": "New York",
-        "image": "assets/img/countries/us.jpg",
-        "servers": [
-          {
+  "server_options": [
+    {
+      "id": "1",
+      "name": "US East",
+      "network_zone": "Zone A",
+      "city": "New York",
+      "image": "assets/img/countries/us.jpg",
+      "servers": [
+        {
+          "id": "1",
+          "name": "New York - Starter",
+          "serverType": {
             "id": "1",
-            "name": "New York - Basic",
-            "serverType": {
-              "id": "2",
-              "name": "Basic",
-              "cpu_cores": 1,
-              "ram": 2,
-              "storage": 20,
-              "network_speed": 1
-            },
-            "pricing": [
-              { "id": "1", "period": "hourly", "price": 0.02 },
-              { "id": "2", "period": "monthly", "price": 11.68 },
-              { "id": "3", "period": "yearly", "price": 112.13 }
-            ]
+            "name": "Starter",
+            "cpu_cores": 1,
+            "ram": 2,
+            "storage": 20,
+            "network_speed": 1
           },
-          {
+          "pricing": [
+            {
+              "id": "1",
+              "period": "hourly",
+              "price": 0.01
+            },
+            {
+              "id": "2",
+              "period": "monthly",
+              "price": 5.84
+            },
+            {
+              "id": "3",
+              "period": "yearly",
+              "price": 56.06
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "name": "New York - Basic",
+          "serverType": {
             "id": "2",
-            "name": "New York - Starter",
-            "serverType": {
-              "id": "1",
-              "name": "Starter",
-              "cpu_cores": 2,
-              "ram": 4,
-              "storage": 40,
-              "network_speed": 1
-            },
-            "pricing": [
-              { "id": "4", "period": "hourly", "price": 0.01 },
-              { "id": "5", "period": "monthly", "price": 5.84 },
-              { "id": "6", "period": "yearly", "price": 56.06 }
-            ]
+            "name": "Basic",
+            "cpu_cores": 2,
+            "ram": 4,
+            "storage": 40,
+            "network_speed": 1
           },
-          {
+          "pricing": [
+            {
+              "id": "4",
+              "period": "hourly",
+              "price": 0.02
+            },
+            {
+              "id": "5",
+              "period": "monthly",
+              "price": 11.68
+            },
+            {
+              "id": "6",
+              "period": "yearly",
+              "price": 112.13
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "name": "New York - Intermediate",
+          "serverType": {
             "id": "3",
-            "name": "New York - Intermediate",
-            "serverType": {
-              "id": "3",
-              "name": "Intermediate",
-              "cpu_cores": 4,
-              "ram": 8,
-              "storage": 80,
-              "network_speed": 2
-            },
-            "pricing": [
-              { "id": "7", "period": "hourly", "price": 0.04 },
-              { "id": "8", "period": "monthly", "price": 23.36 },
-              { "id": "9", "period": "yearly", "price": 224.26 }
-            ]
+            "name": "Intermediate",
+            "cpu_cores": 4,
+            "ram": 8,
+            "storage": 80,
+            "network_speed": 2
           },
-          {
-            "id": "4",
-            "name": "New York - Advanced",
-            "serverType": {
-              "id": "4",
-              "name": "Advanced",
-              "cpu_cores": 8,
-              "ram": 16,
-              "storage": 160,
-              "network_speed": 2
-            },
-            "pricing": [
-              { "id": "10", "period": "hourly", "price": 0.08 },
-              { "id": "11", "period": "monthly", "price": 46.72 },
-              { "id": "12", "period": "yearly", "price": 448.51 }
-            ]
-          },
-          {
-            "id": "5",
-            "name": "New York - Pro",
-            "serverType": {
-              "id": "5",
-              "name": "Pro",
-              "cpu_cores": 16,
-              "ram": 32,
-              "storage": 320,
-              "network_speed": 5
-            },
-            "pricing": [
-              { "id": "13", "period": "hourly", "price": 0.16 },
-              { "id": "14", "period": "monthly", "price": 93.44 },
-              { "id": "15", "period": "yearly", "price": 897.02 }
-            ]
-          },
-          {
-            "id": "6",
-            "name": "New York - Ultra",
-            "serverType": {
-              "id": "6",
-              "name": "Ultra",
-              "cpu_cores": 32,
-              "ram": 64,
-              "storage": 640,
-              "network_speed": 5
-            },
-            "pricing": [
-              { "id": "16", "period": "hourly", "price": 0.32 },
-              { "id": "17", "period": "monthly", "price": 186.88 },
-              { "id": "18", "period": "yearly", "price": 1794.05 }
-            ]
-          },
-          {
-            "id": "7",
-            "name": "New York - Max",
-            "serverType": {
-              "id": "10",
-              "name": "Max",
-              "cpu_cores": 128,
-              "ram": 512,
-              "storage": 5120,
-              "network_speed": 10
-            },
-            "pricing": [
-              { "id": "19", "period": "hourly", "price": 1.28 },
-              { "id": "20", "period": "monthly", "price": 747.52 },
-              { "id": "21", "period": "yearly", "price": 7176.19 }
-            ]
-          },
-          {
-            "id": "8",
-            "name": "New York - Mega",
-            "serverType": {
+          "pricing": [
+            {
               "id": "7",
-              "name": "Mega",
-              "cpu_cores": 48,
-              "ram": 128,
-              "storage": 1280,
-              "network_speed": 10
+              "period": "hourly",
+              "price": 0.04
             },
-            "pricing": [
-              { "id": "22", "period": "hourly", "price": 0.48 },
-              { "id": "23", "period": "monthly", "price": 280.32 },
-              { "id": "24", "period": "yearly", "price": 2691.07 }
-            ]
-          },
-          {
-            "id": "9",
-            "name": "New York - Giga",
-            "serverType": {
+            {
               "id": "8",
-              "name": "Giga",
-              "cpu_cores": 64,
-              "ram": 256,
-              "storage": 2560,
-              "network_speed": 10
+              "period": "monthly",
+              "price": 23.36
             },
-            "pricing": [
-              { "id": "25", "period": "hourly", "price": 0.64 },
-              { "id": "26", "period": "monthly", "price": 373.76 },
-              { "id": "27", "period": "yearly", "price": 3588.10 }
-            ]
-          },
-          {
-            "id": "10",
-            "name": "New York - Tera",
-            "serverType": {
+            {
               "id": "9",
-              "name": "Tera",
-              "cpu_cores": 96,
-              "ram": 384,
-              "storage": 3840,
-              "network_speed": 10
-            },
-            "pricing": [
-              { "id": "28", "period": "hourly", "price": 0.96 },
-              { "id": "29", "period": "monthly", "price": 560.64 },
-              { "id": "30", "period": "yearly", "price": 5382.14 }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "2",
-        "name": "US West",
-        "network_zone": "Zone B",
-        "city": "San Francisco",
-        "image": "assets/img/countries/us.jpg",
-        "servers": [
-          {
-            "id": "11",
-            "name": "San Francisco - Basic",
-            "serverType": {
-              "id": "2",
-              "name": "Basic",
-              "cpu_cores": 1,
-              "ram": 2,
-              "storage": 20,
-              "network_speed": 1
-            },
-            "pricing": [
-              { "id": "31", "period": "hourly", "price": 0.02 },
-              { "id": "32", "period": "monthly", "price": 12.26 },
-              { "id": "33", "period": "yearly", "price": 117.70 }
-            ]
+              "period": "yearly",
+              "price": 224.26
+            }
+          ]
+        },
+        {
+          "id": "4",
+          "name": "New York - Advanced",
+          "serverType": {
+            "id": "4",
+            "name": "Advanced",
+            "cpu_cores": 8,
+            "ram": 16,
+            "storage": 160,
+            "network_speed": 2
           },
-          {
-            "id": "12",
-            "name": "San Francisco - Starter",
-            "serverType": {
-              "id": "1",
-              "name": "Starter",
-              "cpu_cores": 2,
-              "ram": 4,
-              "storage": 40,
-              "network_speed": 1
-            },
-            "pricing": [
-              { "id": "34", "period": "hourly", "price": 0.01 },
-              { "id": "35", "period": "monthly", "price": 6.13 },
-              { "id": "36", "period": "yearly", "price": 58.85 }
-            ]
-          },
-          {
-            "id": "13",
-            "name": "San Francisco - Intermediate",
-            "serverType": {
-              "id": "3",
-              "name": "Intermediate",
-              "cpu_cores": 4,
-              "ram": 8,
-              "storage": 80,
-              "network_speed": 2
-            },
-            "pricing": [
-              { "id": "37", "period": "hourly", "price": 0.04 },
-              { "id": "38", "period": "monthly", "price": 24.53 },
-              { "id": "39", "period": "yearly", "price": 235.49 }
-            ]
-          },
-          {
-            "id": "14",
-            "name": "San Francisco - Advanced",
-            "serverType": {
-              "id": "4",
-              "name": "Advanced",
-              "cpu_cores": 8,
-              "ram": 16,
-              "storage": 160,
-              "network_speed": 2
-            },
-            "pricing": [
-              { "id": "40", "period": "hourly", "price": 0.08 },
-              { "id": "41", "period": "monthly", "price": 49.06 },
-              { "id": "42", "period": "yearly", "price": 470.98 }
-            ]
-          },
-          {
-            "id": "15",
-            "name": "San Francisco - Pro",
-            "serverType": {
-              "id": "5",
-              "name": "Pro",
-              "cpu_cores": 16,
-              "ram": 32,
-              "storage": 320,
-              "network_speed": 5
-            },
-            "pricing": [
-              { "id": "43", "period": "hourly", "price": 0.17 },
-              { "id": "44", "period": "monthly", "price": 98.11 },
-              { "id": "45", "period": "yearly", "price": 941.86 }
-            ]
-          },
-          {
-            "id": "16",
-            "name": "San Francisco - Ultra",
-            "serverType": {
-              "id": "6",
-              "name": "Ultra",
-              "cpu_cores": 32,
-              "ram": 64,
-              "storage": 640,
-              "network_speed": 5
-            },
-            "pricing": [
-              { "id": "46", "period": "hourly", "price": 0.34 },
-              { "id": "47", "period": "monthly", "price": 196.22 },
-              { "id": "48", "period": "yearly", "price": 1883.71 }
-            ]
-          },
-          {
-            "id": "17",
-            "name": "San Francisco - Max",
-            "serverType": {
+          "pricing": [
+            {
               "id": "10",
-              "name": "Max",
-              "cpu_cores": 128,
-              "ram": 512,
-              "storage": 5120,
-              "network_speed": 10
+              "period": "hourly",
+              "price": 0.08
             },
-            "pricing": [
-              { "id": "49", "period": "hourly", "price": 1.34 },
-              { "id": "50", "period": "monthly", "price": 784.90 },
-              { "id": "51", "period": "yearly", "price": 7535.04 }
-            ]
+            {
+              "id": "11",
+              "period": "monthly",
+              "price": 46.72
+            },
+            {
+              "id": "12",
+              "period": "yearly",
+              "price": 448.51
+            }
+          ]
+        },
+        {
+          "id": "5",
+          "name": "New York - Pro",
+          "serverType": {
+            "id": "5",
+            "name": "Pro",
+            "cpu_cores": 16,
+            "ram": 32,
+            "storage": 320,
+            "network_speed": 5
           },
-          {
-            "id": "18",
-            "name": "San Francisco - Mega",
-            "serverType": {
-              "id": "7",
-              "name": "Mega",
-              "cpu_cores": 48,
-              "ram": 128,
-              "storage": 1280,
-              "network_speed": 10
+          "pricing": [
+            {
+              "id": "13",
+              "period": "hourly",
+              "price": 0.16
             },
-            "pricing": [
-              { "id": "52", "period": "hourly", "price": 0.50 },
-              { "id": "53", "period": "monthly", "price": 294.34 },
-              { "id": "54", "period": "yearly", "price": 2825.66 }
-            ]
+            {
+              "id": "14",
+              "period": "monthly",
+              "price": 93.44
+            },
+            {
+              "id": "15",
+              "period": "yearly",
+              "price": 897.02
+            }
+          ]
+        },
+        {
+          "id": "6",
+          "name": "New York - Ultra",
+          "serverType": {
+            "id": "6",
+            "name": "Ultra",
+            "cpu_cores": 32,
+            "ram": 64,
+            "storage": 640,
+            "network_speed": 5
           },
-          {
-            "id": "19",
-            "name": "San Francisco - Giga",
-            "serverType": {
-              "id": "8",
-              "name": "Giga",
-              "cpu_cores": 64,
-              "ram": 256,
-              "storage": 2560,
-              "network_speed": 10
+          "pricing": [
+            {
+              "id": "16",
+              "period": "hourly",
+              "price": 0.32
             },
-            "pricing": [
-              { "id": "55", "period": "hourly", "price": 0.67 },
-              { "id": "56", "period": "monthly", "price": 392.45 },
-              { "id": "57", "period": "yearly", "price": 3767.52 }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "3",
-        "name": "EU West",
-        "network_zone": "Zone C",
-        "city": "London",
-        "image": "assets/img/countries/uk.jpg",
-        "servers": [
-          {
-            "id": "20",
-            "name": "London - Basic",
-            "serverType": {
-              "id": "2",
-              "name": "Basic",
-              "cpu_cores": 1,
-              "ram": 2,
-              "storage": 20,
-              "network_speed": 1
+            {
+              "id": "17",
+              "period": "monthly",
+              "price": 186.88
             },
-            "pricing": [
-              { "id": "58", "period": "hourly", "price": 0.02 },
-              { "id": "59", "period": "monthly", "price": 12.85 },
-              { "id": "60", "period": "yearly", "price": 123.36 }
-            ]
+            {
+              "id": "18",
+              "period": "yearly",
+              "price": 1794.05
+            }
+          ]
+        },
+        {
+          "id": "7",
+          "name": "New York - Mega",
+          "serverType": {
+            "id": "7",
+            "name": "Mega",
+            "cpu_cores": 48,
+            "ram": 128,
+            "storage": 1280,
+            "network_speed": 10
           },
-          {
-            "id": "21",
-            "name": "London - Starter",
-            "serverType": {
-              "id": "1",
-              "name": "Starter",
-              "cpu_cores": 2,
-              "ram": 4,
-              "storage": 40,
-              "network_speed": 1
+          "pricing": [
+            {
+              "id": "19",
+              "period": "hourly",
+              "price": 0.48
             },
-            "pricing": [
-              { "id": "61", "period": "hourly", "price": 0.01 },
-              { "id": "62", "period": "monthly", "price": 6.42 },
-              { "id": "63", "period": "yearly", "price": 61.63 }
-            ]
+            {
+              "id": "20",
+              "period": "monthly",
+              "price": 280.32
+            },
+            {
+              "id": "21",
+              "period": "yearly",
+              "price": 2691.07
+            }
+          ]
+        },
+        {
+          "id": "8",
+          "name": "New York - Giga",
+          "serverType": {
+            "id": "8",
+            "name": "Giga",
+            "cpu_cores": 64,
+            "ram": 256,
+            "storage": 2560,
+            "network_speed": 10
           },
-          {
-            "id": "22",
-            "name": "London - Intermediate",
-            "serverType": {
-              "id": "3",
-              "name": "Intermediate",
-              "cpu_cores": 4,
-              "ram": 8,
-              "storage": 80,
-              "network_speed": 2
+          "pricing": [
+            {
+              "id": "22",
+              "period": "hourly",
+              "price": 0.64
             },
-            "pricing": [
-              { "id": "64", "period": "hourly", "price": 0.04 },
-              { "id": "65", "period": "monthly", "price": 25.70 },
-              { "id": "66", "period": "yearly", "price": 246.72 }
-            ]
+            {
+              "id": "23",
+              "period": "monthly",
+              "price": 373.76
+            },
+            {
+              "id": "24",
+              "period": "yearly",
+              "price": 3588.1
+            }
+          ]
+        },
+        {
+          "id": "9",
+          "name": "New York - Tera",
+          "serverType": {
+            "id": "9",
+            "name": "Tera",
+            "cpu_cores": 96,
+            "ram": 384,
+            "storage": 3840,
+            "network_speed": 10
           },
-          {
-            "id": "23",
-            "name": "London - Advanced",
-            "serverType": {
-              "id": "4",
-              "name": "Advanced",
-              "cpu_cores": 8,
-              "ram": 16,
-              "storage": 160,
-              "network_speed": 2
+          "pricing": [
+            {
+              "id": "25",
+              "period": "hourly",
+              "price": 0.96
             },
-            "pricing": [
-              { "id": "67", "period": "hourly", "price": 0.09 },
-              { "id": "68", "period": "monthly", "price": 51.39 },
-              { "id": "69", "period": "yearly", "price": 493.34 }
-            ]
+            {
+              "id": "26",
+              "period": "monthly",
+              "price": 560.64
+            },
+            {
+              "id": "27",
+              "period": "yearly",
+              "price": 5382.14
+            }
+          ]
+        },
+        {
+          "id": "10",
+          "name": "New York - Max",
+          "serverType": {
+            "id": "10",
+            "name": "Max",
+            "cpu_cores": 128,
+            "ram": 512,
+            "storage": 5120,
+            "network_speed": 10
           },
-          {
-            "id": "24",
-            "name": "London - Pro",
-            "serverType": {
-              "id": "5",
-              "name": "Pro",
-              "cpu_cores": 16,
-              "ram": 32,
-              "storage": 320,
-              "network_speed": 5
+          "pricing": [
+            {
+              "id": "28",
+              "period": "hourly",
+              "price": 1.28
             },
-            "pricing": [
-              { "id": "70", "period": "hourly", "price": 0.18 },
-              { "id": "71", "period": "monthly", "price": 102.78 },
-              { "id": "72", "period": "yearly", "price": 986.69 }
-            ]
+            {
+              "id": "29",
+              "period": "monthly",
+              "price": 747.52
+            },
+            {
+              "id": "30",
+              "period": "yearly",
+              "price": 7176.19
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "US West",
+      "network_zone": "Zone B",
+      "city": "San Francisco",
+      "image": "assets/img/countries/us.jpg",
+      "servers": [
+        {
+          "id": "11",
+          "name": "San Francisco - Starter",
+          "serverType": {
+            "id": "1",
+            "name": "Starter",
+            "cpu_cores": 1,
+            "ram": 2,
+            "storage": 20,
+            "network_speed": 1
           },
-          {
-            "id": "25",
-            "name": "London - Ultra",
-            "serverType": {
-              "id": "6",
-              "name": "Ultra",
-              "cpu_cores": 32,
-              "ram": 64,
-              "storage": 640,
-              "network_speed": 5
+          "pricing": [
+            {
+              "id": "31",
+              "period": "hourly",
+              "price": 0.01
             },
-            "pricing": [
-              { "id": "73", "period": "hourly", "price": 0.35 },
-              { "id": "74", "period": "monthly", "price": 205.57 },
-              { "id": "75", "period": "yearly", "price": 1973.47 }
-            ]
+            {
+              "id": "32",
+              "period": "monthly",
+              "price": 5.84
+            },
+            {
+              "id": "33",
+              "period": "yearly",
+              "price": 56.06
+            }
+          ]
+        },
+        {
+          "id": "12",
+          "name": "San Francisco - Basic",
+          "serverType": {
+            "id": "2",
+            "name": "Basic",
+            "cpu_cores": 2,
+            "ram": 4,
+            "storage": 40,
+            "network_speed": 1
           },
-          {
-            "id": "26",
-            "name": "London - Max",
-            "serverType": {
-              "id": "10",
-              "name": "Max",
-              "cpu_cores": 128,
-              "ram": 512,
-              "storage": 5120,
-              "network_speed": 10
+          "pricing": [
+            {
+              "id": "34",
+              "period": "hourly",
+              "price": 0.02
             },
-            "pricing": [
-              { "id": "76", "period": "hourly", "price": 1.41 },
-              { "id": "77", "period": "monthly", "price": 822.27 },
-              { "id": "78", "period": "yearly", "price": 7893.79 }
-            ]
+            {
+              "id": "35",
+              "period": "monthly",
+              "price": 11.68
+            },
+            {
+              "id": "36",
+              "period": "yearly",
+              "price": 112.13
+            }
+          ]
+        },
+        {
+          "id": "13",
+          "name": "San Francisco - Intermediate",
+          "serverType": {
+            "id": "3",
+            "name": "Intermediate",
+            "cpu_cores": 4,
+            "ram": 8,
+            "storage": 80,
+            "network_speed": 2
           },
-          {
-            "id": "27",
-            "name": "London - Mega",
-            "serverType": {
-              "id": "7",
-              "name": "Mega",
-              "cpu_cores": 48,
-              "ram": 128,
-              "storage": 1280,
-              "network_speed": 10
+          "pricing": [
+            {
+              "id": "37",
+              "period": "hourly",
+              "price": 0.04
             },
-            "pricing": [
-              { "id": "79", "period": "hourly", "price": 0.53 },
-              { "id": "80", "period": "monthly", "price": 308.35 },
-              { "id": "81", "period": "yearly", "price": 2960.16 }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "4",
-        "name": "EU Central",
-        "network_zone": "Zone D",
-        "city": "Frankfurt",
-        "image": "assets/img/countries/germany.jpg",
-        "servers": [
-          {
-            "id": "28",
-            "name": "Frankfurt - Basic",
-            "serverType": {
-              "id": "2",
-              "name": "Basic",
-              "cpu_cores": 1,
-              "ram": 2,
-              "storage": 20,
-              "network_speed": 1
+            {
+              "id": "38",
+              "period": "monthly",
+              "price": 23.36
             },
-            "pricing": [
-              { "id": "82", "period": "hourly", "price": 0.02 },
-              { "id": "83", "period": "monthly", "price": 12.26 },
-              { "id": "84", "period": "yearly", "price": 117.70 }
-            ]
+            {
+              "id": "39",
+              "period": "yearly",
+              "price": 224.26
+            }
+          ]
+        },
+        {
+          "id": "14",
+          "name": "San Francisco - Advanced",
+          "serverType": {
+            "id": "4",
+            "name": "Advanced",
+            "cpu_cores": 8,
+            "ram": 16,
+            "storage": 160,
+            "network_speed": 2
           },
-          {
-            "id": "29",
-            "name": "Frankfurt - Starter",
-            "serverType": {
-              "id": "1",
-              "name": "Starter",
-              "cpu_cores": 2,
-              "ram": 4,
-              "storage": 40,
-              "network_speed": 1
+          "pricing": [
+            {
+              "id": "40",
+              "period": "hourly",
+              "price": 0.08
             },
-            "pricing": [
-              { "id": "85", "period": "hourly", "price": 0.01 },
-              { "id": "86", "period": "monthly", "price": 6.13 },
-              { "id": "87", "period": "yearly", "price": 58.85 }
-            ]
+            {
+              "id": "41",
+              "period": "monthly",
+              "price": 46.72
+            },
+            {
+              "id": "42",
+              "period": "yearly",
+              "price": 448.51
+            }
+          ]
+        },
+        {
+          "id": "15",
+          "name": "San Francisco - Pro",
+          "serverType": {
+            "id": "5",
+            "name": "Pro",
+            "cpu_cores": 16,
+            "ram": 32,
+            "storage": 320,
+            "network_speed": 5
           },
-          {
-            "id": "30",
-            "name": "Frankfurt - Intermediate",
-            "serverType": {
-              "id": "3",
-              "name": "Intermediate",
-              "cpu_cores": 4,
-              "ram": 8,
-              "storage": 80,
-              "network_speed": 2
+          "pricing": [
+            {
+              "id": "43",
+              "period": "hourly",
+              "price": 0.16
             },
-            "pricing": [
-              { "id": "88", "period": "hourly", "price": 0.04 },
-              { "id": "89", "period": "monthly", "price": 24.53 },
-              { "id": "90", "period": "yearly", "price": 235.49 }
-            ]
+            {
+              "id": "44",
+              "period": "monthly",
+              "price": 93.44
+            },
+            {
+              "id": "45",
+              "period": "yearly",
+              "price": 897.02
+            }
+          ]
+        },
+        {
+          "id": "16",
+          "name": "San Francisco - Ultra",
+          "serverType": {
+            "id": "6",
+            "name": "Ultra",
+            "cpu_cores": 32,
+            "ram": 64,
+            "storage": 640,
+            "network_speed": 5
           },
-          {
-            "id": "31",
-            "name": "Frankfurt - Advanced",
-            "serverType": {
-              "id": "4",
-              "name": "Advanced",
-              "cpu_cores": 8,
-              "ram": 16,
-              "storage": 160,
-              "network_speed": 2
+          "pricing": [
+            {
+              "id": "46",
+              "period": "hourly",
+              "price": 0.32
             },
-            "pricing": [
-              { "id": "91", "period": "hourly", "price": 0.08 },
-              { "id": "92", "period": "monthly", "price": 49.06 },
-              { "id": "93", "period": "yearly", "price": 470.98 }
-            ]
+            {
+              "id": "47",
+              "period": "monthly",
+              "price": 186.88
+            },
+            {
+              "id": "48",
+              "period": "yearly",
+              "price": 1794.05
+            }
+          ]
+        },
+        {
+          "id": "17",
+          "name": "San Francisco - Mega",
+          "serverType": {
+            "id": "7",
+            "name": "Mega",
+            "cpu_cores": 48,
+            "ram": 128,
+            "storage": 1280,
+            "network_speed": 10
           },
-          {
-            "id": "32",
-            "name": "Frankfurt - Pro",
-            "serverType": {
-              "id": "5",
-              "name": "Pro",
-              "cpu_cores": 16,
-              "ram": 32,
-              "storage": 320,
-              "network_speed": 5
+          "pricing": [
+            {
+              "id": "49",
+              "period": "hourly",
+              "price": 0.48
             },
-            "pricing": [
-              { "id": "94", "period": "hourly", "price": 0.17 },
-              { "id": "95", "period": "monthly", "price": 98.11 },
-              { "id": "96", "period": "yearly", "price": 941.86 }
-            ]
+            {
+              "id": "50",
+              "period": "monthly",
+              "price": 280.32
+            },
+            {
+              "id": "51",
+              "period": "yearly",
+              "price": 2691.07
+            }
+          ]
+        },
+        {
+          "id": "18",
+          "name": "San Francisco - Giga",
+          "serverType": {
+            "id": "8",
+            "name": "Giga",
+            "cpu_cores": 64,
+            "ram": 256,
+            "storage": 2560,
+            "network_speed": 10
           },
-          {
-            "id": "33",
-            "name": "Frankfurt - Ultra",
-            "serverType": {
-              "id": "6",
-              "name": "Ultra",
-              "cpu_cores": 32,
-              "ram": 64,
-              "storage": 640,
-              "network_speed": 5
+          "pricing": [
+            {
+              "id": "52",
+              "period": "hourly",
+              "price": 0.64
             },
-            "pricing": [
-              { "id": "97", "period": "hourly", "price": 0.34 },
-              { "id": "98", "period": "monthly", "price": 196.22 },
-              { "id": "99", "period": "yearly", "price": 1883.71 }
-            ]
+            {
+              "id": "53",
+              "period": "monthly",
+              "price": 373.76
+            },
+            {
+              "id": "54",
+              "period": "yearly",
+              "price": 3588.1
+            }
+          ]
+        },
+        {
+          "id": "19",
+          "name": "San Francisco - Tera",
+          "serverType": {
+            "id": "9",
+            "name": "Tera",
+            "cpu_cores": 96,
+            "ram": 384,
+            "storage": 3840,
+            "network_speed": 10
           },
-          {
-            "id": "34",
-            "name": "Frankfurt - Max",
-            "serverType": {
-              "id": "10",
-              "name": "Max",
-              "cpu_cores": 128,
-              "ram": 512,
-              "storage": 5120,
-              "network_speed": 10
+          "pricing": [
+            {
+              "id": "55",
+              "period": "hourly",
+              "price": 0.96
             },
-            "pricing": [
-              { "id": "100", "period": "hourly", "price": 1.34 },
-              { "id": "101", "period": "monthly", "price": 784.90 },
-              { "id": "102", "period": "yearly", "price": 7535.04 }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "5",
-        "name": "Asia East",
-        "network_zone": "Zone E",
-        "city": "Tokyo",
-        "image": "assets/img/countries/japan.jpg",
-        "servers": [
-          {
-            "id": "35",
-            "name": "Tokyo - Basic",
-            "serverType": {
-              "id": "2",
-              "name": "Basic",
-              "cpu_cores": 1,
-              "ram": 2,
-              "storage": 20,
-              "network_speed": 1
+            {
+              "id": "56",
+              "period": "monthly",
+              "price": 560.64
             },
-            "pricing": [
-              { "id": "103", "period": "hourly", "price": 0.02 },
-              { "id": "104", "period": "monthly", "price": 11.10 },
-              { "id": "105", "period": "yearly", "price": 106.56 }
-            ]
+            {
+              "id": "57",
+              "period": "yearly",
+              "price": 5382.14
+            }
+          ]
+        },
+        {
+          "id": "20",
+          "name": "San Francisco - Max",
+          "serverType": {
+            "id": "10",
+            "name": "Max",
+            "cpu_cores": 128,
+            "ram": 512,
+            "storage": 5120,
+            "network_speed": 10
           },
-          {
-            "id": "36",
-            "name": "Tokyo - Starter",
-            "serverType": {
-              "id": "1",
-              "name": "Starter",
-              "cpu_cores": 2,
-              "ram": 4,
-              "storage": 40,
-              "network_speed": 1
+          "pricing": [
+            {
+              "id": "58",
+              "period": "hourly",
+              "price": 1.28
             },
-            "pricing": [
-              { "id": "106", "period": "hourly", "price": 0.01 },
-              { "id": "107", "period": "monthly", "price": 5.55 },
-              { "id": "108", "period": "yearly", "price": 53.28 }
-            ]
+            {
+              "id": "59",
+              "period": "monthly",
+              "price": 747.52
+            },
+            {
+              "id": "60",
+              "period": "yearly",
+              "price": 7176.19
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "EU West",
+      "network_zone": "Zone C",
+      "city": "London",
+      "image": "assets/img/countries/uk.jpg",
+      "servers": [
+        {
+          "id": "21",
+          "name": "London - Starter",
+          "serverType": {
+            "id": "1",
+            "name": "Starter",
+            "cpu_cores": 1,
+            "ram": 2,
+            "storage": 20,
+            "network_speed": 1
           },
-          {
-            "id": "37",
-            "name": "Tokyo - Intermediate",
-            "serverType": {
-              "id": "3",
-              "name": "Intermediate",
-              "cpu_cores": 4,
-              "ram": 8,
-              "storage": 80,
-              "network_speed": 2
+          "pricing": [
+            {
+              "id": "61",
+              "period": "hourly",
+              "price": 0.01
             },
-            "pricing": [
-              { "id": "109", "period": "hourly", "price": 0.04 },
-              { "id": "110", "period": "monthly", "price": 22.19 },
-              { "id": "111", "period": "yearly", "price": 213.02 }
-            ]
+            {
+              "id": "62",
+              "period": "monthly",
+              "price": 5.84
+            },
+            {
+              "id": "63",
+              "period": "yearly",
+              "price": 56.06
+            }
+          ]
+        },
+        {
+          "id": "22",
+          "name": "London - Basic",
+          "serverType": {
+            "id": "2",
+            "name": "Basic",
+            "cpu_cores": 2,
+            "ram": 4,
+            "storage": 40,
+            "network_speed": 1
           },
-          {
-            "id": "38",
-            "name": "Tokyo - Advanced",
-            "serverType": {
-              "id": "4",
-              "name": "Advanced",
-              "cpu_cores": 8,
-              "ram": 16,
-              "storage": 160,
-              "network_speed": 2
+          "pricing": [
+            {
+              "id": "64",
+              "period": "hourly",
+              "price": 0.02
             },
-            "pricing": [
-              { "id": "112", "period": "hourly", "price": 0.08 },
-              { "id": "113", "period": "monthly", "price": 44.38 },
-              { "id": "114", "period": "yearly", "price": 426.05 }
-            ]
+            {
+              "id": "65",
+              "period": "monthly",
+              "price": 11.68
+            },
+            {
+              "id": "66",
+              "period": "yearly",
+              "price": 112.13
+            }
+          ]
+        },
+        {
+          "id": "23",
+          "name": "London - Intermediate",
+          "serverType": {
+            "id": "3",
+            "name": "Intermediate",
+            "cpu_cores": 4,
+            "ram": 8,
+            "storage": 80,
+            "network_speed": 2
           },
-          {
-            "id": "39",
-            "name": "Tokyo - Pro",
-            "serverType": {
-              "id": "5",
-              "name": "Pro",
-              "cpu_cores": 16,
-              "ram": 32,
-              "storage": 320,
-              "network_speed": 5
+          "pricing": [
+            {
+              "id": "67",
+              "period": "hourly",
+              "price": 0.04
             },
-            "pricing": [
-              { "id": "115", "period": "hourly", "price": 0.15 },
-              { "id": "116", "period": "monthly", "price": 88.77 },
-              { "id": "117", "period": "yearly", "price": 852.19 }
-            ]
+            {
+              "id": "68",
+              "period": "monthly",
+              "price": 23.36
+            },
+            {
+              "id": "69",
+              "period": "yearly",
+              "price": 224.26
+            }
+          ]
+        },
+        {
+          "id": "24",
+          "name": "London - Advanced",
+          "serverType": {
+            "id": "4",
+            "name": "Advanced",
+            "cpu_cores": 8,
+            "ram": 16,
+            "storage": 160,
+            "network_speed": 2
           },
-          {
-            "id": "40",
-            "name": "Tokyo - Ultra",
-            "serverType": {
-              "id": "6",
-              "name": "Ultra",
-              "cpu_cores": 32,
-              "ram": 64,
-              "storage": 640,
-              "network_speed": 5
+          "pricing": [
+            {
+              "id": "70",
+              "period": "hourly",
+              "price": 0.08
             },
-            "pricing": [
-              { "id": "118", "period": "hourly", "price": 0.30 },
-              { "id": "119", "period": "monthly", "price": 177.54 },
-              { "id": "120", "period": "yearly", "price": 1704.38 }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "6",
-        "name": "Asia South",
-        "network_zone": "Zone F",
-        "city": "Mumbai",
-        "image": "assets/img/countries/india.jpg",
-        "servers": [
-          {
-            "id": "41",
-            "name": "Mumbai - Basic",
-            "serverType": {
-              "id": "2",
-              "name": "Basic",
-              "cpu_cores": 1,
-              "ram": 2,
-              "storage": 20,
-              "network_speed": 1
+            {
+              "id": "71",
+              "period": "monthly",
+              "price": 46.72
             },
-            "pricing": [
-              { "id": "121", "period": "hourly", "price": 0.02 },
-              { "id": "122", "period": "monthly", "price": 10.51 },
-              { "id": "123", "period": "yearly", "price": 100.90 }
-            ]
+            {
+              "id": "72",
+              "period": "yearly",
+              "price": 448.51
+            }
+          ]
+        },
+        {
+          "id": "25",
+          "name": "London - Pro",
+          "serverType": {
+            "id": "5",
+            "name": "Pro",
+            "cpu_cores": 16,
+            "ram": 32,
+            "storage": 320,
+            "network_speed": 5
           },
-          {
-            "id": "42",
-            "name": "Mumbai - Starter",
-            "serverType": {
-              "id": "1",
-              "name": "Starter",
-              "cpu_cores": 2,
-              "ram": 4,
-              "storage": 40,
-              "network_speed": 1
+          "pricing": [
+            {
+              "id": "73",
+              "period": "hourly",
+              "price": 0.16
             },
-            "pricing": [
-              { "id": "124", "period": "hourly", "price": 0.01 },
-              { "id": "125", "period": "monthly", "price": 5.26 },
-              { "id": "126", "period": "yearly", "price": 50.50 }
-            ]
+            {
+              "id": "74",
+              "period": "monthly",
+              "price": 93.44
+            },
+            {
+              "id": "75",
+              "period": "yearly",
+              "price": 897.02
+            }
+          ]
+        },
+        {
+          "id": "26",
+          "name": "London - Ultra",
+          "serverType": {
+            "id": "6",
+            "name": "Ultra",
+            "cpu_cores": 32,
+            "ram": 64,
+            "storage": 640,
+            "network_speed": 5
           },
-          {
-            "id": "43",
-            "name": "Mumbai - Intermediate",
-            "serverType": {
-              "id": "3",
-              "name": "Intermediate",
-              "cpu_cores": 4,
-              "ram": 8,
-              "storage": 80,
-              "network_speed": 2
+          "pricing": [
+            {
+              "id": "76",
+              "period": "hourly",
+              "price": 0.32
             },
-            "pricing": [
-              { "id": "127", "period": "hourly", "price": 0.04 },
-              { "id": "128", "period": "monthly", "price": 21.02 },
-              { "id": "129", "period": "yearly", "price": 201.79 }
-            ]
+            {
+              "id": "77",
+              "period": "monthly",
+              "price": 186.88
+            },
+            {
+              "id": "78",
+              "period": "yearly",
+              "price": 1794.05
+            }
+          ]
+        },
+        {
+          "id": "27",
+          "name": "London - Mega",
+          "serverType": {
+            "id": "7",
+            "name": "Mega",
+            "cpu_cores": 48,
+            "ram": 128,
+            "storage": 1280,
+            "network_speed": 10
           },
-          {
-            "id": "44",
-            "name": "Mumbai - Advanced",
-            "serverType": {
-              "id": "4",
-              "name": "Advanced",
-              "cpu_cores": 8,
-              "ram": 16,
-              "storage": 160,
-              "network_speed": 2
+          "pricing": [
+            {
+              "id": "79",
+              "period": "hourly",
+              "price": 0.48
             },
-            "pricing": [
-              { "id": "130", "period": "hourly", "price": 0.07 },
-              { "id": "131", "period": "monthly", "price": 42.05 },
-              { "id": "132", "period": "yearly", "price": 403.68 }
-            ]
+            {
+              "id": "80",
+              "period": "monthly",
+              "price": 280.32
+            },
+            {
+              "id": "81",
+              "period": "yearly",
+              "price": 2691.07
+            }
+          ]
+        },
+        {
+          "id": "28",
+          "name": "London - Giga",
+          "serverType": {
+            "id": "8",
+            "name": "Giga",
+            "cpu_cores": 64,
+            "ram": 256,
+            "storage": 2560,
+            "network_speed": 10
           },
-          {
-            "id": "45",
-            "name": "Mumbai - Pro",
-            "serverType": {
-              "id": "5",
-              "name": "Pro",
-              "cpu_cores": 16,
-              "ram": 32,
-              "storage": 320,
-              "network_speed": 5
+          "pricing": [
+            {
+              "id": "82",
+              "period": "hourly",
+              "price": 0.64
             },
-            "pricing": [
-              { "id": "133", "period": "hourly", "price": 0.14 },
-              { "id": "134", "period": "monthly", "price": 84.10 },
-              { "id": "135", "period": "yearly", "price": 807.36 }
-            ]
-          }
-        ]
-      }
-    ],
+            {
+              "id": "83",
+              "period": "monthly",
+              "price": 373.76
+            },
+            {
+              "id": "84",
+              "period": "yearly",
+              "price": 3588.1
+            }
+          ]
+        },
+        {
+          "id": "29",
+          "name": "London - Tera",
+          "serverType": {
+            "id": "9",
+            "name": "Tera",
+            "cpu_cores": 96,
+            "ram": 384,
+            "storage": 3840,
+            "network_speed": 10
+          },
+          "pricing": [
+            {
+              "id": "85",
+              "period": "hourly",
+              "price": 0.96
+            },
+            {
+              "id": "86",
+              "period": "monthly",
+              "price": 560.64
+            },
+            {
+              "id": "87",
+              "period": "yearly",
+              "price": 5382.14
+            }
+          ]
+        },
+        {
+          "id": "30",
+          "name": "London - Max",
+          "serverType": {
+            "id": "10",
+            "name": "Max",
+            "cpu_cores": 128,
+            "ram": 512,
+            "storage": 5120,
+            "network_speed": 10
+          },
+          "pricing": [
+            {
+              "id": "88",
+              "period": "hourly",
+              "price": 1.28
+            },
+            {
+              "id": "89",
+              "period": "monthly",
+              "price": 747.52
+            },
+            {
+              "id": "90",
+              "period": "yearly",
+              "price": 7176.19
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "EU Central",
+      "network_zone": "Zone D",
+      "city": "Frankfurt",
+      "image": "assets/img/countries/germany.jpg",
+      "servers": [
+        {
+          "id": "31",
+          "name": "Frankfurt - Starter",
+          "serverType": {
+            "id": "1",
+            "name": "Starter",
+            "cpu_cores": 1,
+            "ram": 2,
+            "storage": 20,
+            "network_speed": 1
+          },
+          "pricing": [
+            {
+              "id": "91",
+              "period": "hourly",
+              "price": 0.01
+            },
+            {
+              "id": "92",
+              "period": "monthly",
+              "price": 5.84
+            },
+            {
+              "id": "93",
+              "period": "yearly",
+              "price": 56.06
+            }
+          ]
+        },
+        {
+          "id": "32",
+          "name": "Frankfurt - Basic",
+          "serverType": {
+            "id": "2",
+            "name": "Basic",
+            "cpu_cores": 2,
+            "ram": 4,
+            "storage": 40,
+            "network_speed": 1
+          },
+          "pricing": [
+            {
+              "id": "94",
+              "period": "hourly",
+              "price": 0.02
+            },
+            {
+              "id": "95",
+              "period": "monthly",
+              "price": 11.68
+            },
+            {
+              "id": "96",
+              "period": "yearly",
+              "price": 112.13
+            }
+          ]
+        },
+        {
+          "id": "33",
+          "name": "Frankfurt - Intermediate",
+          "serverType": {
+            "id": "3",
+            "name": "Intermediate",
+            "cpu_cores": 4,
+            "ram": 8,
+            "storage": 80,
+            "network_speed": 2
+          },
+          "pricing": [
+            {
+              "id": "97",
+              "period": "hourly",
+              "price": 0.04
+            },
+            {
+              "id": "98",
+              "period": "monthly",
+              "price": 23.36
+            },
+            {
+              "id": "99",
+              "period": "yearly",
+              "price": 224.26
+            }
+          ]
+        },
+        {
+          "id": "34",
+          "name": "Frankfurt - Advanced",
+          "serverType": {
+            "id": "4",
+            "name": "Advanced",
+            "cpu_cores": 8,
+            "ram": 16,
+            "storage": 160,
+            "network_speed": 2
+          },
+          "pricing": [
+            {
+              "id": "100",
+              "period": "hourly",
+              "price": 0.08
+            },
+            {
+              "id": "101",
+              "period": "monthly",
+              "price": 46.72
+            },
+            {
+              "id": "102",
+              "period": "yearly",
+              "price": 448.51
+            }
+          ]
+        },
+        {
+          "id": "35",
+          "name": "Frankfurt - Pro",
+          "serverType": {
+            "id": "5",
+            "name": "Pro",
+            "cpu_cores": 16,
+            "ram": 32,
+            "storage": 320,
+            "network_speed": 5
+          },
+          "pricing": [
+            {
+              "id": "103",
+              "period": "hourly",
+              "price": 0.16
+            },
+            {
+              "id": "104",
+              "period": "monthly",
+              "price": 93.44
+            },
+            {
+              "id": "105",
+              "period": "yearly",
+              "price": 897.02
+            }
+          ]
+        },
+        {
+          "id": "36",
+          "name": "Frankfurt - Ultra",
+          "serverType": {
+            "id": "6",
+            "name": "Ultra",
+            "cpu_cores": 32,
+            "ram": 64,
+            "storage": 640,
+            "network_speed": 5
+          },
+          "pricing": [
+            {
+              "id": "106",
+              "period": "hourly",
+              "price": 0.32
+            },
+            {
+              "id": "107",
+              "period": "monthly",
+              "price": 186.88
+            },
+            {
+              "id": "108",
+              "period": "yearly",
+              "price": 1794.05
+            }
+          ]
+        },
+        {
+          "id": "37",
+          "name": "Frankfurt - Mega",
+          "serverType": {
+            "id": "7",
+            "name": "Mega",
+            "cpu_cores": 48,
+            "ram": 128,
+            "storage": 1280,
+            "network_speed": 10
+          },
+          "pricing": [
+            {
+              "id": "109",
+              "period": "hourly",
+              "price": 0.48
+            },
+            {
+              "id": "110",
+              "period": "monthly",
+              "price": 280.32
+            },
+            {
+              "id": "111",
+              "period": "yearly",
+              "price": 2691.07
+            }
+          ]
+        },
+        {
+          "id": "38",
+          "name": "Frankfurt - Giga",
+          "serverType": {
+            "id": "8",
+            "name": "Giga",
+            "cpu_cores": 64,
+            "ram": 256,
+            "storage": 2560,
+            "network_speed": 10
+          },
+          "pricing": [
+            {
+              "id": "112",
+              "period": "hourly",
+              "price": 0.64
+            },
+            {
+              "id": "113",
+              "period": "monthly",
+              "price": 373.76
+            },
+            {
+              "id": "114",
+              "period": "yearly",
+              "price": 3588.1
+            }
+          ]
+        },
+        {
+          "id": "39",
+          "name": "Frankfurt - Tera",
+          "serverType": {
+            "id": "9",
+            "name": "Tera",
+            "cpu_cores": 96,
+            "ram": 384,
+            "storage": 3840,
+            "network_speed": 10
+          },
+          "pricing": [
+            {
+              "id": "115",
+              "period": "hourly",
+              "price": 0.96
+            },
+            {
+              "id": "116",
+              "period": "monthly",
+              "price": 560.64
+            },
+            {
+              "id": "117",
+              "period": "yearly",
+              "price": 5382.14
+            }
+          ]
+        },
+        {
+          "id": "40",
+          "name": "Frankfurt - Max",
+          "serverType": {
+            "id": "10",
+            "name": "Max",
+            "cpu_cores": 128,
+            "ram": 512,
+            "storage": 5120,
+            "network_speed": 10
+          },
+          "pricing": [
+            {
+              "id": "118",
+              "period": "hourly",
+              "price": 1.28
+            },
+            {
+              "id": "119",
+              "period": "monthly",
+              "price": 747.52
+            },
+            {
+              "id": "120",
+              "period": "yearly",
+              "price": 7176.19
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Asia East",
+      "network_zone": "Zone E",
+      "city": "Tokyo",
+      "image": "assets/img/countries/japan.jpg",
+      "servers": [
+        {
+          "id": "41",
+          "name": "Tokyo - Starter",
+          "serverType": {
+            "id": "1",
+            "name": "Starter",
+            "cpu_cores": 1,
+            "ram": 2,
+            "storage": 20,
+            "network_speed": 1
+          },
+          "pricing": [
+            {
+              "id": "121",
+              "period": "hourly",
+              "price": 0.01
+            },
+            {
+              "id": "122",
+              "period": "monthly",
+              "price": 5.84
+            },
+            {
+              "id": "123",
+              "period": "yearly",
+              "price": 56.06
+            }
+          ]
+        },
+        {
+          "id": "42",
+          "name": "Tokyo - Basic",
+          "serverType": {
+            "id": "2",
+            "name": "Basic",
+            "cpu_cores": 2,
+            "ram": 4,
+            "storage": 40,
+            "network_speed": 1
+          },
+          "pricing": [
+            {
+              "id": "124",
+              "period": "hourly",
+              "price": 0.02
+            },
+            {
+              "id": "125",
+              "period": "monthly",
+              "price": 11.68
+            },
+            {
+              "id": "126",
+              "period": "yearly",
+              "price": 112.13
+            }
+          ]
+        },
+        {
+          "id": "43",
+          "name": "Tokyo - Intermediate",
+          "serverType": {
+            "id": "3",
+            "name": "Intermediate",
+            "cpu_cores": 4,
+            "ram": 8,
+            "storage": 80,
+            "network_speed": 2
+          },
+          "pricing": [
+            {
+              "id": "127",
+              "period": "hourly",
+              "price": 0.04
+            },
+            {
+              "id": "128",
+              "period": "monthly",
+              "price": 23.36
+            },
+            {
+              "id": "129",
+              "period": "yearly",
+              "price": 224.26
+            }
+          ]
+        },
+        {
+          "id": "44",
+          "name": "Tokyo - Advanced",
+          "serverType": {
+            "id": "4",
+            "name": "Advanced",
+            "cpu_cores": 8,
+            "ram": 16,
+            "storage": 160,
+            "network_speed": 2
+          },
+          "pricing": [
+            {
+              "id": "130",
+              "period": "hourly",
+              "price": 0.08
+            },
+            {
+              "id": "131",
+              "period": "monthly",
+              "price": 46.72
+            },
+            {
+              "id": "132",
+              "period": "yearly",
+              "price": 448.51
+            }
+          ]
+        },
+        {
+          "id": "45",
+          "name": "Tokyo - Pro",
+          "serverType": {
+            "id": "5",
+            "name": "Pro",
+            "cpu_cores": 16,
+            "ram": 32,
+            "storage": 320,
+            "network_speed": 5
+          },
+          "pricing": [
+            {
+              "id": "133",
+              "period": "hourly",
+              "price": 0.16
+            },
+            {
+              "id": "134",
+              "period": "monthly",
+              "price": 93.44
+            },
+            {
+              "id": "135",
+              "period": "yearly",
+              "price": 897.02
+            }
+          ]
+        },
+        {
+          "id": "46",
+          "name": "Tokyo - Ultra",
+          "serverType": {
+            "id": "6",
+            "name": "Ultra",
+            "cpu_cores": 32,
+            "ram": 64,
+            "storage": 640,
+            "network_speed": 5
+          },
+          "pricing": [
+            {
+              "id": "136",
+              "period": "hourly",
+              "price": 0.32
+            },
+            {
+              "id": "137",
+              "period": "monthly",
+              "price": 186.88
+            },
+            {
+              "id": "138",
+              "period": "yearly",
+              "price": 1794.05
+            }
+          ]
+        },
+        {
+          "id": "47",
+          "name": "Tokyo - Mega",
+          "serverType": {
+            "id": "7",
+            "name": "Mega",
+            "cpu_cores": 48,
+            "ram": 128,
+            "storage": 1280,
+            "network_speed": 10
+          },
+          "pricing": [
+            {
+              "id": "139",
+              "period": "hourly",
+              "price": 0.48
+            },
+            {
+              "id": "140",
+              "period": "monthly",
+              "price": 280.32
+            },
+            {
+              "id": "141",
+              "period": "yearly",
+              "price": 2691.07
+            }
+          ]
+        },
+        {
+          "id": "48",
+          "name": "Tokyo - Giga",
+          "serverType": {
+            "id": "8",
+            "name": "Giga",
+            "cpu_cores": 64,
+            "ram": 256,
+            "storage": 2560,
+            "network_speed": 10
+          },
+          "pricing": [
+            {
+              "id": "142",
+              "period": "hourly",
+              "price": 0.64
+            },
+            {
+              "id": "143",
+              "period": "monthly",
+              "price": 373.76
+            },
+            {
+              "id": "144",
+              "period": "yearly",
+              "price": 3588.1
+            }
+          ]
+        },
+        {
+          "id": "49",
+          "name": "Tokyo - Tera",
+          "serverType": {
+            "id": "9",
+            "name": "Tera",
+            "cpu_cores": 96,
+            "ram": 384,
+            "storage": 3840,
+            "network_speed": 10
+          },
+          "pricing": [
+            {
+              "id": "145",
+              "period": "hourly",
+              "price": 0.96
+            },
+            {
+              "id": "146",
+              "period": "monthly",
+              "price": 560.64
+            },
+            {
+              "id": "147",
+              "period": "yearly",
+              "price": 5382.14
+            }
+          ]
+        },
+        {
+          "id": "50",
+          "name": "Tokyo - Max",
+          "serverType": {
+            "id": "10",
+            "name": "Max",
+            "cpu_cores": 128,
+            "ram": 512,
+            "storage": 5120,
+            "network_speed": 10
+          },
+          "pricing": [
+            {
+              "id": "148",
+              "period": "hourly",
+              "price": 1.28
+            },
+            {
+              "id": "149",
+              "period": "monthly",
+              "price": 747.52
+            },
+            {
+              "id": "150",
+              "period": "yearly",
+              "price": 7176.19
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Asia South",
+      "network_zone": "Zone F",
+      "city": "Mumbai",
+      "image": "assets/img/countries/india.jpg",
+      "servers": [
+        {
+          "id": "51",
+          "name": "Mumbai - Starter",
+          "serverType": {
+            "id": "1",
+            "name": "Starter",
+            "cpu_cores": 1,
+            "ram": 2,
+            "storage": 20,
+            "network_speed": 1
+          },
+          "pricing": [
+            {
+              "id": "151",
+              "period": "hourly",
+              "price": 0.01
+            },
+            {
+              "id": "152",
+              "period": "monthly",
+              "price": 5.84
+            },
+            {
+              "id": "153",
+              "period": "yearly",
+              "price": 56.06
+            }
+          ]
+        },
+        {
+          "id": "52",
+          "name": "Mumbai - Basic",
+          "serverType": {
+            "id": "2",
+            "name": "Basic",
+            "cpu_cores": 2,
+            "ram": 4,
+            "storage": 40,
+            "network_speed": 1
+          },
+          "pricing": [
+            {
+              "id": "154",
+              "period": "hourly",
+              "price": 0.02
+            },
+            {
+              "id": "155",
+              "period": "monthly",
+              "price": 11.68
+            },
+            {
+              "id": "156",
+              "period": "yearly",
+              "price": 112.13
+            }
+          ]
+        },
+        {
+          "id": "53",
+          "name": "Mumbai - Intermediate",
+          "serverType": {
+            "id": "3",
+            "name": "Intermediate",
+            "cpu_cores": 4,
+            "ram": 8,
+            "storage": 80,
+            "network_speed": 2
+          },
+          "pricing": [
+            {
+              "id": "157",
+              "period": "hourly",
+              "price": 0.04
+            },
+            {
+              "id": "158",
+              "period": "monthly",
+              "price": 23.36
+            },
+            {
+              "id": "159",
+              "period": "yearly",
+              "price": 224.26
+            }
+          ]
+        },
+        {
+          "id": "54",
+          "name": "Mumbai - Advanced",
+          "serverType": {
+            "id": "4",
+            "name": "Advanced",
+            "cpu_cores": 8,
+            "ram": 16,
+            "storage": 160,
+            "network_speed": 2
+          },
+          "pricing": [
+            {
+              "id": "160",
+              "period": "hourly",
+              "price": 0.08
+            },
+            {
+              "id": "161",
+              "period": "monthly",
+              "price": 46.72
+            },
+            {
+              "id": "162",
+              "period": "yearly",
+              "price": 448.51
+            }
+          ]
+        },
+        {
+          "id": "55",
+          "name": "Mumbai - Pro",
+          "serverType": {
+            "id": "5",
+            "name": "Pro",
+            "cpu_cores": 16,
+            "ram": 32,
+            "storage": 320,
+            "network_speed": 5
+          },
+          "pricing": [
+            {
+              "id": "163",
+              "period": "hourly",
+              "price": 0.16
+            },
+            {
+              "id": "164",
+              "period": "monthly",
+              "price": 93.44
+            },
+            {
+              "id": "165",
+              "period": "yearly",
+              "price": 897.02
+            }
+          ]
+        },
+        {
+          "id": "56",
+          "name": "Mumbai - Ultra",
+          "serverType": {
+            "id": "6",
+            "name": "Ultra",
+            "cpu_cores": 32,
+            "ram": 64,
+            "storage": 640,
+            "network_speed": 5
+          },
+          "pricing": [
+            {
+              "id": "166",
+              "period": "hourly",
+              "price": 0.32
+            },
+            {
+              "id": "167",
+              "period": "monthly",
+              "price": 186.88
+            },
+            {
+              "id": "168",
+              "period": "yearly",
+              "price": 1794.05
+            }
+          ]
+        },
+        {
+          "id": "57",
+          "name": "Mumbai - Mega",
+          "serverType": {
+            "id": "7",
+            "name": "Mega",
+            "cpu_cores": 48,
+            "ram": 128,
+            "storage": 1280,
+            "network_speed": 10
+          },
+          "pricing": [
+            {
+              "id": "169",
+              "period": "hourly",
+              "price": 0.48
+            },
+            {
+              "id": "170",
+              "period": "monthly",
+              "price": 280.32
+            },
+            {
+              "id": "171",
+              "period": "yearly",
+              "price": 2691.07
+            }
+          ]
+        },
+        {
+          "id": "58",
+          "name": "Mumbai - Giga",
+          "serverType": {
+            "id": "8",
+            "name": "Giga",
+            "cpu_cores": 64,
+            "ram": 256,
+            "storage": 2560,
+            "network_speed": 10
+          },
+          "pricing": [
+            {
+              "id": "172",
+              "period": "hourly",
+              "price": 0.64
+            },
+            {
+              "id": "173",
+              "period": "monthly",
+              "price": 373.76
+            },
+            {
+              "id": "174",
+              "period": "yearly",
+              "price": 3588.1
+            }
+          ]
+        },
+        {
+          "id": "59",
+          "name": "Mumbai - Tera",
+          "serverType": {
+            "id": "9",
+            "name": "Tera",
+            "cpu_cores": 96,
+            "ram": 384,
+            "storage": 3840,
+            "network_speed": 10
+          },
+          "pricing": [
+            {
+              "id": "175",
+              "period": "hourly",
+              "price": 0.96
+            },
+            {
+              "id": "176",
+              "period": "monthly",
+              "price": 560.64
+            },
+            {
+              "id": "177",
+              "period": "yearly",
+              "price": 5382.14
+            }
+          ]
+        },
+        {
+          "id": "60",
+          "name": "Mumbai - Max",
+          "serverType": {
+            "id": "10",
+            "name": "Max",
+            "cpu_cores": 128,
+            "ram": 512,
+            "storage": 5120,
+            "network_speed": 10
+          },
+          "pricing": [
+            {
+              "id": "178",
+              "period": "hourly",
+              "price": 1.28
+            },
+            {
+              "id": "179",
+              "period": "monthly",
+              "price": 747.52
+            },
+            {
+              "id": "180",
+              "period": "yearly",
+              "price": 7176.19
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "subscriptions": [
     {
       "id": "1",
@@ -1398,6 +2373,14 @@
       "service_id": "1",
       "pricing_id": "1",
       "start_date": "2024-01-01T00:00:00Z",
+      "end_date": null
+    },
+    {
+      "id": "f9c2",
+      "user_id": "dd26",
+      "service_id": "22",
+      "pricing_id": "64",
+      "start_date": "2024-06-15T22:40:33.706Z",
       "end_date": null
     }
   ],

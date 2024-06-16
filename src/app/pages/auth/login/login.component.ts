@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
           this.userService.clearRedirectUrl();
           this.router.navigateByUrl(redirectUrl);
         } else {
-          this.router.navigate(['/']);
+          this.router.navigate(['/profile']);
         }
       },
       error => {

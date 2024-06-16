@@ -23,6 +23,7 @@ const routes: Routes = [
   { path: 'servers', component: ServersComponent },
   { path: 'rent-server', component: RentServerComponent },
   { path: 'rent-server/:serverId', component: RentServerComponent },
+  { path: 'profile', loadChildren: () => import('./pages/profile/profile.module').then(m => m.ProfileModule) }
 ];
 
 @NgModule({

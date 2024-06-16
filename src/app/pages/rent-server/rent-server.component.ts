@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ServerService } from '../../services/server.service';
 import { LocationWithServers } from '../../interfaces/location';
 import { Server } from '../../interfaces/server';
 import { Pricing } from '../../interfaces/pricing';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ToastrService } from 'ngx-toastr';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-rent-server',
@@ -27,7 +30,14 @@ export class RentServerComponent implements OnInit {
   serverPlaceholder = 'Please select a location first';
   pricingPlaceholder = 'Please select a location first';
 
-  constructor(private serverService: ServerService, private route: ActivatedRoute) {}
+  constructor(
+    private serverService: ServerService,
+    private route: ActivatedRoute,
+    private modalService: NgbModal,
+    private toastr: ToastrService,
+    private userService: UserService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.loadInitialData();
@@ -99,7 +109,44 @@ export class RentServerComponent implements OnInit {
     this.pricingInfo = this.pricingOptions.find(pricing => pricing.id === this.selectedPricingId) || null;
   }
 
+  openConfirmationModal(content: any): void {
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' });
+  }
+
+  getConfirmationMessage(): string {
+    if (this.serverInfo && this.pricingInfo) {
+      let message = `Are you sure you want to rent the server <b>${this.serverInfo.name}</b> in region <b>${this.locationInfo?.name}</b>? `;
+      if (this.pricingInfo.period.toLowerCase() === 'monthly' || this.pricingInfo.period.toLowerCase() === 'yearly') {
+        message += `This will charge you <b>$${this.pricingInfo.price}</b>.`;
+      } else if (this.pricingInfo.period.toLowerCase() === 'hourly') {
+        message += `This will cost you <b>$${this.pricingInfo.price}</b> per hour, you can cancel the subscription at any time.`;
+      }
+      return message;
+    }
+    return '';
+  }
+
   completeRenting(): void {
+    const user = this.userService.userValue;
+    if (user && this.selectedServerId && this.selectedPricingId) {
+      const subscription = {
+        user_id: user.id,
+        service_id: this.selectedServerId,
+        pricing_id: this.selectedPricingId,
+        start_date: new Date().toISOString(),
+        end_date: null
+      };
+
+      this.serverService.createSubscription(subscription).subscribe(
+        () => {
+          this.toastr.success('Rental successful', 'Success');
+          this.router.navigate(['/']);
+        },
+        error => {
+          this.toastr.error('Rental failed', 'Error');
+        }
+      );
+    }
   }
 
   private resetForm(): void {

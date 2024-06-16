@@ -1,9 +1,9 @@
 import { inject } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { UserService } from '../services/user.service';
 import { ToastrService } from 'ngx-toastr';
 
-export const authGuard = () => {
+export const authGuard = (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) => {
   const userService = inject(UserService);
   const router = inject(Router);
   const toastr = inject(ToastrService);
@@ -13,6 +13,23 @@ export const authGuard = () => {
   if (currentUser) {
     router.navigate(['/']);
     toastr.info('You are already logged in', 'Info');
+    return false;
+  }
+
+  return true;
+};
+
+export const requireAuthGuard = (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) => {
+  const userService = inject(UserService);
+  const router = inject(Router);
+  const toastr = inject(ToastrService);
+
+  const currentUser = userService.userValue;
+
+  if (!currentUser) {
+    userService.saveRedirectUrl(state.url);
+    router.navigate(['/login']);
+    toastr.warning('Please log in to access this page', 'Warning');
     return false;
   }
 

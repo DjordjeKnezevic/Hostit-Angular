@@ -1,0 +1,34 @@
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+.container-fluid {
+  max-width: 100%;
+}
+
+.sidebar {
+  z-index: 1020;
+  top: 0;
+  left: 0;
+  width: 250px;
+  transition: all 0.3s;
+}
+
+.sidebar .nav-link {
+  color: #333;
+}
+
+.sidebar .nav-link.active {
+  color: #007bff;
+  background-color: transparent;
+}
+
+.position-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}

@@ -22,6 +22,13 @@ export class ServersComponent implements OnInit {
   itemsPerPage: number = 3;
   totalSubscriptions: number = 0;
 
+  statusOptions = this.statuses.map(status => ({ value: status, label: status }));
+  locationOptions: { value: string, label: string }[] = [];
+  sortOptions = [
+    { value: 'desc', label: 'Newest First' },
+    { value: 'asc', label: 'Oldest First' }
+  ];
+
   constructor(private serverService: ServerService, private userService: UserService) {}
 
   ngOnInit(): void {
@@ -43,6 +50,7 @@ export class ServersComponent implements OnInit {
   fetchLocations(): void {
     this.serverService.getLocations().subscribe((locations: Location[]) => {
       this.locations = locations;
+      this.locationOptions = this.locations.map(location => ({ value: location.id.toString(), label: location.name }));
     });
   }
 
@@ -54,7 +62,7 @@ export class ServersComponent implements OnInit {
     }
 
     if (this.selectedLocation) {
-      filtered = filtered.filter(sub => sub.server.location.id === this.selectedLocation);
+      filtered = filtered.filter(sub => sub.server.location.id.toString() === this.selectedLocation);
     }
 
     filtered = filtered.sort((a, b) => {
@@ -111,20 +119,19 @@ export class ServersComponent implements OnInit {
     }
 
     this.serverService.updateServerStatus(statusId, statusUpdate).subscribe(() => {
+      subscription.status.status = action;
       if (action === 'terminated') {
-        const subscriptionUpdate = {
-          end_date: new Date().toISOString().split('.')[0].replace('T', ' ')
-        };
-        this.serverService.updateSubscription(subscriptionId, subscriptionUpdate).subscribe(() => {
-          this.fetchSubscriptions();
-        });
-      } else {
-        this.fetchSubscriptions();
+        subscription.end_date = new Date().toISOString().split('.')[0].replace('T', ' ');
       }
+      this.updatePagination();
     });
   }
 
   formatDateTime(dateTime: string): string {
     return dateTime.split('.')[0].replace('T', ' ');
+  }
+
+  getMaxPage(): number {
+    return Math.ceil(this.filteredSubscriptions.length / this.itemsPerPage);
   }
 }

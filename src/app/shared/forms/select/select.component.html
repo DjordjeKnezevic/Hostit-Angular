@@ -1,0 +1,7 @@
+<div class="form-group">
+  <select class="form-select" [(ngModel)]="selectedValue" (ngModelChange)="onChange($event)">
+    <option [ngValue]="''" disabled>{{ placeholder }}</option>
+    <option *ngFor="let option of options" [ngValue]="option.value">{{ option.label }}</option>
+  </select>
+  <div *ngIf="error" class="text-danger">{{ error }}</div>
+</div>

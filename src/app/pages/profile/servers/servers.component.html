@@ -3,22 +3,16 @@
     <h4 class="mb-3" style="color: #495057;">Server Filters</h4>
     <form id="filterForm" class="row">
       <div class="col-md-4 mb-3">
-        <select [(ngModel)]="selectedStatus" name="status" class="form-select" (change)="applyFilters()">
-          <option value="">Select Status</option>
-          <option *ngFor="let status of statuses" [value]="status">{{ status | titlecase }}</option>
-        </select>
+        <app-select [options]="statusOptions" [(selectedValue)]="selectedStatus" placeholder="Select State"
+          (selectedValueChange)="applyFilters()"></app-select>
       </div>
       <div class="col-md-4 mb-3">
-        <select [(ngModel)]="selectedLocation" name="location" class="form-select" (change)="applyFilters()">
-          <option value="">Select Location</option>
-          <option *ngFor="let location of locations" [value]="location.id">{{ location.city }}</option>
-        </select>
+        <app-select [options]="locationOptions" [(selectedValue)]="selectedLocation" placeholder="Select Location"
+          (selectedValueChange)="applyFilters()"></app-select>
       </div>
       <div class="col-md-4 mb-3">
-        <select [(ngModel)]="sortOrder" name="sort" class="form-select" (change)="applyFilters()">
-          <option value="desc">Newest First</option>
-          <option value="asc">Oldest First</option>
-        </select>
+        <app-select [options]="sortOptions" [(selectedValue)]="sortOrder" placeholder="Sort Order"
+          (selectedValueChange)="applyFilters()"></app-select>
       </div>
       <div class="col-12">
         <button type="button" class="btn btn-secondary mt-3" (click)="clearFilters()">Clear Filters</button>
@@ -32,7 +26,6 @@
 
   <div *ngFor="let subscription of paginatedSubscriptions" class="server-block mb-4 p-3 d-flex flex-column">
     <div class="d-flex justify-content-between align-items-start server-wrapper">
-      <!-- Server Info -->
       <div class="server-info">
         <h3>{{ subscription.server.name }}</h3>
         <p>Location: {{ subscription.server.location.city }}</p>
@@ -42,7 +35,6 @@
         <p>Subscription End: {{ subscription.end_date ? formatDateTime(subscription.end_date) : 'N/A' }}</p>
         <p>Subscription type: {{ subscription.pricing.period }}</p>
       </div>
-      <!-- Server Specs -->
       <div class="server-specs">
         <h5>Specs:</h5>
         <p>CPU Cores: {{ subscription.server.serverType.cpu_cores }}</p>
@@ -51,7 +43,6 @@
         <p>Network Speed: {{ subscription.server.serverType.network_speed }} Gbps</p>
       </div>
     </div>
-    <!-- Server Status -->
     <div class="server-status d-flex flex-row justify-content-between row" id="status-{{ subscription.id }}">
       <div class="col-6">
         <h3>Status</h3>
@@ -83,7 +74,7 @@
   <div class="d-flex justify-content-between my-4">
     <button *ngIf="currentPage > 1" (click)="changePage(currentPage - 1)"
       class="btn btn-outline-primary">Previous</button>
-    <button *ngIf="paginatedSubscriptions.length === itemsPerPage" (click)="changePage(currentPage + 1)"
+    <button *ngIf="currentPage < getMaxPage()" (click)="changePage(currentPage + 1)"
       class="btn btn-outline-primary">Next</button>
   </div>
 </div>

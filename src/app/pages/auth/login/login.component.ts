@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { UserService } from '../../../services/user.service';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -12,6 +13,9 @@ export class LoginComponent implements OnInit {
   password = '';
   errorMessage = '';
   redirectTo: string | null = null;
+
+  @ViewChild('emailCtrl') emailCtrl!: NgModel;
+  @ViewChild('passwordCtrl') passwordCtrl!: NgModel;
 
   constructor(private userService: UserService, private router: Router, private route: ActivatedRoute) {}
 

@@ -3,30 +3,19 @@
     <div class="col-md-8">
       <div class="card">
         <div class="card-header">Login</div>
-
         <div class="card-body">
           <form (ngSubmit)="login()">
             <div *ngIf="errorMessage" class="alert alert-danger">
               {{ errorMessage }}
             </div>
             <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" name="email" required class="form-control" [(ngModel)]="email" #emailCtrl="ngModel"
-                [ngClass]="{'is-invalid': emailCtrl.invalid && emailCtrl.touched}">
-              <div *ngIf="emailCtrl.invalid && emailCtrl.touched" class="invalid-feedback">
-                <strong>Email is required</strong>
-              </div>
+              <app-text-input label="Email Address" type="email" name="email" [(ngModel)]="email" required>
+              </app-text-input>
             </div>
-
             <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" name="password" required class="form-control" [(ngModel)]="password"
-                #passwordCtrl="ngModel" [ngClass]="{'is-invalid': passwordCtrl.invalid && passwordCtrl.touched}">
-              <div *ngIf="passwordCtrl.invalid && passwordCtrl.touched" class="invalid-feedback">
-                <strong>Password is required</strong>
-              </div>
+              <app-text-input label="Password" type="password" name="password" [(ngModel)]="password" required>
+              </app-text-input>
             </div>
-
             <button type="submit" class="btn btn-primary">Login</button>
           </form>
         </div>

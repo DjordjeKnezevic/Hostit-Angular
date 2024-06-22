@@ -87,6 +87,20 @@
       "email": "lomucyr@mailinator.com",
       "password": "Pa$$w0rd!",
       "role_id": "1"
+    },
+    {
+      "id": "0959",
+      "name": "Ut cupidatat autem l",
+      "email": "ridocyf@mailinator.com",
+      "password": "Pa$$w0rd!a",
+      "role_id": "1"
+    },
+    {
+      "id": "e21f",
+      "name": "Duis velit nobis sit",
+      "email": "nikexyvihi@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "role_id": "1"
     }
   ],
   "server_types": [
@@ -2467,7 +2481,7 @@
     {
       "id": "4b74",
       "subscription_id": "7edb",
-      "status": "good",
+      "status": "pending",
       "uptime": 0,
       "downtime": 0,
       "last_started_at": "2024-06-21 23:54:12",
@@ -2477,11 +2491,11 @@
     {
       "id": "011c",
       "subscription_id": "29ca",
-      "status": "good",
+      "status": "stopped",
       "uptime": 0,
       "downtime": 0,
-      "last_started_at": "2024-06-21 23:54:11",
-      "last_stopped_at": "2024-06-21 23:54:06",
+      "last_started_at": "2024-06-22 00:17:51",
+      "last_stopped_at": "2024-06-22 00:19:03",
       "last_crashed_at": null
     }
   ],

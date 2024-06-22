@@ -10,6 +10,7 @@ import { AboutComponentComponent } from './about-component/about-component.compo
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { ContactComponent } from './contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule as CustomFormsModule } from './forms/forms.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     RouterModule,
     NgbModule,
     NgbCarouselModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CustomFormsModule
   ],
   exports: [
     LocationDetailsComponent,
@@ -36,7 +38,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AboutComponentComponent,
     TestimonialComponent,
     ContactComponent,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CustomFormsModule
   ]
 })
 export class SharedModule { }

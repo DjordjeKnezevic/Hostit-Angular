@@ -7,37 +7,19 @@
         <div class="card-body">
           <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
             <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" formControlName="name" class="form-control"
-                [ngClass]="{'is-invalid': f['name'].invalid && f['name'].touched}">
-              <div *ngIf="f['name'].invalid && f['name'].touched" class="invalid-feedback">
-                <strong *ngIf="f['name'].errors?.['required']">Name is required</strong>
-                <strong *ngIf="f['name'].errors?.['minlength']">Name must be at least 3 characters</strong>
-              </div>
+              <app-text-input label="Name" type="text" formControlName="name" [errors]="getFieldErrors('name')">
+              </app-text-input>
             </div>
-
             <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" formControlName="email" class="form-control" (blur)="onEmailBlur()"
-                [ngClass]="{'is-invalid': f['email'].invalid && f['email'].touched}">
-              <div *ngIf="f['email'].invalid && f['email'].touched" class="invalid-feedback">
-                <strong *ngIf="f['email'].errors?.['required']">Email is required</strong>
-                <strong *ngIf="f['email'].errors?.['email']">Invalid email format</strong>
-              </div>
+              <app-text-input label="Email Address" type="email" formControlName="email"
+                [errors]="getFieldErrors('email')" (blur)="onEmailBlur()">
+              </app-text-input>
             </div>
-
             <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" formControlName="password" class="form-control"
-                [ngClass]="{'is-invalid': f['password'].invalid && f['password'].touched}">
-              <div *ngIf="f['password'].invalid && f['password'].touched" class="invalid-feedback">
-                <strong *ngIf="f['password'].errors?.['required']">Password is required</strong>
-                <strong *ngIf="f['password'].errors?.['minlength']">Password must be at least 8 characters</strong>
-                <strong *ngIf="f['password'].errors?.['pattern']">Password must contain at least one uppercase letter,
-                  one number, and one special character</strong>
-              </div>
+              <app-text-input label="Password" type="password" formControlName="password"
+                [errors]="getFieldErrors('password')">
+              </app-text-input>
             </div>
-
             <button type="submit" class="btn btn-primary">Register</button>
           </form>
         </div>

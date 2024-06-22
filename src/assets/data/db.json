@@ -2383,12 +2383,106 @@
       "end_date": null
     },
     {
-      "id": "f9c2",
-      "user_id": "dd26",
-      "service_id": "22",
-      "pricing_id": "64",
-      "start_date": "2024-06-15T22:40:33.706Z",
+      "id": "f3c8",
+      "user_id": "409e",
+      "service_id": "45",
+      "pricing_id": "133",
+      "start_date": "2024-06-21T21:32:23.011Z",
+      "end_date": "2024-06-21 22:50:36"
+    },
+    {
+      "id": "50d0",
+      "user_id": "409e",
+      "service_id": "1",
+      "pricing_id": "2",
+      "start_date": "2024-06-21T22:43:23.858Z",
       "end_date": null
+    },
+    {
+      "id": "f3c2",
+      "user_id": "409e",
+      "service_id": "33",
+      "pricing_id": "99",
+      "start_date": "2024-06-21T22:43:41.614Z",
+      "end_date": null
+    },
+    {
+      "id": "7edb",
+      "user_id": "409e",
+      "service_id": "51",
+      "pricing_id": "151",
+      "start_date": "2024-06-21T22:44:17.335Z",
+      "end_date": null
+    },
+    {
+      "id": "29ca",
+      "user_id": "409e",
+      "service_id": "23",
+      "pricing_id": "68",
+      "start_date": "2024-06-21T22:50:17.419Z",
+      "end_date": null
+    }
+  ],
+  "server_statuses": [
+    {
+      "id": "1",
+      "subscription_id": "1",
+      "status": "stopped",
+      "uptime": 9,
+      "downtime": 0,
+      "last_started_at": "2024-06-15T23:35:52",
+      "last_stopped_at": "2024-06-15T23:36:01",
+      "last_crashed_at": null
+    },
+    {
+      "id": "5150",
+      "subscription_id": "f3c8",
+      "status": "terminated",
+      "uptime": 0,
+      "downtime": 0,
+      "last_started_at": "2024-06-21 22:38:38.631",
+      "last_stopped_at": "2024-06-21 22:50:36",
+      "last_crashed_at": null
+    },
+    {
+      "id": "d2b2",
+      "subscription_id": "50d0",
+      "status": "good",
+      "uptime": 0,
+      "downtime": 0,
+      "last_started_at": "2024-06-21T22:43:23.898Z",
+      "last_stopped_at": null,
+      "last_crashed_at": null
+    },
+    {
+      "id": "f825",
+      "subscription_id": "f3c2",
+      "status": "good",
+      "uptime": 0,
+      "downtime": 0,
+      "last_started_at": "2024-06-21T22:43:41.643Z",
+      "last_stopped_at": null,
+      "last_crashed_at": null
+    },
+    {
+      "id": "4b74",
+      "subscription_id": "7edb",
+      "status": "good",
+      "uptime": 0,
+      "downtime": 0,
+      "last_started_at": "2024-06-21 23:54:12",
+      "last_stopped_at": "2024-06-21 23:54:07",
+      "last_crashed_at": null
+    },
+    {
+      "id": "011c",
+      "subscription_id": "29ca",
+      "status": "good",
+      "uptime": 0,
+      "downtime": 0,
+      "last_started_at": "2024-06-21 23:54:11",
+      "last_stopped_at": "2024-06-21 23:54:06",
+      "last_crashed_at": null
     }
   ],
   "invoices": [
@@ -2471,18 +2565,6 @@
       "type": "Customer",
       "description": "We switched to their cloud hosting a year ago, and the improvement in our application's performance has been remarkable.",
       "image": "assets/img/testimonials/testimonial4.jpg"
-    }
-  ],
-  "server_statuses": [
-    {
-      "id": "1",
-      "subscription_id": "1",
-      "status": "good",
-      "uptime": 3600,
-      "downtime": 0,
-      "last_started_at": "2024-01-01T00:00:00Z",
-      "last_stopped_at": null,
-      "last_crashed_at": null
     }
   ],
   "mailing_list": [

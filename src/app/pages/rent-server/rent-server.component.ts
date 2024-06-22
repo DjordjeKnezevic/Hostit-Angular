@@ -7,6 +7,8 @@ import { Pricing } from '../../interfaces/pricing';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrService } from 'ngx-toastr';
 import { UserService } from '../../services/user.service';
+import { Subscription } from '../../interfaces/subscription';
+import { ServerStatus } from '../../interfaces/server-status';
 
 @Component({
   selector: 'app-rent-server',
@@ -129,8 +131,8 @@ export class RentServerComponent implements OnInit {
   completeRenting(): void {
     const user = this.userService.userValue;
     if (user && this.selectedServerId && this.selectedPricingId) {
-      const subscription = {
-        user_id: user.id,
+      const subscription: Partial<Subscription> = {
+        user_id: user.id.toString(),
         service_id: this.selectedServerId,
         pricing_id: this.selectedPricingId,
         start_date: new Date().toISOString(),
@@ -138,9 +140,21 @@ export class RentServerComponent implements OnInit {
       };
 
       this.serverService.createSubscription(subscription).subscribe(
-        () => {
-          this.toastr.success('Rental successful', 'Success');
-          this.router.navigate(['/']);
+        (createdSubscription) => {
+          const status: Partial<ServerStatus> = {
+            subscription_id: createdSubscription.id,
+            status: 'good',
+            uptime: 0,
+            downtime: 0,
+            last_started_at: new Date().toISOString(),
+            last_stopped_at: null,
+            last_crashed_at: null,
+          };
+
+          this.serverService.createServerStatus(status).subscribe(() => {
+            this.toastr.success('Rental successful', 'Success');
+            this.router.navigate(['/profile']);
+          });
         },
         error => {
           this.toastr.error('Rental failed', 'Error');

@@ -5,7 +5,7 @@ export interface Location {
   name: string;
   network_zone: string;
   city: string;
-  image: string;
+  image?: string;
 }
 
 export interface LocationWithServers extends Location {

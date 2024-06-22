@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ServerService } from '../../../services/server.service';
+import { UserService } from '../../../services/user.service';
+import { ServerStatus } from '../../../interfaces/server-status';
+import { Location } from '../../../interfaces/location';
 
 @Component({
   selector: 'app-servers',
@@ -6,35 +10,121 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
+  subscriptions: any[] = [];
+  filteredSubscriptions: any[] = [];
+  paginatedSubscriptions: any[] = [];
+  locations: Location[] = [];
+  statuses: string[] = ['good', 'pending', 'down', 'stopped', 'terminated'];
+  selectedStatus: string = '';
+  selectedLocation: string = '';
+  sortOrder: string = 'desc';
+  currentPage: number = 1;
+  itemsPerPage: number = 3;
+  totalSubscriptions: number = 0;
 
-  constructor() { }
+  constructor(private serverService: ServerService, private userService: UserService) {}
 
   ngOnInit(): void {
-    // TODO
+    this.fetchSubscriptions();
+    this.fetchLocations();
   }
 
-  onFilterChange() {
-    // TODO
+  fetchSubscriptions(): void {
+    const userId = this.userService.userValue?.id.toString();
+    if (userId) {
+      this.serverService.getUserSubscriptions(userId).subscribe(data => {
+        this.subscriptions = data.subscriptions;
+        this.totalSubscriptions = data.total;
+        this.applyFilters();
+      });
+    }
   }
 
-  clearFilters() {
-    // TODO
+  fetchLocations(): void {
+    this.serverService.getLocations().subscribe((locations: Location[]) => {
+      this.locations = locations;
+    });
   }
 
-  startServer(id: number) {
-    // TODO
+  applyFilters(): void {
+    let filtered = this.subscriptions;
+
+    if (this.selectedStatus) {
+      filtered = filtered.filter(sub => sub.status.status === this.selectedStatus);
+    }
+
+    if (this.selectedLocation) {
+      filtered = filtered.filter(sub => sub.server.location.id === this.selectedLocation);
+    }
+
+    filtered = filtered.sort((a, b) => {
+      const dateA = new Date(a.start_date).getTime();
+      const dateB = new Date(b.start_date).getTime();
+      return this.sortOrder === 'desc' ? dateB - dateA : dateA - dateB;
+    });
+
+    this.filteredSubscriptions = filtered;
+    this.currentPage = 1; // Reset to first page
+    this.updatePagination();
   }
 
-  stopServer(id: number) {
-    // TODO
+  updatePagination(): void {
+    const start = (this.currentPage - 1) * this.itemsPerPage;
+    const end = start + this.itemsPerPage;
+    this.paginatedSubscriptions = this.filteredSubscriptions.slice(start, end);
   }
 
-  restartServer(id: number) {
-    // TODO
+  changePage(page: number): void {
+    this.currentPage = page;
+    this.updatePagination();
+    window.scrollTo(0, 0);
   }
 
-  terminateServer(id: number) {
-    // TODO
+  clearFilters(): void {
+    this.selectedStatus = '';
+    this.selectedLocation = '';
+    this.sortOrder = 'desc';
+    this.applyFilters();
   }
 
+  getStatusColor(status: string): string {
+    switch (status) {
+      case 'good': return 'green';
+      case 'pending': return 'yellow';
+      case 'down': return 'red';
+      case 'stopped': return 'gray';
+      case 'terminated': return 'black';
+      default: return 'gray';
+    }
+  }
+
+  updateServerStatus(subscriptionId: string, action: string): void {
+    const subscription = this.subscriptions.find(sub => sub.id === subscriptionId);
+    if (!subscription) return;
+    const statusId = subscription.status.id;
+    const statusUpdate: Partial<ServerStatus> = { status: action };
+
+    if (action === 'good') {
+      statusUpdate.last_started_at = new Date().toISOString().split('.')[0].replace('T', ' ');
+    } else if (action === 'stopped' || action === 'terminated') {
+      statusUpdate.last_stopped_at = new Date().toISOString().split('.')[0].replace('T', ' ');
+    }
+
+    this.serverService.updateServerStatus(statusId, statusUpdate).subscribe(() => {
+      if (action === 'terminated') {
+        const subscriptionUpdate = {
+          end_date: new Date().toISOString().split('.')[0].replace('T', ' ')
+        };
+        this.serverService.updateSubscription(subscriptionId, subscriptionUpdate).subscribe(() => {
+          this.fetchSubscriptions();
+        });
+      } else {
+        this.fetchSubscriptions();
+      }
+    });
+  }
+
+  formatDateTime(dateTime: string): string {
+    return dateTime.split('.')[0].replace('T', ' ');
+  }
 }

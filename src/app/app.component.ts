@@ -4,6 +4,7 @@ import { UserService } from './services/user.service';
 import { NavigationLink } from './interfaces/navigation-link';
 import { Router, NavigationEnd, Event } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,8 @@ export class AppComponent implements OnInit {
     private navigationService: NavigationService,
     private userService: UserService,
     private router: Router,
-    private renderer: Renderer2
+    private renderer: Renderer2,
+    private toastr: ToastrService
   ) {
     this.router.events.pipe(
       filter((event: Event): event is NavigationEnd => event instanceof NavigationEnd)
@@ -39,6 +41,16 @@ export class AppComponent implements OnInit {
       this.footerLinks = links;
     });
 
-    this.userService.user.subscribe();
+    this.userService.initializeUser().subscribe({
+      next: (user) => {
+        // User fetched successfully
+      },
+      error: (err) => {
+        if (err.status === 401 && this.router.url !== '/login' && this.router.url !== '/register') {
+          this.toastr.info('Please login again', 'Session expired');
+          this.router.navigate(['/login']);
+        }
+      }
+    });
   }
 }

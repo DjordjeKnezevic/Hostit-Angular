@@ -2,17 +2,17 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
-import { PricingPlan } from '../interfaces/pricing-plan';
+import { PricingResponse } from '../interfaces/pricing-plan';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PricingService {
-  private apiUrl: string = `${environment.apiUrl}/pricing_options`;
+  private apiUrl: string = `${environment.newApiUrl}/pricing-options`;
 
   constructor(private http: HttpClient) {}
 
-  getPricingPlans(): Observable<PricingPlan[]> {
-    return this.http.get<PricingPlan[]>(this.apiUrl);
+  getPricingPlans(): Observable<PricingResponse> {
+    return this.http.get<PricingResponse>(this.apiUrl);
   }
 }

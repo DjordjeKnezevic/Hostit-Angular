@@ -2,7 +2,6 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
 import { NavigationLink } from '../../interfaces/navigation-link';
-import { User } from '../../interfaces/user';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -24,14 +23,24 @@ export class HeaderComponent implements OnInit {
       this.isAuthenticated = !!user;
       if (user) {
         this.userName = user.name;
-        this.isAdmin = user.roleName === 'admin';
+        this.isAdmin = user.role.name === 'admin';
+      } else {
+        this.userName = 'User';
+        this.isAdmin = false;
       }
     });
   }
 
   public logout() {
-    this.userService.logout();
-    this.toastr.success('Logout successful', 'Success');
-    this.router.navigate(['/login']);
+    this.userService.logout().subscribe(
+      () => {
+        this.toastr.success('Logout successful', 'Success');
+        this.router.navigate(['/login']);
+      },
+      error => {
+        this.toastr.error('Logout failed', 'Error');
+        console.error('Logout error:', error);
+      }
+    );
   }
 }

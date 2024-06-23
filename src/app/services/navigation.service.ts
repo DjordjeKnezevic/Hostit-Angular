@@ -8,7 +8,8 @@ import { NavigationLink } from '../interfaces/navigation-link';
   providedIn: 'root'
 })
 export class NavigationService {
-  private apiUrl: string = `${environment.apiUrl}/navigation_links`;
+  private apiUrl: string = `${environment.newApiUrl}/navigation-links`;
+
   constructor(private http: HttpClient) { }
 
   getNavigationLinks(): Observable<NavigationLink[]> {

@@ -8,7 +8,7 @@ import { Testimonial } from '../interfaces/testimonial';
   providedIn: 'root'
 })
 export class TestimonialService {
-  private apiUrl: string = `${environment.apiUrl}/testimonials`;
+  private apiUrl: string = `${environment.newApiUrl}/testimonials`;
 
   constructor(private http: HttpClient) {}
 

@@ -4,7 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule as AngularFormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '../../shared/forms/forms.module'; // Import the custom FormsModule
+import { FormsModule } from '../../shared/forms/forms.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { FormsModule } from '../../shared/forms/forms.module'; // Import the cus
     AngularFormsModule,
     ReactiveFormsModule,
     RouterModule,
-    FormsModule // Add the custom FormsModule here
+    FormsModule
   ],
   exports: [
     LoginComponent,

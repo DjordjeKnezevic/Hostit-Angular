@@ -8,9 +8,9 @@ export const authGuard = (route: ActivatedRouteSnapshot, state: RouterStateSnaps
   const router = inject(Router);
   const toastr = inject(ToastrService);
 
-  const currentUser = userService.userValue;
+  const token = localStorage.getItem('token');
 
-  if (currentUser) {
+  if (token) {
     router.navigate(['/']);
     toastr.info('You are already logged in', 'Info');
     return false;
@@ -24,9 +24,9 @@ export const requireAuthGuard = (route: ActivatedRouteSnapshot, state: RouterSta
   const router = inject(Router);
   const toastr = inject(ToastrService);
 
-  const currentUser = userService.userValue;
+  const token = localStorage.getItem('token');
 
-  if (!currentUser) {
+  if (!token) {
     userService.saveRedirectUrl(state.url);
     router.navigate(['/login']);
     toastr.warning('Please log in to access this page', 'Warning');

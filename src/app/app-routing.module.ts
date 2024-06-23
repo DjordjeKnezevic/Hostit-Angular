@@ -9,7 +9,7 @@ import { RentServerComponent } from './pages/rent-server/rent-server.component';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
 import { ServersComponent } from './pages/servers/servers.component';
-import { authGuard } from './services/auth-guard.service';
+import { authGuard, requireAuthGuard } from './services/auth-guard.service';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,12 +17,11 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'price', component: PriceComponent },
   { path: 'service', component: ServiceComponent },
-  { path: 'rent-server', component: RentServerComponent },
   { path: 'login', component: LoginComponent, canActivate: [authGuard] },
   { path: 'register', component: RegisterComponent, canActivate: [authGuard] },
   { path: 'servers', component: ServersComponent },
-  { path: 'rent-server', component: RentServerComponent },
-  { path: 'rent-server/:serverId', component: RentServerComponent },
+  { path: 'rent-server', component: RentServerComponent, canActivate: [requireAuthGuard]},
+  { path: 'rent-server/:serverId', component: RentServerComponent, canActivate: [requireAuthGuard]},
   { path: 'profile', loadChildren: () => import('./pages/profile/profile.module').then(m => m.ProfileModule) }
 ];
 

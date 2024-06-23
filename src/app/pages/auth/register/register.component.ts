@@ -1,15 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { UserService } from '../../../services/user.service';
+import { debounceTime, distinctUntilChanged, switchMap, catchError } from 'rxjs/operators';
+import { of } from 'rxjs';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent {
+export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   errorMessage: string = '';
 
@@ -30,6 +32,22 @@ export class RegisterComponent {
     });
   }
 
+  ngOnInit() {
+    this.registerForm.get('email')?.valueChanges.pipe(
+      debounceTime(500),
+      distinctUntilChanged(),
+      switchMap(value => this.userService.checkUserByEmail(value).pipe(
+        catchError(() => of({ exists: false }))
+      ))
+    ).subscribe(response => {
+      if (response.exists) {
+        this.registerForm.get('email')?.setErrors({ emailExists: true });
+      } else {
+        this.registerForm.get('email')?.setErrors(null);
+      }
+    });
+  }
+
   get f() {
     return this.registerForm.controls;
   }
@@ -37,10 +55,11 @@ export class RegisterComponent {
   onEmailBlur() {
     const emailControl = this.f['email'];
     if (emailControl.valid) {
-      this.userService.checkUserByEmail(emailControl.value).subscribe(users => {
-        if (users && users.length > 0) {
+      this.userService.checkUserByEmail(emailControl.value).subscribe(response => {
+        if (response.exists) {
           emailControl.setErrors({ emailExists: true });
-          this.toastr.error('Email already exists', 'Registration Error');
+        } else {
+          emailControl.setErrors(null);
         }
       });
     }
@@ -58,8 +77,6 @@ export class RegisterComponent {
       role_id: '1'
     };
 
-    console.log('New user:', newUser); // Add this for debugging
-
     this.userService.register(newUser).subscribe(
       () => {
         this.userService.login(newUser.email, newUser.password).subscribe(
@@ -73,7 +90,11 @@ export class RegisterComponent {
         );
       },
       error => {
-        this.toastr.error(error.message, 'Registration Error');
+        if (error.error && error.error.email) {
+          this.toastr.error(error.error.email[0], 'Registration Error');
+        } else {
+          this.toastr.error('Registration failed. Please try again later.', 'Registration Error');
+        }
       }
     );
   }

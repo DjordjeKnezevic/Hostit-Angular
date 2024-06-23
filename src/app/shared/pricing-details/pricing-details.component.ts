@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PricingService } from '../../services/pricing.service';
-import { PricingPlan } from '../../interfaces/pricing-plan';
+import { PricingOption, PricingResponse } from '../../interfaces/pricing-plan';
 
 @Component({
   selector: 'app-pricing-details',
@@ -8,13 +8,19 @@ import { PricingPlan } from '../../interfaces/pricing-plan';
   styleUrls: ['./pricing-details.component.css']
 })
 export class PricingDetailsComponent implements OnInit {
-  pricingPlans: PricingPlan[] = [];
+  pricingPlans: PricingOption[] = [];
+  maxSpecs: { [key: string]: number } | null = null;
 
   constructor(private pricingService: PricingService) {}
 
   ngOnInit(): void {
-    this.pricingService.getPricingPlans().subscribe(data => {
-      this.pricingPlans = data;
+    this.pricingService.getPricingPlans().subscribe((data: PricingResponse) => {
+      this.pricingPlans = [
+        { period: 'hourly', price: data.pricingOptions.hourly },
+        { period: 'monthly', price: data.pricingOptions.monthly },
+        { period: 'yearly', price: data.pricingOptions.yearly }
+      ];
+      this.maxSpecs = data.maxSpecs;
     });
   }
 }

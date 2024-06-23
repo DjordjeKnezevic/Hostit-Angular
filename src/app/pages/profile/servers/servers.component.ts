@@ -72,7 +72,7 @@ export class ServersComponent implements OnInit {
     });
 
     this.filteredSubscriptions = filtered;
-    this.currentPage = 1; // Reset to first page
+    this.currentPage = 1;
     this.updatePagination();
   }
 

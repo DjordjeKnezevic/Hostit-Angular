@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { UserService } from '../../../services/user.service';
 import { NgModel } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,7 @@ export class LoginComponent implements OnInit {
   @ViewChild('emailCtrl') emailCtrl!: NgModel;
   @ViewChild('passwordCtrl') passwordCtrl!: NgModel;
 
-  constructor(private userService: UserService, private router: Router, private route: ActivatedRoute) {}
+  constructor(private userService: UserService, private router: Router, private route: ActivatedRoute, private toastr: ToastrService) {}
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
@@ -29,6 +30,7 @@ export class LoginComponent implements OnInit {
     this.userService.login(this.email, this.password).subscribe(
       () => {
         const redirectUrl = this.userService.getRedirectUrl();
+        this.toastr.success('Login successful', 'Success');
         if (redirectUrl) {
           this.userService.clearRedirectUrl();
           this.router.navigateByUrl(redirectUrl);
@@ -37,7 +39,7 @@ export class LoginComponent implements OnInit {
         }
       },
       error => {
-        this.errorMessage = error.message;
+        this.errorMessage = error.error.error || 'An unexpected error occurred.';
       }
     );
   }

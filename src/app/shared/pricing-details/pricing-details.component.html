@@ -9,17 +9,17 @@
           <h2>$ <span>{{ plan.price }}<sup>*</sup></span></h2>
           <h6>{{ plan.period | titlecase }}</h6>
           <ul class="price_features">
-            <li>CPU up to {{ plan.cpu }} cores<sup>*</sup></li>
-            <li>RAM up to {{ plan.ram }} GB<sup>*</sup></li>
-            <li>Storage up to {{ plan.storage }} GB<sup>*</sup></li>
-            <li>Network Speed up to {{ plan.network_speed }}<sup>*</sup></li>
+            <li *ngIf="maxSpecs">CPU up to {{ maxSpecs['cpu'] }} cores<sup>*</sup></li>
+            <li *ngIf="maxSpecs">RAM up to {{ maxSpecs['ram'] }} GB<sup>*</sup></li>
+            <li *ngIf="maxSpecs">Storage up to {{ maxSpecs['storage'] }} GB<sup>*</sup></li>
+            <li *ngIf="maxSpecs">Network Speed up to {{ maxSpecs['network_speed'] }}<sup>*</sup></li>
             <li>Weekly Backups</li>
             <li>DDoS Protection</li>
             <li>Full Root Access</li>
             <li>24/7/365 Tech Support</li>
           </ul>
           <div class="btn-box">
-            <a [routerLink]="plan.link">{{ plan.linkText }}</a>
+            <a [routerLink]="['/servers']">See details</a>
           </div>
           <p class="small-text">*Pricing and specs depend on the region</p>
         </div>

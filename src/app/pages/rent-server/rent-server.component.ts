@@ -30,7 +30,7 @@ export class RentServerComponent implements OnInit {
 
   locationPlaceholder = 'Select a Location';
   serverPlaceholder = 'Please select a location first';
-  pricingPlaceholder = 'Please select a location first';
+  pricingPlaceholder = 'Please select a server first';
 
   constructor(
     private serverService: ServerService,
@@ -77,38 +77,56 @@ export class RentServerComponent implements OnInit {
   }
 
   onLocationChange(): void {
-    this.locationInfo = this.locations.find(location => location.id === this.selectedLocationId) || null;
-    if (this.locationInfo) {
-      this.servers = this.locationInfo.servers;
-      this.serverInfo = null;
-      this.pricingOptions = [];
-      this.pricingInfo = null;
-      this.selectedServerId = '';
-      this.selectedPricingId = '';
-      this.serverPlaceholder = 'Select a Server';
-      this.pricingPlaceholder = 'Please select a server first';
+    this.serverInfo = null;
+    this.pricingInfo = null;
+    this.servers = [];
+    this.pricingOptions = [];
+    this.selectedServerId = '';
+    this.selectedPricingId = '';
+    this.serverPlaceholder = 'Loading servers...';
+    this.pricingPlaceholder = 'Please select a server first';
+
+    if (this.selectedLocationId) {
+      this.serverService.getLocationById(this.selectedLocationId).subscribe((location: LocationWithServers) => {
+        this.locationInfo = location;
+        this.serverService.getServersByLocation(this.selectedLocationId).subscribe((servers: Server[]) => {
+          this.servers = servers;
+          this.serverPlaceholder = 'Select a Server';
+        });
+      }, error => {
+        this.locationInfo = null;
+        this.serverPlaceholder = 'Please select a location first';
+        this.pricingPlaceholder = 'Please select a server first';
+      });
     } else {
-      this.resetForm();
+      this.locationInfo = null;
+      this.serverPlaceholder = 'Please select a location first';
+      this.pricingPlaceholder = 'Please select a server first';
     }
   }
 
   onServerChange(): void {
-    const selectedServer = this.servers.find(server => server.id === this.selectedServerId) || null;
-    if (selectedServer) {
-      this.serverService.getServerWithDetails(selectedServer.id).subscribe((serverWithDetails: Server) => {
+    this.serverInfo = null;
+    this.pricingInfo = null;
+    this.pricingOptions = [];
+    this.selectedPricingId = '';
+    this.pricingPlaceholder = 'Loading pricing...';
+
+    if (this.selectedServerId) {
+      this.serverService.getServerWithDetails(this.selectedServerId).subscribe((serverWithDetails: Server) => {
         this.serverInfo = serverWithDetails;
         this.pricingOptions = serverWithDetails.pricing;
-        this.pricingInfo = null;
-        this.selectedPricingId = '';
         this.pricingPlaceholder = 'Select a Pricing Plan';
       });
     } else {
-      this.resetServerAndPricing();
+      this.serverInfo = null;
+      this.pricingPlaceholder = 'Please select a server first';
     }
   }
 
   onPricingChange(): void {
-    this.pricingInfo = this.pricingOptions.find(pricing => pricing.id === this.selectedPricingId) || null;
+    const selectedPricingIdString = this.selectedPricingId.toString();
+    this.pricingInfo = this.pricingOptions.find(pricing => pricing.id.toString() === selectedPricingIdString) || null;
   }
 
   openConfirmationModal(content: any): void {
@@ -131,57 +149,21 @@ export class RentServerComponent implements OnInit {
   completeRenting(): void {
     const user = this.userService.userValue;
     if (user && this.selectedServerId && this.selectedPricingId) {
-      const subscription: Partial<Subscription> = {
-        user_id: user.id.toString(),
-        service_id: this.selectedServerId,
-        pricing_id: this.selectedPricingId,
-        start_date: new Date().toISOString(),
-        end_date: null
+      const rentData = {
+        location: parseInt(this.selectedLocationId, 10),
+        server: parseInt(this.selectedServerId, 10),
+        pricing: parseInt(this.selectedPricingId, 10)
       };
 
-      this.serverService.createSubscription(subscription).subscribe(
-        (createdSubscription) => {
-          const status: Partial<ServerStatus> = {
-            subscription_id: createdSubscription.id,
-            status: 'good',
-            uptime: 0,
-            downtime: 0,
-            last_started_at: new Date().toISOString(),
-            last_stopped_at: null,
-            last_crashed_at: null,
-          };
-
-          this.serverService.createServerStatus(status).subscribe(() => {
-            this.toastr.success('Rental successful', 'Success');
-            this.router.navigate(['/profile']);
-          });
+      this.serverService.processRenting(rentData).subscribe(
+        () => {
+          this.toastr.success('Rental successful', 'Success');
+          this.router.navigate(['/profile']);
         },
         error => {
           this.toastr.error('Rental failed', 'Error');
         }
       );
     }
-  }
-
-  private resetForm(): void {
-    this.selectedLocationId = '';
-    this.selectedServerId = '';
-    this.selectedPricingId = '';
-    this.servers = [];
-    this.pricingOptions = [];
-    this.locationInfo = null;
-    this.serverInfo = null;
-    this.pricingInfo = null;
-    this.serverPlaceholder = 'Please select a location first';
-    this.pricingPlaceholder = 'Please select a location first';
-  }
-
-  private resetServerAndPricing(): void {
-    this.selectedServerId = '';
-    this.selectedPricingId = '';
-    this.serverInfo = null;
-    this.pricingOptions = [];
-    this.pricingInfo = null;
-    this.pricingPlaceholder = 'Please select a server first';
   }
 }

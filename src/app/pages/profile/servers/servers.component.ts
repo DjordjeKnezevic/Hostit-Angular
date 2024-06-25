@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ServerService } from '../../../services/server.service';
-import { UserService } from '../../../services/user.service';
 import { ServerStatus } from '../../../interfaces/server-status';
 import { Location } from '../../../interfaces/location';
 
@@ -11,15 +10,12 @@ import { Location } from '../../../interfaces/location';
 })
 export class ServersComponent implements OnInit {
   subscriptions: any[] = [];
-  filteredSubscriptions: any[] = [];
-  paginatedSubscriptions: any[] = [];
   locations: Location[] = [];
   statuses: string[] = ['good', 'pending', 'down', 'stopped', 'terminated'];
   selectedStatus: string = '';
   selectedLocation: string = '';
   sortOrder: string = 'desc';
   currentPage: number = 1;
-  itemsPerPage: number = 3;
   totalSubscriptions: number = 0;
 
   statusOptions = this.statuses.map(status => ({ value: status, label: status }));
@@ -29,22 +25,23 @@ export class ServersComponent implements OnInit {
     { value: 'asc', label: 'Oldest First' }
   ];
 
-  constructor(private serverService: ServerService, private userService: UserService) {}
+  nextPageUrl: string | null = null;
+  prevPageUrl: string | null = null;
+
+  constructor(private serverService: ServerService) {}
 
   ngOnInit(): void {
-    this.fetchSubscriptions();
+    this.fetchServers();
     this.fetchLocations();
   }
 
-  fetchSubscriptions(): void {
-    const userId = this.userService.userValue?.id.toString();
-    if (userId) {
-      this.serverService.getUserSubscriptions(userId).subscribe(data => {
-        this.subscriptions = data.subscriptions;
-        this.totalSubscriptions = data.total;
-        this.applyFilters();
-      });
-    }
+  fetchServers(url: string | null = null): void {
+    this.serverService.getUserServers(url, this.selectedStatus, this.selectedLocation, this.sortOrder).subscribe(data => {
+      this.subscriptions = data.servers.data;
+      this.totalSubscriptions = data.servers.total;
+      this.nextPageUrl = data.servers.next_page_url;
+      this.prevPageUrl = data.servers.prev_page_url;
+    });
   }
 
   fetchLocations(): void {
@@ -52,47 +49,6 @@ export class ServersComponent implements OnInit {
       this.locations = locations;
       this.locationOptions = this.locations.map(location => ({ value: location.id.toString(), label: location.name }));
     });
-  }
-
-  applyFilters(): void {
-    let filtered = this.subscriptions;
-
-    if (this.selectedStatus) {
-      filtered = filtered.filter(sub => sub.status.status === this.selectedStatus);
-    }
-
-    if (this.selectedLocation) {
-      filtered = filtered.filter(sub => sub.server.location.id.toString() === this.selectedLocation);
-    }
-
-    filtered = filtered.sort((a, b) => {
-      const dateA = new Date(a.start_date).getTime();
-      const dateB = new Date(b.start_date).getTime();
-      return this.sortOrder === 'desc' ? dateB - dateA : dateA - dateB;
-    });
-
-    this.filteredSubscriptions = filtered;
-    this.currentPage = 1;
-    this.updatePagination();
-  }
-
-  updatePagination(): void {
-    const start = (this.currentPage - 1) * this.itemsPerPage;
-    const end = start + this.itemsPerPage;
-    this.paginatedSubscriptions = this.filteredSubscriptions.slice(start, end);
-  }
-
-  changePage(page: number): void {
-    this.currentPage = page;
-    this.updatePagination();
-    window.scrollTo(0, 0);
-  }
-
-  clearFilters(): void {
-    this.selectedStatus = '';
-    this.selectedLocation = '';
-    this.sortOrder = 'desc';
-    this.applyFilters();
   }
 
   getStatusColor(status: string): string {
@@ -109,29 +65,78 @@ export class ServersComponent implements OnInit {
   updateServerStatus(subscriptionId: string, action: string): void {
     const subscription = this.subscriptions.find(sub => sub.id === subscriptionId);
     if (!subscription) return;
-    const statusId = subscription.status.id;
-    const statusUpdate: Partial<ServerStatus> = { status: action };
 
-    if (action === 'good') {
-      statusUpdate.last_started_at = new Date().toISOString().split('.')[0].replace('T', ' ');
-    } else if (action === 'stopped' || action === 'terminated') {
-      statusUpdate.last_stopped_at = new Date().toISOString().split('.')[0].replace('T', ' ');
-    }
-
-    this.serverService.updateServerStatus(statusId, statusUpdate).subscribe(() => {
-      subscription.status.status = action;
-      if (action === 'terminated') {
-        subscription.end_date = new Date().toISOString().split('.')[0].replace('T', ' ');
+    const statusUpdate = () => {
+      subscription.server_status.status = action;
+      if (action === 'good') {
+        subscription.server_status.last_started_at = new Date().toISOString().split('.')[0].replace('T', ' ');
+      } else if (action === 'stopped' || action === 'terminated') {
+        subscription.server_status.last_stopped_at = new Date().toISOString().split('.')[0].replace('T', ' ');
+        if (action === 'terminated') {
+          subscription.end_date = new Date().toISOString().split('.')[0].replace('T', ' ');
+        }
       }
-      this.updatePagination();
-    });
+    };
+
+    switch (action) {
+      case 'good':
+        this.serverService.startServer(subscriptionId).subscribe(statusUpdate);
+        break;
+      case 'stopped':
+        this.serverService.stopServer(subscriptionId).subscribe(statusUpdate);
+        break;
+      case 'pending':
+        this.serverService.restartServer(subscriptionId).subscribe(statusUpdate);
+        break;
+      case 'terminated':
+        this.serverService.terminateServer(subscriptionId).subscribe(statusUpdate);
+        break;
+    }
   }
 
   formatDateTime(dateTime: string): string {
     return dateTime.split('.')[0].replace('T', ' ');
   }
 
-  getMaxPage(): number {
-    return Math.ceil(this.filteredSubscriptions.length / this.itemsPerPage);
+  getLocationName(locationId: number): string {
+    const location = this.locations.find(loc => parseInt(loc.id) === locationId);
+    return location ? location.city : 'Unknown City';
+  }
+
+  getLocationZone(locationId: number): string {
+    const location = this.locations.find(loc => parseInt(loc.id) === locationId);
+    return location ? location.network_zone : 'Unknown Zone';
+  }
+
+  changePage(url: string | null): void {
+    if (url) {
+      const newUrl = this.constructUrlWithFilters(url);
+      this.fetchServers(newUrl);
+      window.scrollTo(0, 0);
+    }
+  }
+
+  applyFilters(): void {
+    this.currentPage = 1;
+    this.fetchServers();
+  }
+
+  clearFilters(): void {
+    this.selectedStatus = '';
+    this.selectedLocation = '';
+    this.sortOrder = 'desc';
+    this.applyFilters();
+  }
+
+  constructUrlWithFilters(url: string): string {
+    const urlObj = new URL(url);
+    if (this.selectedStatus) {
+      urlObj.searchParams.set('state', this.selectedStatus);
+    }
+    if (this.selectedLocation) {
+      urlObj.searchParams.set('location', this.selectedLocation);
+    }
+    urlObj.searchParams.set('sort', this.sortOrder);
+    return urlObj.toString();
   }
 }

@@ -35,7 +35,11 @@ export class LoginComponent implements OnInit {
           this.userService.clearRedirectUrl();
           this.router.navigateByUrl(redirectUrl);
         } else {
-          this.router.navigate(['/profile']);
+          if(this.userService.userValue?.role.name === 'Admin') {
+            this.router.navigate(['/admin']);
+          } else {
+            this.router.navigate(['/profile']);
+          }
         }
       },
       error => {

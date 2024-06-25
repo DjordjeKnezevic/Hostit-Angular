@@ -7,7 +7,7 @@ export interface Server {
   name: string;
   server_type_id: string;
   location_id: string;
-  serverType: ServerType;
+  server_type: ServerType;
   location: Location;
   pricing: Pricing[];
   isOpen?: boolean;

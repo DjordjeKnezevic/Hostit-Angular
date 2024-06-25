@@ -1,0 +1,29 @@
+<div class="container mt-5">
+  <h2>Server Statuses</h2>
+  <table class="table table-striped mt-4">
+    <thead>
+      <tr>
+        <th>Subscription ID</th>
+        <th>Status</th>
+        <th>Uptime (seconds)</th>
+        <th>Downtime (seconds)</th>
+        <th>Last Started At</th>
+        <th>Last Stopped At</th>
+        <th>Last Crashed At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let status of serverStatuses">
+        <td>{{ status.subscription_id }}</td>
+        <td [ngStyle]="{'background-color': getStatusColor(status.status), 'color': 'white'}">
+          {{ status.status }}
+        </td>
+        <td>{{ status.uptime }}</td>
+        <td>{{ status.downtime }}</td>
+        <td>{{ status.last_started_at | date: 'medium' }}</td>
+        <td>{{ status.last_stopped_at | date: 'medium' }}</td>
+        <td>{{ status.last_crashed_at | date: 'medium' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

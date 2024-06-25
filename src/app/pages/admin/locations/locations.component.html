@@ -1,0 +1,69 @@
+<div class="container mt-5">
+  <div *ngIf="!isFormVisible">
+    <h2>Locations</h2>
+    <button class="btn btn-primary mb-3" (click)="showForm()">Create Location</button>
+    <table class="table table-striped mt-4">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Network Zone</th>
+          <th>City</th>
+          <th>Image</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let location of locations">
+          <td>{{ location.name }}</td>
+          <td>{{ location.network_zone }}</td>
+          <td>{{ location.city }}</td>
+          <td><img [src]="location.image" alt="{{ location.name }}" width="50"></td>
+          <td>
+            <button class="btn btn-warning btn-sm me-2" (click)="editLocation(location)">Edit</button>
+            <button class="btn btn-danger btn-sm" (click)="deleteLocation(location.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="isFormVisible">
+    <h2>{{ editingLocation ? 'Edit Location' : 'Create Location' }}</h2>
+    <form [formGroup]="locationForm" (ngSubmit)="submitForm()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" class="form-control" formControlName="name"
+          [ngClass]="{'is-invalid': isFieldInvalid('name')}">
+        <div *ngIf="isFieldInvalid('name')" class="invalid-feedback">
+          Name is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="network_zone">Network Zone</label>
+        <input type="text" id="network_zone" class="form-control" formControlName="network_zone"
+          [ngClass]="{'is-invalid': isFieldInvalid('network_zone')}">
+        <div *ngIf="isFieldInvalid('network_zone')" class="invalid-feedback">
+          Network Zone is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" id="city" class="form-control" formControlName="city"
+          [ngClass]="{'is-invalid': isFieldInvalid('city')}">
+        <div *ngIf="isFieldInvalid('city')" class="invalid-feedback">
+          City is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="image">Image</label>
+        <input type="text" id="image" class="form-control" formControlName="image"
+          [ngClass]="{'is-invalid': isFieldInvalid('image')}">
+        <div *ngIf="isFieldInvalid('image')" class="invalid-feedback">
+          Image is required
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">{{ editingLocation ? 'Update' : 'Create' }} Location</button>
+      <button type="button" class="btn btn-secondary" (click)="resetForm()">Cancel</button>
+    </form>
+  </div>
+</div>

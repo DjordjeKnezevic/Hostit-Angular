@@ -1,0 +1,79 @@
+<div class="container mt-5">
+  <div *ngIf="!isFormVisible">
+    <h2>Server Types</h2>
+    <button class="btn btn-primary mb-3" (click)="showForm()">Create Server Type</button>
+    <table class="table table-striped mt-4">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>CPU Cores</th>
+          <th>RAM (GB)</th>
+          <th>Storage (GB)</th>
+          <th>Network Speed (Gbps)</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let serverType of serverTypes">
+          <td>{{ serverType.name }}</td>
+          <td>{{ serverType.cpu_cores }}</td>
+          <td>{{ serverType.ram }}</td>
+          <td>{{ serverType.storage }}</td>
+          <td>{{ serverType.network_speed }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm me-2" (click)="editServerType(serverType)">Edit</button>
+            <button class="btn btn-danger btn-sm" (click)="deleteServerType(serverType.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="isFormVisible">
+    <h2>{{ editingServerType ? 'Edit Server Type' : 'Create Server Type' }}</h2>
+    <form [formGroup]="serverTypeForm" (ngSubmit)="submitForm()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" class="form-control" formControlName="name"
+          [ngClass]="{'is-invalid': isFieldInvalid('name')}">
+        <div *ngIf="isFieldInvalid('name')" class="invalid-feedback">
+          Name is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="cpu_cores">CPU Cores</label>
+        <input type="number" id="cpu_cores" class="form-control" formControlName="cpu_cores"
+          [ngClass]="{'is-invalid': isFieldInvalid('cpu_cores')}">
+        <div *ngIf="isFieldInvalid('cpu_cores')" class="invalid-feedback">
+          CPU Cores are required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="ram">RAM (GB)</label>
+        <input type="number" id="ram" class="form-control" formControlName="ram"
+          [ngClass]="{'is-invalid': isFieldInvalid('ram')}">
+        <div *ngIf="isFieldInvalid('ram')" class="invalid-feedback">
+          RAM is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="storage">Storage (GB)</label>
+        <input type="number" id="storage" class="form-control" formControlName="storage"
+          [ngClass]="{'is-invalid': isFieldInvalid('storage')}">
+        <div *ngIf="isFieldInvalid('storage')" class="invalid-feedback">
+          Storage is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="network_speed">Network Speed (Gbps)</label>
+        <input type="number" id="network_speed" class="form-control" formControlName="network_speed"
+          [ngClass]="{'is-invalid': isFieldInvalid('network_speed')}">
+        <div *ngIf="isFieldInvalid('network_speed')" class="invalid-feedback">
+          Network Speed is required
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">{{ editingServerType ? 'Update' : 'Create' }} Server Type</button>
+      <button type="button" class="btn btn-secondary" (click)="resetForm()">Cancel</button>
+    </form>
+  </div>
+</div>

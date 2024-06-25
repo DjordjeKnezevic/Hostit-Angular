@@ -1,0 +1,80 @@
+<div class="container mt-5">
+  <div *ngIf="!isFormVisible">
+    <h2>Users</h2>
+    <button class="btn btn-primary mb-3" (click)="showForm()">Create User</button>
+    <table class="table table-striped mt-4">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.role.name }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm me-2" (click)="editUser(user)">Edit</button>
+            <button class="btn btn-danger btn-sm" (click)="deleteUser(user.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="isFormVisible">
+    <h2>{{ editingUser ? 'Edit User' : 'Create User' }}</h2>
+    <form [formGroup]="userForm" (ngSubmit)="submitForm()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" class="form-control" formControlName="name"
+          [ngClass]="{'is-invalid': isFieldInvalid('name')}">
+        <div *ngIf="isFieldInvalid('name')" class="invalid-feedback">
+          Name is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" class="form-control" formControlName="email"
+          [ngClass]="{'is-invalid': isFieldInvalid('email')}">
+        <div *ngIf="isFieldInvalid('email')" class="invalid-feedback">
+          Email is required and must be valid
+        </div>
+      </div>
+      <div class="form-group" *ngIf="!editingUser">
+        <label for="password">Password</label>
+        <input type="password" id="password" class="form-control" formControlName="password"
+          [ngClass]="{'is-invalid': isFieldInvalid('password')}">
+        <div *ngIf="isFieldInvalid('password')" class="invalid-feedback">
+          Password is required
+        </div>
+      </div>
+      <div class="form-group" *ngIf="!editingUser">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" class="form-control" formControlName="confirmPassword"
+          [ngClass]="{'is-invalid': isFieldInvalid('confirmPassword') || isPasswordMismatch()}">
+        <div *ngIf="isFieldInvalid('confirmPassword')" class="invalid-feedback">
+          Confirm Password is required
+        </div>
+        <div *ngIf="isPasswordMismatch()" class="invalid-feedback">
+          Passwords do not match
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="role_id">Role</label>
+        <select id="role_id" class="form-control" formControlName="role_id"
+          [ngClass]="{'is-invalid': isFieldInvalid('role_id')}">
+          <option *ngFor="let role of roles" [value]="role.id">{{ role.name }}</option>
+        </select>
+        <div *ngIf="isFieldInvalid('role_id')" class="invalid-feedback">
+          Role is required
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">{{ editingUser ? 'Update' : 'Create' }} User</button>
+      <button type="button" class="btn btn-secondary" (click)="resetForm()">Cancel</button>
+    </form>
+  </div>
+</div>

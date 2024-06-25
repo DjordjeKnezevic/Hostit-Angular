@@ -12,12 +12,12 @@
     </button>
     <div *ngIf="location.isOpen">
       <div *ngFor="let server of location.servers" class="card card-body mt-2">
-        <h5 class="text-center">{{ server.serverType.name }}</h5>
+        <h5 class="text-center">{{ server.server_type.name }}</h5>
         <ul>
-          <li>CPU: {{ server.serverType.cpu_cores }} cores</li>
-          <li>RAM: {{ server.serverType.ram }} GB</li>
-          <li>Storage: {{ server.serverType.storage }} GB</li>
-          <li>Network Speed: {{ server.serverType.network_speed }}</li>
+          <li>CPU: {{ server.server_type.cpu_cores }} cores</li>
+          <li>RAM: {{ server.server_type.ram }} GB</li>
+          <li>Storage: {{ server.server_type.storage }} GB</li>
+          <li>Network Speed: {{ server.server_type.network_speed }} Gbps</li>
           <li>Weekly Backups</li>
           <li>DDoS Protection</li>
           <li>Full Root Access</li>

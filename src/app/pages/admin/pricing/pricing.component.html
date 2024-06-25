@@ -1,0 +1,95 @@
+<div class="container mt-5">
+  <div *ngIf="!isFormVisible">
+    <h2>Pricings</h2>
+    <button class="btn btn-primary mb-3" (click)="showForm()">Create Pricing</button>
+    <table class="table table-striped mt-4">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Service Name</th>
+          <th>Price</th>
+          <th>Period</th>
+          <th>Valid From</th>
+          <th>Valid Until</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pricing of pricings">
+          <td>{{ pricing.name }}</td>
+          <td>{{ pricing.service.name }}</td>
+          <td>{{ pricing.price }}</td>
+          <td>{{ pricing.period | titlecase }}</td>
+          <td>{{ pricing.valid_from | date: 'medium' }}</td>
+          <td>{{ pricing.valid_until ? (pricing.valid_until | date: 'medium') : 'N/A' }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm me-2" (click)="editPricing(pricing)">Edit</button>
+            <button class="btn btn-danger btn-sm" (click)="deletePricing(pricing.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="isFormVisible">
+    <h2>{{ editingPricing ? 'Edit Pricing' : 'Create Pricing' }}</h2>
+    <form [formGroup]="pricingForm" (ngSubmit)="submitForm()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" class="form-control" formControlName="name" [ngClass]="{'is-invalid': isFieldInvalid('name')}">
+        <div *ngIf="isFieldInvalid('name')" class="invalid-feedback">
+          Name is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="service_id">Service</label>
+        <select id="service_id" class="form-control" formControlName="service_id"
+          [ngClass]="{'is-invalid': isFieldInvalid('service_id')}">
+          <option *ngFor="let service of services" [value]="service.id">{{ service.name }}</option>
+        </select>
+        <div *ngIf="isFieldInvalid('service_id')" class="invalid-feedback">
+          Service is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input id="price" class="form-control" type="number" formControlName="price" step="0.01"
+          [ngClass]="{'is-invalid': isFieldInvalid('price')}">
+        <div *ngIf="isFieldInvalid('price')" class="invalid-feedback">
+          Price is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="period">Period</label>
+        <select id="period" class="form-control" formControlName="period"
+          [ngClass]="{'is-invalid': isFieldInvalid('period')}">
+          <option *ngFor="let period of periods" [value]="period">{{ period | titlecase }}</option>
+        </select>
+        <div *ngIf="isFieldInvalid('period')" class="invalid-feedback">
+          Period is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="valid_from">Valid From</label>
+        <input id="valid_from" class="form-control" type="datetime-local" formControlName="valid_from"
+          [ngClass]="{'is-invalid': isFieldInvalid('valid_from')}">
+        <div *ngIf="isFieldInvalid('valid_from')" class="invalid-feedback">
+          Valid from date is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="valid_until">Valid Until</label>
+        <input id="valid_until" class="form-control" type="datetime-local" formControlName="valid_until"
+          [ngClass]="{'is-invalid': isFieldInvalid('valid_until') || pricingForm.errors?.['dateMismatch']}">
+        <div *ngIf="isFieldInvalid('valid_until')" class="invalid-feedback">
+          Valid until date is invalid.
+        </div>
+        <div *ngIf="pricingForm.errors?.['dateMismatch']" class="invalid-feedback">
+          Valid until date must be after the valid from date.
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">{{ editingPricing ? 'Update' : 'Create' }} Pricing</button>
+      <button type="button" class="btn btn-secondary" (click)="resetForm()">Cancel</button>
+    </form>
+  </div>
+</div>

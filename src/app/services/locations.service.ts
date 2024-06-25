@@ -8,7 +8,7 @@ import { Location } from '../interfaces/location';
   providedIn: 'root'
 })
 export class LocationsService {
-  private apiUrl: string = `${environment.apiUrl}/locations`;
+  private apiUrl: string = `${environment.newApiUrl}/locations`;
   constructor(private http: HttpClient) { }
 
   getLocations(): Observable<Location[]> {

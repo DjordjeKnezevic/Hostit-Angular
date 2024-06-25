@@ -1,0 +1,16 @@
+<div class="d-flex">
+  <nav class="nav flex-column bg-light p-3" style="width: 250px;">
+    <a class="nav-link" routerLink="/admin/locations" routerLinkActive="active">Locations</a>
+    <a class="nav-link" routerLink="/admin/roles" routerLinkActive="active">Roles</a>
+    <a class="nav-link" routerLink="/admin/users" routerLinkActive="active">Users</a>
+    <a class="nav-link" routerLink="/admin/testimonials" routerLinkActive="active">Testimonials</a>
+    <a class="nav-link" routerLink="/admin/servers" routerLinkActive="active">Servers</a>
+    <a class="nav-link" routerLink="/admin/server-statuses" routerLinkActive="active">Server Statuses</a>
+    <a class="nav-link" routerLink="/admin/server-types" routerLinkActive="active">Server Types</a>
+    <a class="nav-link" routerLink="/admin/subscriptions" routerLinkActive="active">Subscriptions</a>
+    <a class="nav-link" routerLink="/admin/pricing" routerLinkActive="active">Pricing</a>
+  </nav>
+  <div class="flex-grow-1 p-3">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -12,6 +12,7 @@ import { NgbModule, NgbCarouselModule, NgbDropdownModule } from '@ng-bootstrap/n
 import { SharedModule } from '../shared/shared.module';
 import { ServersComponent } from './servers/servers.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SharedModule,
     NgbDropdownModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AdminModule
   ]
 })
 export class PagesModule { }

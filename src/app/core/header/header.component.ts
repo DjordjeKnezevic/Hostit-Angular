@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit {
       this.isAuthenticated = !!user;
       if (user) {
         this.userName = user.name;
-        this.isAdmin = user.role.name === 'admin';
+        this.isAdmin = user.role.name === 'Admin';
       } else {
         this.userName = 'User';
         this.isAdmin = false;

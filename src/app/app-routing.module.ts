@@ -9,7 +9,7 @@ import { RentServerComponent } from './pages/rent-server/rent-server.component';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
 import { ServersComponent } from './pages/servers/servers.component';
-import { authGuard, requireAuthGuard } from './services/auth-guard.service';
+import { authGuard, requireAuthGuard, adminGuard } from './services/auth-guard.service';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -22,7 +22,8 @@ const routes: Routes = [
   { path: 'servers', component: ServersComponent },
   { path: 'rent-server', component: RentServerComponent, canActivate: [requireAuthGuard]},
   { path: 'rent-server/:serverId', component: RentServerComponent, canActivate: [requireAuthGuard]},
-  { path: 'profile', loadChildren: () => import('./pages/profile/profile.module').then(m => m.ProfileModule) }
+  { path: 'profile', loadChildren: () => import('./pages/profile/profile.module').then(m => m.ProfileModule) },
+  { path: 'admin', loadChildren: () => import('./pages/admin/admin.module').then(m => m.AdminModule), canActivate: [adminGuard] }
 ];
 
 @NgModule({

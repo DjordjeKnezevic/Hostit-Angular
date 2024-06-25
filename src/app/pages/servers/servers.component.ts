@@ -22,7 +22,13 @@ export class ServersComponent implements OnInit {
         isOpen: false,
         servers: location.servers.map(server => ({
           ...server,
-          isOpen: false
+          isOpen: false,
+          server_type: server.server_type,
+          pricing: server.pricing.map(price => ({
+            ...price,
+            period: price.period,
+            price: parseFloat(price.price.toString())
+          }))
         }))
       }));
     });

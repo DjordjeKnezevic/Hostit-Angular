@@ -1,0 +1,65 @@
+<div class="container mt-5">
+  <div *ngIf="!isFormVisible">
+    <h2>Servers</h2>
+    <button class="btn btn-primary mb-3" (click)="showForm()">Create Server</button>
+    <table class="table table-striped mt-4">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Location</th>
+          <th>Server Type</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let server of servers">
+          <td>{{ server.name }}</td>
+          <td>{{ server.location.name }}</td>
+          <td>{{ server.server_type.name }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm me-2" (click)="editServer(server)">Edit</button>
+            <button class="btn btn-danger btn-sm" (click)="deleteServer(server.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="isFormVisible">
+    <h2>{{ editingServer ? 'Edit Server' : 'Create Server' }}</h2>
+    <form [formGroup]="serverForm" (ngSubmit)="submitForm()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" class="form-control" formControlName="name"
+          [ngClass]="{'is-invalid': isFieldInvalid('name')}">
+        <div *ngIf="isFieldInvalid('name')" class="invalid-feedback">
+          Name is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="location_id">Location</label>
+        <select id="location_id" class="form-control" formControlName="location_id"
+          [ngClass]="{'is-invalid': isFieldInvalid('location_id')}">
+          <option value="">Select Location</option>
+          <option *ngFor="let location of locations" [value]="location.id">{{ location.name }}</option>
+        </select>
+        <div *ngIf="isFieldInvalid('location_id')" class="invalid-feedback">
+          Location is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="server_type_id">Server Type</label>
+        <select id="server_type_id" class="form-control" formControlName="server_type_id"
+          [ngClass]="{'is-invalid': isFieldInvalid('server_type_id')}">
+          <option value="">Select Server Type</option>
+          <option *ngFor="let serverType of serverTypes" [value]="serverType.id">{{ serverType.name }}</option>
+        </select>
+        <div *ngIf="isFieldInvalid('server_type_id')" class="invalid-feedback">
+          Server Type is required
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">{{ editingServer ? 'Update' : 'Create' }} Server</button>
+      <button type="button" class="btn btn-secondary" (click)="resetForm()">Cancel</button>
+    </form>
+  </div>
+</div>

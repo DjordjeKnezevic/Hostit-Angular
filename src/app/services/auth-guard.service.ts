@@ -35,3 +35,19 @@ export const requireAuthGuard = (route: ActivatedRouteSnapshot, state: RouterSta
 
   return true;
 };
+
+export const adminGuard = (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) => {
+  const userService = inject(UserService);
+  const router = inject(Router);
+  const toastr = inject(ToastrService);
+
+  const user = userService.userValue;
+
+  if (!user || user.role.name !== 'Admin') {
+    router.navigate(['/']);
+    toastr.error('You do not have permission to access this page', 'Error');
+    return false;
+  }
+
+  return true;
+};

@@ -1,0 +1,91 @@
+<div class="container mt-5">
+  <div *ngIf="!isFormVisible">
+    <h2>Subscriptions</h2>
+    <button class="btn btn-primary mb-3" (click)="showForm()">Create Subscription</button>
+    <table class="table table-striped mt-4">
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>Service name</th>
+          <th>Pricing plan</th>
+          <th>Pricing period</th>
+          <th>Start date</th>
+          <th>End date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let subscription of subscriptions">
+          <td>{{ subscription.user.email }}</td>
+          <td>{{ subscription.service.name }}</td>
+          <td>{{ subscription.pricing.name }}</td>
+          <td>{{ subscription.pricing.period }}</td>
+          <td>{{ subscription.start_date | date: 'medium' }}</td>
+          <td>{{ subscription.end_date ? (subscription.end_date | date: 'medium') : 'Ongoing' }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm me-2" (click)="editSubscription(subscription)">Edit</button>
+            <button class="btn btn-danger btn-sm" (click)="deleteSubscription(subscription.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="isFormVisible">
+    <h2>{{ editingSubscription ? 'Edit Subscription' : 'Create Subscription' }}</h2>
+    <form [formGroup]="subscriptionForm" (ngSubmit)="submitForm()">
+      <div class="form-group">
+        <label for="user_id">User</label>
+        <select id="user_id" class="form-control" formControlName="user_id"
+          [ngClass]="{'is-invalid': isFieldInvalid('user_id')}">
+          <option *ngFor="let user of users" [value]="user.id">{{ user.email }}</option>
+        </select>
+        <div *ngIf="isFieldInvalid('user_id')" class="invalid-feedback">
+          User is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="service_id">Service</label>
+        <select id="service_id" class="form-control" formControlName="service_id"
+          [ngClass]="{'is-invalid': isFieldInvalid('service_id')}">
+          <option *ngFor="let service of servers" [value]="service.id">{{ service.name }}</option>
+        </select>
+        <div *ngIf="isFieldInvalid('service_id')" class="invalid-feedback">
+          Service is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="pricing_id">Pricing Plan</label>
+        <select id="pricing_id" class="form-control" formControlName="pricing_id"
+          [ngClass]="{'is-invalid': isFieldInvalid('pricing_id')}">
+          <option *ngFor="let pricing of pricings" [value]="pricing.id">{{ pricing.name }}</option>
+        </select>
+        <div *ngIf="isFieldInvalid('pricing_id')" class="invalid-feedback">
+          Pricing plan is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="start_date">Start Date</label>
+        <input type="datetime-local" id="start_date" class="form-control" formControlName="start_date"
+          [ngClass]="{'is-invalid': isFieldInvalid('start_date')}">
+        <div *ngIf="isFieldInvalid('start_date')" class="invalid-feedback">
+          Start date is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="end_date">End Date</label>
+        <input type="datetime-local" id="end_date" class="form-control" formControlName="end_date"
+          [ngClass]="{'is-invalid': isFieldInvalid('end_date') || subscriptionForm.errors?.['dateMismatch']}">
+        <div *ngIf="isFieldInvalid('end_date')" class="invalid-feedback">
+          End date is invalid
+        </div>
+        <div *ngIf="subscriptionForm.errors?.['dateMismatch']" class="invalid-feedback">
+          End date must be after start date
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">{{ editingSubscription ? 'Update' : 'Create' }}
+        Subscription</button>
+      <button type="button" class="btn btn-secondary" (click)="resetForm()">Cancel</button>
+    </form>
+  </div>
+</div>
